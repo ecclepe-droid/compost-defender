@@ -14,6 +14,10 @@ config/name="Compost Defencer"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Globals="*uid://cqs5lw7h4512j"
+
 [dotnet]
 
 project/assembly_name="Compost Defencer"

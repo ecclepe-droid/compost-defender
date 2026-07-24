@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://wo6ikdj2tex3"]
+
+[node name="StartingScreen" type="Control" unique_id=1006004596]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=498185193]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 277.0
+offset_top = 289.0
+offset_right = 884.0
+offset_bottom = 515.0
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=2124356601]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Play Game"
+
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=1045815827]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Options"
+
+[node name="Button3" type="Button" parent="VBoxContainer" unique_id=1388510629]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Exit Game"
