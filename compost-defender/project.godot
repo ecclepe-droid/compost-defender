@@ -11,8 +11,9 @@ config_version=5
 [application]
 
 config/name="Compost Defencer"
+run/main_scene="uid://wo6ikdj2tex3"
 config/features=PackedStringArray("4.6", "Mobile")
-config/icon="res://icon.svg"
+config/icon="res://Sprites/icon.svg"
 
 [autoload]
 
@@ -28,7 +29,8 @@ folder_colors={
 "res://Recources/": "green",
 "res://Recources/Sound/": "red",
 "res://Scenes/": "blue",
-"res://Scripts/": "purple"
+"res://Scripts/": "purple",
+"res://Sprites/": "pink"
 }
 
 [input]

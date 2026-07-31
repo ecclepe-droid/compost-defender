@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://doredddjuxaar"]
+
+[ext_resource type="Script" uid="uid://lxjps4cjxf08" path="res://Scenes/level_select_screen.gd" id="1_cmltv"]
+
+[node name="LevelSelectScreen" type="Control" unique_id=1006004596]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cmltv")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=185897513]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -360.5
+offset_top = -31.5
+offset_right = 360.5
+offset_bottom = 31.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Levels" type="HBoxContainer" parent="VBoxContainer" unique_id=289891882]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="LevelOneButton" type="Button" parent="VBoxContainer/Levels" unique_id=2124356601]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 40
+text = "Level 1"
+
+[node name="LevelTwoButton" type="Button" parent="VBoxContainer/Levels" unique_id=1045815827]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 40
+text = "Level 2"
+
+[node name="LevelThreeButton" type="Button" parent="VBoxContainer/Levels" unique_id=1388510629]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 40
+text = "Level 3"
+
+[node name="LevelFourButton" type="Button" parent="VBoxContainer/Levels" unique_id=286915383]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 40
+text = "Level 4"
+
+[node name="LevelFiveButton" type="Button" parent="VBoxContainer/Levels" unique_id=1973702474]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 40
+text = "Level 5"
+
+[node name="StartScreenButton" type="Button" parent="VBoxContainer" unique_id=553846353]
+layout_mode = 2
+text = "Return"
+
+[connection signal="pressed" from="VBoxContainer/Levels/LevelOneButton" to="." method="_on_level_one_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/StartScreenButton" to="." method="_on_start_screen_button_pressed"]
