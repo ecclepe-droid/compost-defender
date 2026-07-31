@@ -16,4 +16,8 @@ func _process(delta: float) -> void:
 		
 		var aim_direction = global_position.direction_to(get_global_mouse_position())
 		var aim_angle = rad_to_deg(aim_direction.angle())
-		print(aim_angle)
+#		pick_attack.emit(self, aim_direction)
+
+
+func pick_attack(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	pass # Replace with function body.

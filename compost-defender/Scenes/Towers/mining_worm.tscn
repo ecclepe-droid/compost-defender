@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bhav1kvwveyf7"]
 
 [ext_resource type="Script" uid="uid://dr7xeykwkptha" path="res://Scripts/Towers/mining_worm.gd" id="1_7borv"]
-[ext_resource type="Texture2D" uid="uid://0pp8rvsdbrjw" path="res://Sprites/icon.svg" id="2_6nsud"]
+[ext_resource type="Texture2D" uid="uid://dd3uq8pkm8dsf" path="res://Sprites/weerm(3).png" id="2_7borv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hcvec"]
 size = Vector2(32, 32)
@@ -11,7 +11,7 @@ script = ExtResource("1_7borv")
 
 [node name="MiningWormSprite" type="Sprite2D" parent="." unique_id=1813466560]
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("2_6nsud")
+texture = ExtResource("2_7borv")
 
 [node name="MiningWormAnimations" type="AnimationPlayer" parent="." unique_id=776124042]
 
@@ -20,3 +20,5 @@ shape = SubResource("RectangleShape2D_hcvec")
 
 [node name="MiningWormAttackTimer" type="Timer" parent="." unique_id=126103253]
 one_shot = true
+
+[connection signal="input_event" from="." to="." method="pick_attack"]
