@@ -70,4 +70,8 @@ layout_mode = 2
 text = "Return"
 
 [connection signal="pressed" from="VBoxContainer/Levels/LevelOneButton" to="." method="_on_level_one_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Levels/LevelTwoButton" to="." method="_on_level_two_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Levels/LevelThreeButton" to="." method="_on_level_three_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Levels/LevelFourButton" to="." method="_on_level_four_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Levels/LevelFiveButton" to="." method="_on_level_five_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/StartScreenButton" to="." method="_on_start_screen_button_pressed"]
