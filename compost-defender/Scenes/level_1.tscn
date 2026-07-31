@@ -1,6 +1,25 @@
 [gd_scene format=3 uid="uid://xbdiqwdb2ala"]
 
 [ext_resource type="Script" uid="uid://g3h2opbgjf31" path="res://Scripts/level_1.gd" id="1_vk57k"]
+[ext_resource type="Texture2D" uid="uid://0pp8rvsdbrjw" path="res://Sprites/icon.svg" id="2_xfk5q"]
 
-[node name="Level-1" type="Node2D" unique_id=1674712715]
+[sub_resource type="Curve2D" id="Curve2D_8ffim"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -1811, -824, 0, 0, 0, 0, 746, -197, 0, 0, 0, 0, -1121, 365, 0, 0, 0, 0, 1903, 736)
+}
+point_count = 4
+
+[node name="Level1" type="Node2D" unique_id=1674712715]
 script = ExtResource("1_vk57k")
+
+[node name="LevelView" type="Camera2D" parent="." unique_id=752227584]
+zoom = Vector2(0.34, 0.34)
+
+[node name="LevelBackground" type="Sprite2D" parent="." unique_id=649744635]
+z_index = -1
+position = Vector2(-44864, 8557)
+scale = Vector2(999, 999)
+texture = ExtResource("2_xfk5q")
+
+[node name="EnemyPath" type="Path2D" parent="." unique_id=158417071]
+curve = SubResource("Curve2D_8ffim")
