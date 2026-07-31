@@ -1,7 +1,11 @@
 [gd_scene format=3 uid="uid://xbdiqwdb2ala"]
 
 [ext_resource type="Script" uid="uid://g3h2opbgjf31" path="res://Scripts/level_1.gd" id="1_vk57k"]
+<<<<<<< Updated upstream
 [ext_resource type="Texture2D" uid="uid://0pp8rvsdbrjw" path="res://Sprites/icon.svg" id="2_xfk5q"]
+=======
+[ext_resource type="PackedScene" uid="uid://bhav1kvwveyf7" path="res://Scenes/Towers/mining_worm.tscn" id="2_8ffim"]
+>>>>>>> Stashed changes
 
 [sub_resource type="Curve2D" id="Curve2D_8ffim"]
 _data = {
@@ -12,6 +16,7 @@ point_count = 4
 [node name="Level1" type="Node2D" unique_id=1674712715]
 script = ExtResource("1_vk57k")
 
+<<<<<<< Updated upstream
 [node name="LevelView" type="Camera2D" parent="." unique_id=752227584]
 zoom = Vector2(0.34, 0.34)
 
@@ -23,3 +28,6 @@ texture = ExtResource("2_xfk5q")
 
 [node name="EnemyPath" type="Path2D" parent="." unique_id=158417071]
 curve = SubResource("Curve2D_8ffim")
+=======
+[node name="MiningWorm" parent="." unique_id=1069538837 instance=ExtResource("2_8ffim")]
+>>>>>>> Stashed changes
