@@ -26,10 +26,9 @@ project/assembly_name="Compost Defencer"
 [file_customization]
 
 folder_colors={
-"res://Recources/": "green",
-"res://Recources/Sound/": "red",
 "res://Scenes/": "blue",
 "res://Scripts/": "purple",
+"res://Sound/": "red",
 "res://Sprites/": "pink"
 }
 

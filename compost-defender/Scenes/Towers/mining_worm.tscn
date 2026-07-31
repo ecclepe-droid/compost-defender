@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bhav1kvwveyf7"]
 
 [ext_resource type="Script" uid="uid://dr7xeykwkptha" path="res://Scripts/Towers/mining_worm.gd" id="1_7borv"]
-[ext_resource type="Texture2D" uid="uid://dd3uq8pkm8dsf" path="res://Sprites/weerm(3).png" id="2_7borv"]
+[ext_resource type="Texture2D" uid="uid://f0lenvmgjjtv" path="res://Sprites/weerm(3).png" id="2_7borv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hcvec"]
 size = Vector2(32, 32)

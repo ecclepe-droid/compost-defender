@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://pq4gqsv4cmq"
-path="res://.godot/imported/paer.png-72c5b829c12dca257ad71e0e10f80256.ctex"
+uid="uid://bpnce0qv5f2rj"
+path="res://.godot/imported/pleaf(3).png-78e67ad34e5dccd9c8292e59f29cbe24.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/paer.png"
-dest_files=["res://.godot/imported/paer.png-72c5b829c12dca257ad71e0e10f80256.ctex"]
+source_file="res://Sprites/Enimies/pleaf(3).png"
+dest_files=["res://.godot/imported/pleaf(3).png-78e67ad34e5dccd9c8292e59f29cbe24.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cq1ucyfh5s54"
-path="res://.godot/imported/catchew(3).png-9b49b9dce2b20d72059cde5bb7e4716b.ctex"
+uid="uid://dl0bn65pr5nsx"
+path="res://.godot/imported/bashmana.png-db77ca2ff5c7f247c551a84464342ca5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/catchew(3).png"
-dest_files=["res://.godot/imported/catchew(3).png-9b49b9dce2b20d72059cde5bb7e4716b.ctex"]
+source_file="res://Sprites/Enimies/bashmana.png"
+dest_files=["res://.godot/imported/bashmana.png-db77ca2ff5c7f247c551a84464342ca5.ctex"]
 
 [params]
 
