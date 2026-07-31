@@ -19,3 +19,4 @@ texture = ExtResource("2_6nsud")
 shape = SubResource("RectangleShape2D_hcvec")
 
 [node name="MiningWormAttackTimer" type="Timer" parent="." unique_id=126103253]
+one_shot = true

@@ -10,9 +10,9 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 
 	
-	if $MiningWormAttackTimer.time_left <= 0.5:
+	if $MiningWormAttackTimer.time_left <= 0:
 		print("Swinging pickaxe!")
-		$MiningWormAttackTimer.start(1.5)
+		$MiningWormAttackTimer.start(1)
 		
 		var aim_direction = global_position.direction_to(get_global_mouse_position())
 		var aim_angle = rad_to_deg(aim_direction.angle())
