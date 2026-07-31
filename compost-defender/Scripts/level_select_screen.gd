@@ -1,20 +1,17 @@
 extends Control
 
-const LEVEL_ONE = preload("res://Scenes/level_1.tscn")
-const STARTING_SCREEN = preload("res://Scenes/starting_screen.tscn")
-
-
-func _ready() -> void:
-	pass
-
-
-func _process(delta: float) -> void:
-	pass
+const STARTING_SCREEN_FILE = "res://Scenes/start_screen.tscn"
+const LEVEL_ONE_PACKED = preload("res://Scenes/level_1.tscn")
+const LEVEL_TWO_PACKED = ("res://Scenes/level_1.tscn")
+const LEVEL_THREE_PACKED = ("res://Scenes/level_1.tscn")
+const LEVEL_FOUR_PACKED = ("res://Scenes/level_1.tscn")
+const LEVEL_FIVE_PACKED = ("res://Scenes/level_1.tscn")
 
 
 func _on_level_one_button_pressed() -> void:
-	get_tree().change_scene_to_packed(LEVEL_ONE)
+	get_tree().change_scene_to_packed(LEVEL_ONE_PACKED)
 
 
 func _on_start_screen_button_pressed() -> void:
-	get_tree().change_scene_to_packed(STARTING_SCREEN)
+	get_tree().change_scene_to_file(STARTING_SCREEN_FILE)
+	printerr("Level One is not finished yet")
