@@ -4,13 +4,13 @@
 [ext_resource type="PackedScene" uid="uid://bhav1kvwveyf7" path="res://Scenes/Towers/mining_worm.tscn" id="2_8ffim"]
 [ext_resource type="Texture2D" uid="uid://0pp8rvsdbrjw" path="res://Sprites/icon.svg" id="2_xfk5q"]
 [ext_resource type="PackedScene" uid="uid://dll8bbujgildc" path="res://Scenes/Enemies/test_enemy.tscn" id="4_7p6j4"]
-[ext_resource type="Script" uid="uid://cjyq6e6vl4f4a" path="res://Scripts/enemy_spawner.gd" id="4_6444e"]
+[ext_resource type="Script" path="res://Scripts/enemy_spawner.gd" id="4_6444e"]
 
 [sub_resource type="Curve2D" id="Curve2D_8ffim"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -1811, -824, 0, 0, 0, 0, 746, -197, 0, 0, 0, 0, -1121, 365, 0, 0, 0, 0, 1903, 736)
+"points": PackedVector2Array(0, 0, 0, 0, -1811, -824, 0, 0, 0, 0, -1463, -827, 0, 0, 0, 0, -1227, -772, 0, 0, 0, 0, -1105, -671, 0, 0, 0, 0, -1043.273, -602.59705, 0, 0, 0, 0, -1043, -515, 0, 0, 0, 0, -1060, -447, 0, 0, 0, 0, -1142, -369, 0, 0, 0, 0, -1258, -298, 0, 0, 0, 0, -1288, -223, 0, 0, 0, 0, -1211, -154, 0, 0, 0, 0, -1069, -124, 0, 0, 0, 0, -871, -185, 0, 0, 0, 0, -763, -258, 0, 0, 0, 0, -685, -385, 0, 0, 0, 0, -621, -513, 0, 0, 0, 0, -496, -602, 0, 0, 0, 0, -303, -647, 0, 0, 0, 0, -114, -621, 0, 0, 0, 0, 69, -540, 0, 0, 0, 0, 230, -412, 0, 0, 0, 0, 301, -301, 0, 0, 0, 0, 345, -202, 0, 0, 0, 0, 341, -75, 0, 0, 0, 0, 237, 24, 0, 0, 0, 0, 126, 109, 0, 0, 0, 0, -25, 156, 0, 0, 0, 0, -206, 142, 0, 0, 0, 0, -331, 73, 0, 0, 0, 0, -437, -4, 0, 0, 0, 0, -548, -44, 0, 0, 0, 0, -680, -49, 0, 0, 0, 0, -801, -4, 0, 0, 0, 0, -925, 45, 0, 0, 0, 0, -1034, 130, 0, 0, 0, 0, -1154, 149, 0, 0, 0, 0, -1282, 83, 0, 0, 0, 0, -1399, 52, 0, 0, 0, 0, -1494, 95, 0, 0, 0, 0, -1522, 187, 0, 0, 0, 0, -1473, 305, 0, 0, 0, 0, -1371, 394, 0, 0, 0, 0, -1213, 451, 0, 0, 0, 0, -1086, 496, 0, 0, 0, 0, -907, 505, 0, 0, 0, 0, -758, 465, 0, 0, 0, 0, -546, 444, 0, 0, 0, 0, -298, 465, 0, 0, 0, 0, -39, 533, 0, 0, 0, 0, 272, 585, 0, 0, 0, 0, 485, 538, 0, 0, 0, 0, 612, 446, 0, 0, 0, 0, 692, 302, 0, 0, 0, 0, 791, 121, 0, 0, 0, 0, 817, -70, 0, 0, 0, 0, 782, -308, 0, 0, 0, 0, 742, -509, 0, 0, 0, 0, 784, -650, 0, 0, 0, 0, 888, -733, 0, 0, 0, 0, 1072, -705, 0, 0, 0, 0, 1232, -636, 0, 0, 0, 0, 1315, -476, 0, 0, 0, 0, 1329, -313, 0, 0, 0, 0, 1282, -176, 0, 0, 0, 0, 1239, -56, 0, 0, 0, 0, 1187, 85, 0, 0, 0, 0, 1140, 215, 0, 0, 0, 0, 1133, 378, 0, 0, 0, 0, 1208, 517, 0, 0, 0, 0, 1345, 642, 0, 0, 0, 0, 1515, 736, 0, 0, 0, 0, 1903, 736)
 }
-point_count = 4
+point_count = 72
 
 [node name="Level1" type="Node2D" unique_id=1674712715]
 script = ExtResource("1_vk57k")
@@ -20,7 +20,7 @@ zoom = Vector2(0.34, 0.34)
 
 [node name="LevelBackground" type="Sprite2D" parent="." unique_id=649744635]
 z_index = -1
-position = Vector2(-44864, 8557)
+position = Vector2(-44852, 8486)
 scale = Vector2(999, 999)
 texture = ExtResource("2_xfk5q")
 
@@ -30,8 +30,9 @@ texture = ExtResource("2_xfk5q")
 script = ExtResource("4_6444e")
 
 [node name="EnemyPath" type="Path2D" parent="EnemySpawner" unique_id=158417071]
+position = Vector2(-7, 21)
 curve = SubResource("Curve2D_8ffim")
 
 [node name="TestEnemy" parent="EnemySpawner/EnemyPath" unique_id=708822331 instance=ExtResource("4_7p6j4")]
 position = Vector2(-1811, -824)
-rotation = 0.24046464
+rotation = -0.008620476
