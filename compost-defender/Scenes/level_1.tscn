@@ -8,7 +8,7 @@
 
 [sub_resource type="Curve2D" id="Curve2D_8ffim"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -1811, -824, 0, 0, 0, 0, 746, -197, 0, 0, 0, 0, -1121, 365, 0, 0, 0, 0, 1903, 736)
+"points": PackedVector2Array(0, 0, 0, 0, -654, -272, 0, 0, 0, 0, 249, -122, 0, 0, 0, 0, -280, 105, 0, 0, 0, 0, 478, 345)
 }
 point_count = 4
 
@@ -16,7 +16,7 @@ point_count = 4
 script = ExtResource("1_vk57k")
 
 [node name="LevelView" type="Camera2D" parent="." unique_id=752227584]
-zoom = Vector2(0.34, 0.34)
+zoom = Vector2(1.25, 1.25)
 
 [node name="LevelBackground" type="Sprite2D" parent="." unique_id=649744635]
 z_index = -1
@@ -33,5 +33,5 @@ script = ExtResource("4_6444e")
 curve = SubResource("Curve2D_8ffim")
 
 [node name="TestEnemy" parent="EnemySpawner/EnemyPath" unique_id=708822331 instance=ExtResource("4_7p6j4")]
-position = Vector2(-1811, -824)
-rotation = 0.24046464
+position = Vector2(-654, -272)
+rotation = 0.1646099
