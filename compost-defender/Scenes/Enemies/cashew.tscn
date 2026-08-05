@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://ijvwom52jkji"]
+
+[ext_resource type="Script" uid="uid://c4hd773ujds44" path="res://Scripts/Enemies/cashew.gd" id="1_y0ttw"]
+[ext_resource type="Texture2D" uid="uid://cq1ucyfh5s54" path="res://Sprites/Enimies/catchew(3).png" id="2_y0ttw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ilg6p"]
+size = Vector2(16, 17)
+
+[node name="Cashew" type="PathFollow2D" unique_id=848236373]
+script = ExtResource("1_y0ttw")
+
+[node name="CashewSprite" type="Sprite2D" parent="." unique_id=674722710]
+position = Vector2(-7.1525574e-07, 4.7683716e-07)
+scale = Vector2(0.24999999, 0.25)
+texture = ExtResource("2_y0ttw")
+
+[node name="CashewArea" type="Area2D" parent="." unique_id=1961882758]
+
+[node name="CashewCollisionShape" type="CollisionShape2D" parent="CashewArea" unique_id=894666033]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_ilg6p")
