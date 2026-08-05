@@ -1,23 +1,16 @@
 extends StaticBody2D
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	$MiningWormAttackTimer.start()
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-
+func _on_pickaxe_hitbox_area_entered(area: Area2D) -> void:
+	if($MiningWormAttackTimer.time_left > 0):
+		return
 	
-	if $MiningWormAttackTimer.time_left <= 0:
-		print("Swinging pickaxe!")
-		$MiningWormAttackTimer.start(1)
-		
-		var aim_direction = global_position.direction_to(get_global_mouse_position())
-		var aim_angle = rad_to_deg(aim_direction.angle())
-#		pick_attack.emit(self, aim_direction)
-
-
-func pick_attack(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	pass # Replace with function body.
+	var potentialEnemyHurtbox = area
+	if(potentialEnemyHurtbox.is_in_group("Enemies")):
+		if(potentialEnemyHurtbox.has_method("damage")):
+			potentialEnemyHurtbox.damage()
+			$MiningWormAttackTimer.start()
+		print("Pickaxe swung!")
