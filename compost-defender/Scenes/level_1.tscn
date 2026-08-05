@@ -7,6 +7,12 @@
 [ext_resource type="Script" path="res://Scripts/enemy_spawner.gd" id="4_6444e"]
 [ext_resource type="PackedScene" uid="uid://cy5jaopi0ojal" path="res://Scenes/Enemies/apple.tscn" id="6_evi0p"]
 [ext_resource type="PackedScene" uid="uid://cbju3xlv4m3rs" path="res://Scenes/Enemies/pear.tscn" id="7_lsmp6"]
+[ext_resource type="PackedScene" uid="uid://dsf6n5bhf45lr" path="res://Scenes/Enemies/banana.tscn" id="8_6r07y"]
+[ext_resource type="PackedScene" uid="uid://co0ctpoiolvx2" path="res://Scenes/Enemies/almond.tscn" id="9_6ioyp"]
+[ext_resource type="PackedScene" uid="uid://cokkh6i15lofd" path="res://Scenes/Enemies/pomagranite.tscn" id="10_oovug"]
+[ext_resource type="PackedScene" uid="uid://ijvwom52jkji" path="res://Scenes/Enemies/cashew.tscn" id="11_8i23i"]
+[ext_resource type="PackedScene" uid="uid://dp3mdbcka8adl" path="res://Scenes/Enemies/orange.tscn" id="12_8yhm2"]
+[ext_resource type="PackedScene" uid="uid://c8i27y1vpy8i6" path="res://Scenes/Enemies/leaf.tscn" id="13_pjppf"]
 
 [sub_resource type="Curve2D" id="Curve2D_8ffim"]
 _data = {
@@ -41,8 +47,32 @@ rotation = -0.008620476
 
 [node name="Apple" parent="EnemySpawner/EnemyPath" unique_id=848236373 instance=ExtResource("6_evi0p")]
 position = Vector2(-1811, -824)
-rotation = -0.008620475
+rotation = -0.008620476
 
 [node name="Pear" parent="EnemySpawner/EnemyPath" unique_id=1438226589 instance=ExtResource("7_lsmp6")]
 position = Vector2(-1811, -824)
-rotation = -0.008620475
+rotation = -0.008620476
+
+[node name="Banana" parent="EnemySpawner/EnemyPath" unique_id=1456422614 instance=ExtResource("8_6r07y")]
+position = Vector2(-1811, -824)
+rotation = -0.008620476
+
+[node name="Almond" parent="EnemySpawner/EnemyPath" unique_id=1847777279 instance=ExtResource("9_6ioyp")]
+position = Vector2(-1811, -824)
+rotation = -0.008620476
+
+[node name="Pomagranite" parent="EnemySpawner/EnemyPath" unique_id=807753426 instance=ExtResource("10_oovug")]
+position = Vector2(-1811, -824)
+rotation = -0.008620476
+
+[node name="Cashew" parent="EnemySpawner/EnemyPath" unique_id=1601575403 instance=ExtResource("11_8i23i")]
+position = Vector2(-1811, -824)
+rotation = -0.008620476
+
+[node name="Orange" parent="EnemySpawner/EnemyPath" unique_id=1231008779 instance=ExtResource("12_8yhm2")]
+position = Vector2(-1811, -824)
+rotation = -0.008620476
+
+[node name="Leaf" parent="EnemySpawner/EnemyPath" unique_id=1554251388 instance=ExtResource("13_pjppf")]
+position = Vector2(-1811, -824)
+rotation = -0.008620476

@@ -3,19 +3,19 @@
 [ext_resource type="Script" uid="uid://b12snaskslgtv" path="res://Scripts/Enemies/pear.gd" id="1_wl0tx"]
 [ext_resource type="Texture2D" uid="uid://pq4gqsv4cmq" path="res://Sprites/Enimies/paer.png" id="2_wl0tx"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jtotl"]
-size = Vector2(16, 17)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wl0tx"]
+radius = 13.0
+height = 34.0
 
 [node name="Pear" type="PathFollow2D" unique_id=1438226589]
 script = ExtResource("1_wl0tx")
 
 [node name="PearSprite" type="Sprite2D" parent="." unique_id=1907922814]
-position = Vector2(-7.1525574e-07, 4.7683716e-07)
-scale = Vector2(0.24999999, 0.25)
+position = Vector2(0.9999993, 4.7683716e-07)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_wl0tx")
 
 [node name="PearArea" type="Area2D" parent="." unique_id=1323129039]
 
 [node name="PearCollisionShape" type="CollisionShape2D" parent="PearArea" unique_id=677474707]
-position = Vector2(0, -0.5)
-shape = SubResource("RectangleShape2D_jtotl")
+shape = SubResource("CapsuleShape2D_wl0tx")
