@@ -2,6 +2,58 @@
 
 [ext_resource type="Script" uid="uid://lxjps4cjxf08" path="res://Scripts/level_select_screen.gd" id="1_cmltv"]
 
+[sub_resource type="Animation" id="Animation_60q08"]
+resource_name = "Fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_bc1jf"]
+resource_name = "new_animation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [1.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_ls13d"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cmltv"]
+_data = {
+&"Fade_in": SubResource("Animation_60q08"),
+&"Fade_out": SubResource("Animation_bc1jf"),
+&"RESET": SubResource("Animation_ls13d")
+}
+
 [node name="LevelSelectScreen" type="Control" unique_id=1006004596]
 layout_mode = 3
 anchors_preset = 15
@@ -68,6 +120,18 @@ text = "Level 5"
 [node name="StartScreenButton" type="Button" parent="VBoxContainer" unique_id=553846353]
 layout_mode = 2
 text = "Return"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2020502434]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2096975544]
+libraries/ = SubResource("AnimationLibrary_cmltv")
 
 [connection signal="pressed" from="VBoxContainer/Levels/LevelOneButton" to="." method="_on_level_one_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/Levels/LevelTwoButton" to="." method="_on_level_two_button_pressed"]

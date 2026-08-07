@@ -3,19 +3,19 @@
 [ext_resource type="Script" uid="uid://bvcvy76bywkh3" path="res://Scripts/Enemies/leaf.gd" id="1_3fdn3"]
 [ext_resource type="Texture2D" uid="uid://bpnce0qv5f2rj" path="res://Sprites/Enimies/pleaf(3).png" id="2_3fdn3"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ilg6p"]
-size = Vector2(16, 17)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3fdn3"]
+radius = 22.0
+height = 78.0
 
 [node name="Leaf" type="PathFollow2D" unique_id=1554251388]
 script = ExtResource("1_3fdn3")
 
 [node name="LeafSprite" type="Sprite2D" parent="." unique_id=341765347]
 position = Vector2(-7.1525574e-07, 4.7683716e-07)
-scale = Vector2(0.24999999, 0.25)
 texture = ExtResource("2_3fdn3")
 
 [node name="LeafArea" type="Area2D" parent="." unique_id=504149780]
 
 [node name="LeafCollisionShape" type="CollisionShape2D" parent="LeafArea" unique_id=1962173842]
-position = Vector2(0, -0.5)
-shape = SubResource("RectangleShape2D_ilg6p")
+position = Vector2(-2, 3)
+shape = SubResource("CapsuleShape2D_3fdn3")

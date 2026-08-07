@@ -1,6 +1,6 @@
 extends PathFollow2D
 var enemy_level = 2
-const SPEED = 250
+const SPEED = 275
 const MAX_HEALTH = 10
 var health
 
