@@ -9,12 +9,13 @@ const LEVEL_ONE_PACKED = preload("res://Scenes/level_1.tscn")
 
 
 func _on_start_screen_button_pressed() -> void:
-	fade_in()
 	get_tree().change_scene_to_file(STARTING_SCREEN_FILE)
-	fade_out()
 
 func _on_level_one_button_pressed() -> void:
+	fade_in()
+	await $AnimationPlayer.animation_finished
 	get_tree().change_scene_to_packed(LEVEL_ONE_PACKED)
+	fade_out()
 	printerr("Level One is not finished yet")
 
 
@@ -40,3 +41,9 @@ func fade_in():
 
 func fade_out():
 	$AnimationPlayer.play("Fade_out")
+
+
+func _on_fade_test_button_pressed() -> void:
+	fade_in()
+	await $AnimationPlayer.animation_finished
+	fade_out()
