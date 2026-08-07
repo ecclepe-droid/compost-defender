@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bm37mvpo6pnw7"
-path="res://.godot/imported/the alaskan bull worm(3).png-eb3c468946bec04a32da10a6a0c5296b.ctex"
+uid="uid://e51l0qqnulhw"
+path="res://.godot/imported/unlit pillar(8).png-4f9fec378054dcd7083c9eabfe70e088.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/the alaskan bull worm(3).png"
-dest_files=["res://.godot/imported/the alaskan bull worm(3).png-eb3c468946bec04a32da10a6a0c5296b.ctex"]
+source_file="res://Sprites/Towers/unlit pillar(8).png"
+dest_files=["res://.godot/imported/unlit pillar(8).png-4f9fec378054dcd7083c9eabfe70e088.ctex"]
 
 [params]
 

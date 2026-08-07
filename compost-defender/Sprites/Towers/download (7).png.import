@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqu2si08cprw0"
-path="res://.godot/imported/worm lord(3).png-fc29d72eba11c497459b81c1a19450fd.ctex"
+uid="uid://dpuq0c6sm2glo"
+path="res://.godot/imported/download (7).png-54eb7f1dd435042d2d75d8571bb6ef8c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/worm lord(3).png"
-dest_files=["res://.godot/imported/worm lord(3).png-fc29d72eba11c497459b81c1a19450fd.ctex"]
+source_file="res://Sprites/Towers/download (7).png"
+dest_files=["res://.godot/imported/download (7).png-54eb7f1dd435042d2d75d8571bb6ef8c.ctex"]
 
 [params]
 

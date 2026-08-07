@@ -63,6 +63,18 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_cmltv")
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2020502434]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2096975544]
+libraries/ = SubResource("AnimationLibrary_cmltv")
+
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=185897513]
 layout_mode = 1
 anchors_preset = 8
@@ -120,18 +132,6 @@ text = "Level 5"
 [node name="StartScreenButton" type="Button" parent="VBoxContainer" unique_id=553846353]
 layout_mode = 2
 text = "Return"
-
-[node name="ColorRect" type="ColorRect" parent="." unique_id=2020502434]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 0)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2096975544]
-libraries/ = SubResource("AnimationLibrary_cmltv")
 
 [connection signal="pressed" from="VBoxContainer/Levels/LevelOneButton" to="." method="_on_level_one_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/Levels/LevelTwoButton" to="." method="_on_level_two_button_pressed"]

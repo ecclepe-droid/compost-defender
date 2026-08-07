@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vys72hai2ebc"
-path="res://.godot/imported/literal worm naoya(3).png-d4478b1f5afec305093e77816e006756.ctex"
+uid="uid://be6ir22c6611r"
+path="res://.godot/imported/tesuworm shima (3).png-3ddaba0a341b2781704cdaa9054ca4b4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/literal worm naoya(3).png"
-dest_files=["res://.godot/imported/literal worm naoya(3).png-d4478b1f5afec305093e77816e006756.ctex"]
+source_file="res://Sprites/Towers/tesuworm shima (3).png"
+dest_files=["res://.godot/imported/tesuworm shima (3).png-3ddaba0a341b2781704cdaa9054ca4b4.ctex"]
 
 [params]
 

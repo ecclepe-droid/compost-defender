@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://be6ir22c6611r"
-path="res://.godot/imported/tesuworm shima (3).png-da6a909b1f7709371d427e52dea34972.ctex"
+uid="uid://djnmuup50ivxx"
+path="res://.godot/imported/download (3).png-9dd47352f79ebd254269c94f3c0a7b8e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/tesuworm shima (3).png"
-dest_files=["res://.godot/imported/tesuworm shima (3).png-da6a909b1f7709371d427e52dea34972.ctex"]
+source_file="res://Sprites/Towers/download (3).png"
+dest_files=["res://.godot/imported/download (3).png-9dd47352f79ebd254269c94f3c0a7b8e.ctex"]
 
 [params]
 

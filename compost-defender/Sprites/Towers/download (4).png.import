@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvl6y8lrdb8th"
-path="res://.godot/imported/phat(3).png-d19fcf753ea4cd3cd851dcb21a5e1f52.ctex"
+uid="uid://c6hw7mr7606vx"
+path="res://.godot/imported/download (4).png-43783a578a77a78052f950693ae79052.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/phat(3).png"
-dest_files=["res://.godot/imported/phat(3).png-d19fcf753ea4cd3cd851dcb21a5e1f52.ctex"]
+source_file="res://Sprites/Towers/download (4).png"
+dest_files=["res://.godot/imported/download (4).png-43783a578a77a78052f950693ae79052.ctex"]
 
 [params]
 
