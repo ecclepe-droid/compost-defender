@@ -15,7 +15,6 @@ func _on_level_one_button_pressed() -> void:
 	fade_in()
 	await $AnimationPlayer.animation_finished
 	get_tree().change_scene_to_packed(LEVEL_ONE_PACKED)
-	fade_out()
 	printerr("Level One is not finished yet")
 
 
