@@ -1,7 +1,7 @@
 extends PathFollow2D
 var enemy_level = 1
 const SPEED = 200
-const MAX_HEALTH = 10
+const MAX_HEALTH = 25
 var health
 
 
@@ -16,9 +16,13 @@ func _process(delta: float) -> void:
 
 func damage(damageAmount: int) -> void:
 	health -= damageAmount
+	print(health)
 	if health <= 0:
 		_die()
 
 
 func _die() -> void:
+	print("Cashew died")
+	Globals.compost += 20
+	print("You gained 20 compost and now have " + str(Globals.compost) + " compost")
 	queue_free()

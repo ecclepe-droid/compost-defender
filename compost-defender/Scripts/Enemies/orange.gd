@@ -16,9 +16,13 @@ func _process(delta: float) -> void:
 
 func damage(damageAmount: int) -> void:
 	health -= damageAmount
+	print(health)
 	if health <= 0:
 		_die()
 
 
 func _die() -> void:
+	print("Orange died")
+	Globals.compost += 10
+	print("You gained 10 compost and now have " + str(Globals.compost) + " compost")
 	queue_free()
