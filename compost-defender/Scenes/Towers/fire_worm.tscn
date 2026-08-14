@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://baiohhikv3fnj" path="res://Scripts/Towers/fire_worm.gd" id="1_hq7qo"]
 [ext_resource type="Texture2D" uid="uid://dv0bxy3xefpjd" path="res://Sprites/Towers/fire(13).png" id="2_3irfd"]
-[ext_resource type="PackedScene" uid="uid://bchmqi1i2qfvf" path="res://Scenes/Towers/melee_weapon_attack.tscn" id="3_hp1kf"]
+[ext_resource type="PackedScene" uid="uid://bchmqi1i2qfvf" path="res://Scenes/Towers/melee_attack.tscn" id="3_hp1kf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6nsud"]
 size = Vector2(57, 68)
