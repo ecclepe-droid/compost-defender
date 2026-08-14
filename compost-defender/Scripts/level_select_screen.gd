@@ -19,28 +19,34 @@ func _on_level_one_button_pressed() -> void:
 
 
 func _on_level_two_button_pressed() -> void:
+	fade_in()
+	await $AnimationPlayer.animation_finished
 	printerr("Level Two is not finished yet")
 
 
 func _on_level_three_button_pressed() -> void:
+	fade_in()
+	await $AnimationPlayer.animation_finished
 	printerr("Level Three is not finished yet")
 
 
 func _on_level_four_button_pressed() -> void:
+	fade_in()
+	await $AnimationPlayer.animation_finished
 	printerr("Level Four is not finished yet")
 
 
 func _on_level_five_button_pressed() -> void:
+	fade_in()
+	await $AnimationPlayer.animation_finished
 	printerr("Level Five is not finished yet")
 
 
 func fade_in():
 	$AnimationPlayer.play("Fade_in")
 
-
 func fade_out():
 	$AnimationPlayer.play("Fade_out")
-
 
 func _on_fade_test_button_pressed() -> void:
 	fade_in()
