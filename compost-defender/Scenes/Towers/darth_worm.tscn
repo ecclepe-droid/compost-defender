@@ -1,21 +1,28 @@
 [gd_scene format=3 uid="uid://bhav1kvwveyf7"]
 
+<<<<<<< Updated upstream
 [ext_resource type="Texture2D" uid="uid://dpuq0c6sm2glo" path="res://Sprites/Towers/download (7).png" id="2_8uso2"]
 [ext_resource type="PackedScene" uid="uid://bchmqi1i2qfvf" path="res://Scenes/Towers/melee_weapon_attack.tscn" id="3_0xf5l"]
+=======
+[ext_resource type="Script" uid="uid://cf63e5tj4047d" path="res://Scripts/Towers/darth_worm.gd" id="1_ma7nj"]
+[ext_resource type="PackedScene" uid="uid://bchmqi1i2qfvf" path="res://Scenes/Towers/melee_weapon_attack.tscn" id="2_6nsud"]
+[ext_resource type="Texture2D" uid="uid://dpuq0c6sm2glo" path="res://Sprites/Towers/download (7).png" id="2_7borv"]
+>>>>>>> Stashed changes
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6nsud"]
 size = Vector2(57, 68)
 
 [node name="DarthWorm" type="StaticBody2D" unique_id=1069538837]
+script = ExtResource("1_ma7nj")
 
-[node name="DarthWormCollision" type="CollisionShape2D" parent="." unique_id=356165788]
+[node name="CollisionShape" type="CollisionShape2D" parent="." unique_id=356165788]
 position = Vector2(0.5, 0)
 shape = SubResource("RectangleShape2D_6nsud")
 
-[node name="DarthWormSprite" type="Sprite2D" parent="." unique_id=1813466560]
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1813466560]
 position = Vector2(10, -8)
 texture = ExtResource("2_8uso2")
 
-[node name="DarthWormAnimations" type="AnimationPlayer" parent="." unique_id=776124042]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=776124042]
 
 [node name="LightsaberAttack" parent="." unique_id=919355094 instance=ExtResource("3_0xf5l")]

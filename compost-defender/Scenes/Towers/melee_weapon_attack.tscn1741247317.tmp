@@ -16,5 +16,3 @@ one_shot = true
 [node name="attackAreaShape" type="CollisionShape2D" parent="attackArea" unique_id=1594650703]
 scale = Vector2(6, 6)
 shape = SubResource("CircleShape2D_lif2s")
-
-[connection signal="timeout" from="attackCooldown" to="." method="_on_attack_cooldown_timeout"]
