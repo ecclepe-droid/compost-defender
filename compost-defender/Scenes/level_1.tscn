@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dsf6n5bhf45lr" path="res://Scenes/Enemies/banana.tscn" id="8_6r07y"]
 [ext_resource type="PackedScene" uid="uid://cokkh6i15lofd" path="res://Scenes/Enemies/pomagranite.tscn" id="10_oovug"]
 [ext_resource type="PackedScene" uid="uid://dp3mdbcka8adl" path="res://Scenes/Enemies/orange.tscn" id="12_8yhm2"]
+[ext_resource type="PackedScene" uid="uid://cupv03t4evic4" path="res://Scenes/tower_ui.tscn" id="12_uy8f0"]
 [ext_resource type="PackedScene" uid="uid://c8i27y1vpy8i6" path="res://Scenes/Enemies/leaf.tscn" id="13_pjppf"]
 
 [sub_resource type="Curve2D" id="Curve2D_8ffim"]
@@ -114,3 +115,5 @@ libraries/ = SubResource("AnimationLibrary_6r07y")
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=1397507541]
 energy = 0.0
 blend_mode = 1
+
+[node name="TowerUI" parent="." unique_id=1566003896 instance=ExtResource("12_uy8f0")]
