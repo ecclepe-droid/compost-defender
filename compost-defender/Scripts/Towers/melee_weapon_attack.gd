@@ -10,7 +10,7 @@ func _ready() -> void:
 	$attackCooldown.start(cooldownInSeconds)
 	
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	var potentialEnemyAreas: Array[Area2D] = $attackArea.get_overlapping_areas()
 	for potentialEnemyArea in potentialEnemyAreas:
 		var potentialEnemy: Node = potentialEnemyArea.get_parent()

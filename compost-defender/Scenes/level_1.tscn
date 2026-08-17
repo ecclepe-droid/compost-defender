@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bhav1kvwveyf7" path="res://Scenes/Towers/darth_worm.tscn" id="2_8ffim"]
 [ext_resource type="Texture2D" uid="uid://0pp8rvsdbrjw" path="res://Sprites/icon.svg" id="2_xfk5q"]
 [ext_resource type="PackedScene" uid="uid://dll8bbujgildc" path="res://Scenes/Enemies/test_enemy.tscn" id="4_7p6j4"]
-[ext_resource type="Script" path="res://Scripts/enemy_spawner.gd" id="4_6444e"]
+[ext_resource type="Script" uid="uid://cjyq6e6vl4f4a" path="res://Scripts/enemy_spawner.gd" id="4_6444e"]
 [ext_resource type="PackedScene" uid="uid://cy5jaopi0ojal" path="res://Scenes/Enemies/apple.tscn" id="6_evi0p"]
 [ext_resource type="PackedScene" uid="uid://cbju3xlv4m3rs" path="res://Scenes/Enemies/pear.tscn" id="7_lsmp6"]
 [ext_resource type="PackedScene" uid="uid://dsf6n5bhf45lr" path="res://Scenes/Enemies/banana.tscn" id="8_6r07y"]
