@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://cupv03t4evic4"]
+
+[ext_resource type="Texture2D" uid="uid://dv0bxy3xefpjd" path="res://Sprites/Towers/fire(13).png" id="1_iwru2"]
+[ext_resource type="Script" uid="uid://b6ku4jk3t4nnt" path="res://Scenes/tower_select_ui.gd" id="1_ug3km"]
+[ext_resource type="Texture2D" path="res://Sprites/Towers/darth_worm.png" id="2_ug3km"]
+
+[node name="TowerSelectUI" type="Control" unique_id=1566003896]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_ug3km")
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=557206799]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.8
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="ItemList" type="ItemList" parent="VBoxContainer" unique_id=717254525]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 3
+auto_width = true
+auto_height = true
+item_count = 2
+max_columns = 2
+same_column_width = true
+icon_mode = 0
+item_0/text = "Fire Worm"
+item_0/icon = ExtResource("1_iwru2")
+item_1/text = "Darth Worm"
+item_1/icon = ExtResource("2_ug3km")
+
+[connection signal="item_activated" from="VBoxContainer/ItemList" to="." method="_on_item_list_item_activated"]
