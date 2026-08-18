@@ -34,8 +34,8 @@ func attack_enemy(enemy: Node2D) -> void:
 		$attackCooldown.start(burn_cooldown_in_seconds)
 
 func burn_enemy(enemy: Node2D) -> void:
-	if(enemy.has_method("burn")):
-		enemy.burn(fire)
+	if(enemy.has_method("add_fire")):
+		enemy.add_fire(fire)
 		attacked.emit()
 		print("I burnt the orange with fire!")
 		#print_debug("Enemy attacked")

@@ -24,7 +24,8 @@ func _process(delta: float) -> void:
 #	health -= damageAmount
 #	print(health)
 #		_die()
-func burn(burn):
+
+func add_fire(burn):
 	fire += burn
 	print("my heat level is " + str(fire))
 
