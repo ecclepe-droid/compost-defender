@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bchmqi1i2qfvf"]
 
-[ext_resource type="Script" uid="uid://dr7xeykwkptha" path="res://Scripts/Towers/melee_weapon_attack.gd" id="1_8321k"]
+[ext_resource type="Script" uid="uid://dr7xeykwkptha" path="res://Scripts/Towers/ligtsaber_attack.gd" id="1_8321k"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lif2s"]
 radius = 29.166668
@@ -16,5 +16,7 @@ one_shot = true
 [node name="attackAreaShape" type="CollisionShape2D" parent="attackArea" unique_id=1594650703]
 scale = Vector2(6, 6)
 shape = SubResource("CircleShape2D_lif2s")
+
+[node name="burnCooldown" type="Timer" parent="." unique_id=452430513]
 
 [connection signal="timeout" from="attackCooldown" to="." method="_on_attack_cooldown_timeout"]

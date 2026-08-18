@@ -3,7 +3,7 @@ var enemy_level = 2
 const SPEED = 275
 const MAX_HEALTH = 10
 var health
-
+var enemyName = name
 
 func _ready() -> void:
 	health = MAX_HEALTH
@@ -22,7 +22,7 @@ func damage(damageAmount: int) -> void:
 
 
 func _die() -> void:
-	print("Pear died")
+	print(name + " died")
 	Globals.compost += 5
 	print("You gained 5 compost and now have " + str(Globals.compost) + " compost")
 	queue_free()

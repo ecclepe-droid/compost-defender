@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cj1lprm4g1ror"]
+
+[ext_resource type="Script" uid="uid://d11qly4q0356i" path="res://bite_attack.gd" id="1_0v1us"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lif2s"]
+radius = 16.666668
+
+[node name="BiteAttack" type="Node2D" unique_id=919355094]
+script = ExtResource("1_0v1us")
+
+[node name="attackCooldown" type="Timer" parent="." unique_id=769674001]
+one_shot = true
+
+[node name="attackArea" type="Area2D" parent="." unique_id=1257827942]
+
+[node name="attackAreaShape" type="CollisionShape2D" parent="attackArea" unique_id=1594650703]
+scale = Vector2(6, 6)
+shape = SubResource("CircleShape2D_lif2s")
+
+[connection signal="area_entered" from="attackArea" to="." method="_on_attack_area_area_entered"]

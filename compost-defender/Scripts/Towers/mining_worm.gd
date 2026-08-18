@@ -9,9 +9,9 @@ func _on_pickaxe_hitbox_area_entered(area: Area2D) -> void:
 		return
 	
 	
-	var potentialEnemyHurtbox = area
-	if(potentialEnemyHurtbox.is_in_group("Enemies")):
-		if(potentialEnemyHurtbox.has_method("damage")):
-			potentialEnemyHurtbox.damage()
+	var potential_enemyHurtbox = area
+	if(potential_enemyHurtbox.is_in_group("Enemies")):
+		if(potential_enemyHurtbox.has_method("damage")):
+			potential_enemyHurtbox.damage()
 			$DarthWormAttackTimer.start()
 		print("Lightsaber swung!")
