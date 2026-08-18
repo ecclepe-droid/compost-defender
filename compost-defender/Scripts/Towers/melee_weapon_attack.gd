@@ -3,11 +3,11 @@ extends Node2D
 signal attacked
 
 var damage = 50.0
-var cooldownInSeconds = 2.5
+var cooldown_in_seconds = 2.5
 
 
 func _ready() -> void:
-	$attackCooldown.start(cooldownInSeconds)
+	$attackCooldown.start(cooldown_in_seconds)
 	
 
 func _physics_process(_delta: float) -> void:
@@ -26,10 +26,10 @@ func attack_enemy(enemy: Node2D) -> void:
 		attacked.emit()
 		#print_debug("Enemy attacked")
 		
-		$attackCooldown.start(cooldownInSeconds)
+		$attackCooldown.start(cooldown_in_seconds)
 		
 		set_physics_process(false)
-		$attackCooldown.start(cooldownInSeconds)
+		$attackCooldown.start(cooldown_in_seconds)
 	else:
 		printerr("Enemy doesn't have damage() method")
 	
