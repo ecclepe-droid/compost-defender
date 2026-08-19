@@ -120,4 +120,4 @@ blend_mode = 1
 
 [node name="WormSelectUI" parent="CanvasLayer" unique_id=1566003896 instance=ExtResource("12_uy8f0")]
 
-[connection signal="worm_selected" from="CanvasLayer/WormSelectUI" to="." method="_on_worm_select_ui_worm_selected"]
+[connection signal="user_wants_worm" from="CanvasLayer/WormSelectUI" to="." method="_on_worm_select_ui_user_wants_worm"]

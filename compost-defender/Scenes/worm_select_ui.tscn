@@ -30,7 +30,6 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 3
-select_mode = 2
 auto_width = true
 item_count = 2
 icon_mode = 0
@@ -39,4 +38,4 @@ item_0/icon = ExtResource("1_d85gg")
 item_1/text = "Fire Worm"
 item_1/icon = ExtResource("2_iwru2")
 
-[connection signal="item_activated" from="VBoxContainer/ItemList" to="." method="_on_item_list_item_activated"]
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
