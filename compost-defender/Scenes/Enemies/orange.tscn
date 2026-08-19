@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ccb16wqvlw7ci" path="res://Scripts/Enemies/orange.gd" id="1_6k1qn"]
 [ext_resource type="Texture2D" uid="uid://q60jvji451n7" path="res://Sprites/Enimies/borange.png" id="2_6k1qn"]
+[ext_resource type="Texture2D" uid="uid://c5ex82mnieasl" path="res://Bigfire(14).png" id="3_n4lcx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6k1qn"]
 radius = 12.5025
@@ -12,6 +13,9 @@ script = ExtResource("1_6k1qn")
 [node name="OrangeSprite" type="Sprite2D" parent="." unique_id=1560617475]
 position = Vector2(-7.1525574e-07, 4.7683716e-07)
 texture = ExtResource("2_6k1qn")
+
+[node name="Fire" type="Sprite2D" parent="." unique_id=275787942]
+texture = ExtResource("3_n4lcx")
 
 [node name="OrangeArea" type="Area2D" parent="." unique_id=1970124870]
 

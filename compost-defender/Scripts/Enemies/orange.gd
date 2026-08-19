@@ -4,6 +4,7 @@ const SPEED = 300
 const MAX_HEALTH = 15
 var health
 var fire = 0
+var flaming
 func _ready() -> void:
 	health = MAX_HEALTH
 	progress = 0
@@ -11,14 +12,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	progress += SPEED * delta
-	if($BurnTimer.time_left == 0):
-		health -= fire
-		if(fire>0):
-			fire -= 1
-			print("I AM BURNING AND ONLY HAVE " + str(health) + " HEALTH LEFT")
-		$BurnTimer.start()
-		if health <= 0:
-			_die()
+	burn_tick()
 
 #func damage(damageAmount: int) -> void:
 #	health -= damageAmount
@@ -29,6 +23,18 @@ func add_fire(burn):
 	fire += burn
 	print("my heat level is " + str(fire))
 
+func burn_tick():
+	if($BurnTimer.time_left == 0):
+		health -= fire
+		if(fire>0):
+			flaming = true
+			fire -= 1
+			print("I AM BURNING AND ONLY HAVE " + str(health) + " HEALTH LEFT")
+		else:
+			flaming = false
+		$BurnTimer.start()
+		if health <= 0:
+			_die()
 
 func _die() -> void:
 	print("Orange died")
