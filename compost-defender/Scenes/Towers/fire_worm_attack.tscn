@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://cj1lprm4g1ror"]
 
-[ext_resource type="Script" uid="uid://d11qly4q0356i" path="res://Scripts/Towers/bite_attack.gd" id="1_0v1us"]
+[ext_resource type="Script" uid="uid://d11qly4q0356i" path="res://Scripts/Towers/fire_worm_attack.gd" id="1_a1day"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lif2s"]
 radius = 16.666668
 
 [node name="BiteAttack" type="Node2D" unique_id=919355094]
-script = ExtResource("1_0v1us")
+script = ExtResource("1_a1day")
 
 [node name="AttackCooldown" type="Timer" parent="." unique_id=769674001]
 one_shot = true
