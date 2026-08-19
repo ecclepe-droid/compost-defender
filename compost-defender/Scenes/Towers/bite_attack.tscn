@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cj1lprm4g1ror"]
 
-[ext_resource type="Script" uid="uid://d11qly4q0356i" path="res://bite_attack.gd" id="1_0v1us"]
+[ext_resource type="Script" uid="uid://d11qly4q0356i" path="res://Scripts/Towers/bite_attack.gd" id="1_0v1us"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lif2s"]
 radius = 16.666668
