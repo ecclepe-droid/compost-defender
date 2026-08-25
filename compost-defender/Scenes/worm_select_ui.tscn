@@ -30,6 +30,8 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 3
+allow_rmb_select = true
+allow_search = false
 auto_width = true
 item_count = 2
 icon_mode = 0
@@ -39,3 +41,5 @@ item_1/text = "Fire Worm"
 item_1/icon = ExtResource("2_iwru2")
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="empty_clicked" from="VBoxContainer/ItemList" to="." method="_on_item_list_empty_clicked"]
+[connection signal="item_clicked" from="VBoxContainer/ItemList" to="." method="_on_item_list_item_clicked"]
