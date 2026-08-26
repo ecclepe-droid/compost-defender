@@ -15,32 +15,27 @@ func _on_level_one_button_pressed() -> void:
 	fade_in()
 	await $AnimationPlayer.animation_finished
 	get_tree().change_scene_to_packed(LEVEL_ONE_PACKED)
-	print_debug("Level One is not finished yet")
 
 
 func _on_level_two_button_pressed() -> void:
 	fade_in()
 	await $AnimationPlayer.animation_finished
 	get_tree().change_scene_to_packed(LEVEL_TWO_PACKED)
-	print_debug("Level Two is not finished yet")
 
 
 func _on_level_three_button_pressed() -> void:
 	fade_in()
 	await $AnimationPlayer.animation_finished
-	print_debug("Level Three is not finished yet")
 
 
 func _on_level_four_button_pressed() -> void:
 	fade_in()
 	await $AnimationPlayer.animation_finished
-	print_debug("Level Four is not finished yet")
 
 
 func _on_level_five_button_pressed() -> void:
 	fade_in()
 	await $AnimationPlayer.animation_finished
-	print_debug("Level Five is not finished yet")
 
 
 func fade_in():
