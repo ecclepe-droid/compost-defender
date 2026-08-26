@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dm28grfpm2wro"]
+
+[ext_resource type="Texture2D" uid="uid://c5ex82mnieasl" path="res://Sprites/Bigfire(14).png" id="1_krqdc"]
+
+[node name="FireFX" type="Sprite2D" unique_id=434670146]
+texture = ExtResource("1_krqdc")

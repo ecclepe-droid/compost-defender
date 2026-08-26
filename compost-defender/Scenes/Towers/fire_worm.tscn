@@ -19,5 +19,6 @@ texture = ExtResource("2_3irfd")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=776124042]
 
 [node name="FireAttack" parent="." unique_id=919355094 instance=ExtResource("3_hp1kf")]
-damage = 2
-fire_stacks_effect = 3
+damage = 1
+seconds_between_attacks = 1.0
+fire_stacks_effect = 4

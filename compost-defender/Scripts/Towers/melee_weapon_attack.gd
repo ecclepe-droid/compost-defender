@@ -2,8 +2,8 @@ extends Node2D
 
 signal attacked_enemy
 
-@export var damage: int = 4
-@export var seconds_between_attacks: float = 0.65
+@export var damage: int = 3
+@export var seconds_between_attacks: float = 0.85
 @export var hurt_box_scale: float = 1.0
 @export var fire_stacks_effect: int = 0
 var attack_cooldown: Timer
