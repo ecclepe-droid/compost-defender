@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmikl0f2ta7gu"
-path="res://.godot/imported/download (14).png-83a2f8c1763e08c6cb47e929f7cfbbc0.ctex"
+uid="uid://bu7desh67giua"
+path="res://.godot/imported/Biglightsaber14).png-4368ffe48bcf3f5c19f98299376cee80.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://download (14).png"
-dest_files=["res://.godot/imported/download (14).png-83a2f8c1763e08c6cb47e929f7cfbbc0.ctex"]
+source_file="res://Sprites/Biglightsaber14).png"
+dest_files=["res://.godot/imported/Biglightsaber14).png-4368ffe48bcf3f5c19f98299376cee80.ctex"]
 
 [params]
 

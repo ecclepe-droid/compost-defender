@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ijvwom52jkji"]
 
 [ext_resource type="Script" uid="uid://c4hd773ujds44" path="res://Scripts/Enemies/cashew.gd" id="1_y0ttw"]
-[ext_resource type="Texture2D" uid="uid://cq1ucyfh5s54" path="res://Sprites/Enimies/catchew(3).png" id="2_y0ttw"]
+[ext_resource type="Texture2D" uid="uid://cq1ucyfh5s54" path="res://Sprites/Enemies/catchew(3).png" id="2_y0ttw"]
 
 [node name="Cashew" type="PathFollow2D" unique_id=848236373]
 script = ExtResource("1_y0ttw")

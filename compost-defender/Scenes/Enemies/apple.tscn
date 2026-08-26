@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cy5jaopi0ojal"]
 
 [ext_resource type="Script" uid="uid://ciwcpj38n5rdw" path="res://Scripts/Enemies/apple.gd" id="1_ilg6p"]
-[ext_resource type="Texture2D" uid="uid://ctvs61pfin6mt" path="res://Sprites/Enimies/bapple.png" id="1_q1m5d"]
+[ext_resource type="Texture2D" uid="uid://ctvs61pfin6mt" path="res://Sprites/Enemies/bapple.png" id="1_q1m5d"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ilg6p"]
 radius = 35.032127

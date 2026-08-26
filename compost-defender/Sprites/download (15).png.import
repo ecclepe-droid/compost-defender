@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://q60jvji451n7"
-path="res://.godot/imported/borange.png-f84b65d73a4ec97f05be91fbc66baad7.ctex"
+uid="uid://w3cd5tvtlin6"
+path="res://.godot/imported/download (15).png-a6a5f72774fcec6a5f6b01007fc4c216.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Enimies/borange.png"
-dest_files=["res://.godot/imported/borange.png-f84b65d73a4ec97f05be91fbc66baad7.ctex"]
+source_file="res://Sprites/download (15).png"
+dest_files=["res://.godot/imported/download (15).png-a6a5f72774fcec6a5f6b01007fc4c216.ctex"]
 
 [params]
 

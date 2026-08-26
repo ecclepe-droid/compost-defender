@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ci6eat72veam7"
-path="res://.godot/imported/UltraGrape(10).png-869cc12f3db49b29e51caa6abcd61cd6.ctex"
+uid="uid://ihf5s8f8nwc2"
+path="res://.godot/imported/download (8).png-6f0d536ae7f1af6ad303972218822c29.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Enimies/UltraGrape(10).png"
-dest_files=["res://.godot/imported/UltraGrape(10).png-869cc12f3db49b29e51caa6abcd61cd6.ctex"]
+source_file="res://Sprites/Enemies/download (8).png"
+dest_files=["res://.godot/imported/download (8).png-6f0d536ae7f1af6ad303972218822c29.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://w3cd5tvtlin6"
-path="res://.godot/imported/download (15).png-64b0dab0312ece36edecfaeb7397f02e.ctex"
+uid="uid://dl0bn65pr5nsx"
+path="res://.godot/imported/bashmana.png-a234e9765dabb69c3aa920980bbabfc2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://download (15).png"
-dest_files=["res://.godot/imported/download (15).png-64b0dab0312ece36edecfaeb7397f02e.ctex"]
+source_file="res://Sprites/Enemies/bashmana.png"
+dest_files=["res://.godot/imported/bashmana.png-a234e9765dabb69c3aa920980bbabfc2.ctex"]
 
 [params]
 

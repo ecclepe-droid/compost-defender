@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://dp3mdbcka8adl"]
 
 [ext_resource type="Script" uid="uid://ccb16wqvlw7ci" path="res://Scripts/Enemies/orange.gd" id="1_6k1qn"]
-[ext_resource type="Texture2D" uid="uid://q60jvji451n7" path="res://Sprites/Enimies/borange.png" id="2_6k1qn"]
-[ext_resource type="Texture2D" uid="uid://c5ex82mnieasl" path="res://Bigfire(14).png" id="3_n4lcx"]
+[ext_resource type="Texture2D" uid="uid://q60jvji451n7" path="res://Sprites/Enemies/borange.png" id="2_6k1qn"]
+[ext_resource type="Texture2D" uid="uid://c5ex82mnieasl" path="res://Sprites/Bigfire(14).png" id="3_n4lcx"]
 [ext_resource type="Script" uid="uid://cengrtgfnyo2t" path="res://Scripts/Enemies/fire.gd" id="4_mqg6g"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6k1qn"]

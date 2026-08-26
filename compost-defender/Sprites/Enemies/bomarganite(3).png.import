@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cq1ucyfh5s54"
-path="res://.godot/imported/catchew(3).png-aedac1c6d96fd194fb7a497b7d6d37a6.ctex"
+uid="uid://bdnhhuth1wr4q"
+path="res://.godot/imported/bomarganite(3).png-3cd87b96d5ba25c568ca1fe5c2e9a054.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Enimies/catchew(3).png"
-dest_files=["res://.godot/imported/catchew(3).png-aedac1c6d96fd194fb7a497b7d6d37a6.ctex"]
+source_file="res://Sprites/Enemies/bomarganite(3).png"
+dest_files=["res://.godot/imported/bomarganite(3).png-3cd87b96d5ba25c568ca1fe5c2e9a054.ctex"]
 
 [params]
 

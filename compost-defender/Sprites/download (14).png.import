@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bdnhhuth1wr4q"
-path="res://.godot/imported/bomarganite(3).png-1894d6d224bacf6b8cdb5915607ad2cb.ctex"
+uid="uid://bmikl0f2ta7gu"
+path="res://.godot/imported/download (14).png-6f9117dcdcc6fefe2382f90d7a39a865.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Enimies/bomarganite(3).png"
-dest_files=["res://.godot/imported/bomarganite(3).png-1894d6d224bacf6b8cdb5915607ad2cb.ctex"]
+source_file="res://Sprites/download (14).png"
+dest_files=["res://.godot/imported/download (14).png-6f9117dcdcc6fefe2382f90d7a39a865.ctex"]
 
 [params]
 

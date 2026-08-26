@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ihf5s8f8nwc2"
-path="res://.godot/imported/download (8).png-67811f072f70fe5d9fc43cef9d61b3b3.ctex"
+uid="uid://ctvs61pfin6mt"
+path="res://.godot/imported/bapple.png-a57dfdeb4ba3e254b56856040891bb30.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Enimies/download (8).png"
-dest_files=["res://.godot/imported/download (8).png-67811f072f70fe5d9fc43cef9d61b3b3.ctex"]
+source_file="res://Sprites/Enemies/bapple.png"
+dest_files=["res://.godot/imported/bapple.png-a57dfdeb4ba3e254b56856040891bb30.ctex"]
 
 [params]
 

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cbju3xlv4m3rs"]
 
 [ext_resource type="Script" uid="uid://b12snaskslgtv" path="res://Scripts/Enemies/pear.gd" id="1_wl0tx"]
-[ext_resource type="Texture2D" uid="uid://pq4gqsv4cmq" path="res://Sprites/Enimies/paer.png" id="2_wl0tx"]
+[ext_resource type="Texture2D" uid="uid://pq4gqsv4cmq" path="res://Sprites/Enemies/paer.png" id="2_wl0tx"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wl0tx"]
 radius = 27.0

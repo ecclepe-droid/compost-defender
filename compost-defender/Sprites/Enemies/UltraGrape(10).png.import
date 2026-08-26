@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5ex82mnieasl"
-path="res://.godot/imported/Bigfire(14).png-e284f0b543935a119b8d78fc09237ab7.ctex"
+uid="uid://ci6eat72veam7"
+path="res://.godot/imported/UltraGrape(10).png-5e18f59f2624a08a381a0c56fa9d1cc8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Bigfire(14).png"
-dest_files=["res://.godot/imported/Bigfire(14).png-e284f0b543935a119b8d78fc09237ab7.ctex"]
+source_file="res://Sprites/Enemies/UltraGrape(10).png"
+dest_files=["res://.godot/imported/UltraGrape(10).png-5e18f59f2624a08a381a0c56fa9d1cc8.ctex"]
 
 [params]
 

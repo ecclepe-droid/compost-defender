@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhgkbm2f4nheh"
-path="res://.godot/imported/download (13).png-b4b007e850f568f7416f23f7fe0ab278.ctex"
+uid="uid://pq4gqsv4cmq"
+path="res://.godot/imported/paer.png-e10045587207dbe856a5a87a149859f5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://download (13).png"
-dest_files=["res://.godot/imported/download (13).png-b4b007e850f568f7416f23f7fe0ab278.ctex"]
+source_file="res://Sprites/Enemies/paer.png"
+dest_files=["res://.godot/imported/paer.png-e10045587207dbe856a5a87a149859f5.ctex"]
 
 [params]
 

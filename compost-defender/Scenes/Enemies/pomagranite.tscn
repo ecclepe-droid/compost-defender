@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cokkh6i15lofd"]
 
 [ext_resource type="Script" uid="uid://cs81p5b2wxt2m" path="res://Scripts/Enemies/pomagranite.gd" id="1_ocwqr"]
-[ext_resource type="Texture2D" uid="uid://bdnhhuth1wr4q" path="res://Sprites/Enimies/bomarganite(3).png" id="2_ocwqr"]
+[ext_resource type="Texture2D" uid="uid://bdnhhuth1wr4q" path="res://Sprites/Enemies/bomarganite(3).png" id="2_ocwqr"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ocwqr"]
 radius = 24.005207

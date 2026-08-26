@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://85ngb57c2v8l"
-path="res://.godot/imported/amond(3).png-6326509c88139fe97c9ae72a0bd37797.ctex"
+uid="uid://cq1ucyfh5s54"
+path="res://.godot/imported/catchew(3).png-6bf698cc6a1f35d82c7c67ffc4e92ffc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Enimies/amond(3).png"
-dest_files=["res://.godot/imported/amond(3).png-6326509c88139fe97c9ae72a0bd37797.ctex"]
+source_file="res://Sprites/Enemies/catchew(3).png"
+dest_files=["res://.godot/imported/catchew(3).png-6bf698cc6a1f35d82c7c67ffc4e92ffc.ctex"]
 
 [params]
 

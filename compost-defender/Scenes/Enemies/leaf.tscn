@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c8i27y1vpy8i6"]
 
 [ext_resource type="Script" uid="uid://bvcvy76bywkh3" path="res://Scripts/Enemies/leaf.gd" id="1_3fdn3"]
-[ext_resource type="Texture2D" uid="uid://bpnce0qv5f2rj" path="res://Sprites/Enimies/pleaf(3).png" id="2_3fdn3"]
+[ext_resource type="Texture2D" uid="uid://bpnce0qv5f2rj" path="res://Sprites/Enemies/pleaf(3).png" id="2_3fdn3"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3fdn3"]
 radius = 22.0

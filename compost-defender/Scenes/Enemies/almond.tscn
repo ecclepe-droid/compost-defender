@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://co0ctpoiolvx2"]
 
 [ext_resource type="Script" uid="uid://b8x33mnvdw48h" path="res://Scripts/Enemies/almond.gd" id="1_ji30e"]
-[ext_resource type="Texture2D" uid="uid://85ngb57c2v8l" path="res://Sprites/Enimies/amond(3).png" id="2_ji30e"]
+[ext_resource type="Texture2D" uid="uid://85ngb57c2v8l" path="res://Sprites/Enemies/amond(3).png" id="2_ji30e"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ji30e"]
 radius = 21.0
