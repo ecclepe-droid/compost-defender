@@ -1,20 +1,26 @@
 [gd_scene format=3 uid="uid://cy5jaopi0ojal"]
 
-[ext_resource type="Script" uid="uid://ciwcpj38n5rdw" path="res://Scripts/Enemies/apple.gd" id="1_ilg6p"]
+[ext_resource type="Script" uid="uid://ciwcpj38n5rdw" path="res://Scripts/Enemies/enemy.gd" id="1_ilg6p"]
 [ext_resource type="Texture2D" uid="uid://ctvs61pfin6mt" path="res://Sprites/Enemies/bapple.png" id="1_q1m5d"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ilg6p"]
 radius = 35.032127
 
-[node name="Apple" type="PathFollow2D" unique_id=848236373]
+[node name="Apple" type="PathFollow2D" unique_id=848236373 node_paths=PackedStringArray("burn_timer")]
 script = ExtResource("1_ilg6p")
+burn_timer = NodePath("BurnTimer")
 
 [node name="AppleSprite" type="Sprite2D" parent="." unique_id=674722710]
 position = Vector2(-7.1525574e-07, 4.7683716e-07)
 texture = ExtResource("1_q1m5d")
 
-[node name="AppleArea" type="Area2D" parent="." unique_id=1961882758]
+[node name="Hurtbox" type="Area2D" parent="." unique_id=1961882758]
 
-[node name="AppleCollisionShape" type="CollisionShape2D" parent="AppleArea" unique_id=894666033]
+[node name="CollisionShape" type="CollisionShape2D" parent="Hurtbox" unique_id=894666033]
 position = Vector2(0, -0.5)
 shape = SubResource("CircleShape2D_ilg6p")
+
+[node name="BurnTimer" type="Timer" parent="." unique_id=1436177283]
+one_shot = true
+
+[connection signal="timeout" from="BurnTimer" to="." method="_on_burn_timer_timeout"]

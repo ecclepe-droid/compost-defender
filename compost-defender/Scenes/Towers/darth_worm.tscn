@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://bhav1kvwveyf7"]
 
-[ext_resource type="Script" uid="uid://cf63e5tj4047d" path="res://Scripts/Towers/darth_worm.gd" id="1_ma7nj"]
 [ext_resource type="PackedScene" uid="uid://bchmqi1i2qfvf" path="res://Scenes/Towers/melee_attack.tscn" id="2_6nsud"]
 [ext_resource type="Texture2D" uid="uid://dpuq0c6sm2glo" path="res://Sprites/Towers/download (7).png" id="2_7borv"]
 
@@ -8,7 +7,6 @@
 size = Vector2(57, 68)
 
 [node name="DarthWorm" type="StaticBody2D" unique_id=1069538837]
-script = ExtResource("1_ma7nj")
 
 [node name="CollisionShape" type="CollisionShape2D" parent="." unique_id=356165788]
 position = Vector2(0.5, 0)
@@ -20,4 +18,4 @@ texture = ExtResource("2_7borv")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=776124042]
 
-[node name="MeleeAttack" parent="." unique_id=919355094 instance=ExtResource("2_6nsud")]
+[node name="LightsaberAttack" parent="." unique_id=919355094 instance=ExtResource("2_6nsud")]

@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://g3h2opbgjf31" path="res://Scripts/level_1.gd" id="1_vk57k"]
 [ext_resource type="PackedScene" uid="uid://bhav1kvwveyf7" path="res://Scenes/Towers/darth_worm.tscn" id="2_8ffim"]
 [ext_resource type="Texture2D" uid="uid://0pp8rvsdbrjw" path="res://Sprites/icon.svg" id="2_xfk5q"]
-[ext_resource type="PackedScene" uid="uid://dll8bbujgildc" path="res://Scenes/Enemies/test_enemy.tscn" id="4_7p6j4"]
 [ext_resource type="Script" uid="uid://cjyq6e6vl4f4a" path="res://Scripts/enemy_spawner.gd" id="4_6444e"]
 [ext_resource type="PackedScene" uid="uid://cy5jaopi0ojal" path="res://Scenes/Enemies/apple.tscn" id="6_evi0p"]
 [ext_resource type="PackedScene" uid="uid://cbju3xlv4m3rs" path="res://Scenes/Enemies/pear.tscn" id="7_lsmp6"]
@@ -81,10 +80,6 @@ script = ExtResource("4_6444e")
 position = Vector2(-7, 21)
 curve = SubResource("Curve2D_8ffim")
 
-[node name="TestEnemy" parent="EnemySpawner/EnemyPath" unique_id=708822331 groups=["Enemies"] instance=ExtResource("4_7p6j4")]
-position = Vector2(-1811, -824)
-rotation = -0.008620476
-
 [node name="Apple" parent="EnemySpawner/EnemyPath" unique_id=848236373 groups=["Enemies"] instance=ExtResource("6_evi0p")]
 position = Vector2(-1811, -824)
 rotation = -0.008620476
@@ -92,22 +87,37 @@ rotation = -0.008620476
 [node name="Pear" parent="EnemySpawner/EnemyPath" unique_id=1438226589 groups=["Enemies"] instance=ExtResource("7_lsmp6")]
 position = Vector2(-1811, -824)
 rotation = -0.008620476
+enemy_level = 2
+speed = 155.0
+max_health = 8
 
 [node name="Banana" parent="EnemySpawner/EnemyPath" unique_id=1456422614 groups=["Enemies"] instance=ExtResource("8_6r07y")]
 position = Vector2(-1811, -824)
 rotation = -0.008620476
+enemy_level = 3
+speed = 125.0
+max_health = 13
 
 [node name="Pomagranite" parent="EnemySpawner/EnemyPath" unique_id=807753426 groups=["Enemies"] instance=ExtResource("10_oovug")]
 position = Vector2(-1811, -824)
 rotation = -0.008620476
+enemy_level = 4
+speed = 100.0
+max_health = 16
 
 [node name="Orange" parent="EnemySpawner/EnemyPath" unique_id=1231008779 groups=["Enemies"] instance=ExtResource("12_8yhm2")]
 position = Vector2(-1811, -824)
 rotation = -0.008620476
+enemy_level = 5
+speed = 125.0
+max_health = 11
 
 [node name="Leaf" parent="EnemySpawner/EnemyPath" unique_id=1554251388 groups=["Enemies"] instance=ExtResource("13_pjppf")]
 position = Vector2(-1811, -824)
 rotation = -0.008620476
+enemy_level = 6
+speed = 180.0
+max_health = 5
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=425287912]
 libraries/ = SubResource("AnimationLibrary_6r07y")

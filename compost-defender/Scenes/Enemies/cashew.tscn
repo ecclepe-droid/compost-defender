@@ -1,16 +1,22 @@
 [gd_scene format=3 uid="uid://ijvwom52jkji"]
 
-[ext_resource type="Script" uid="uid://c4hd773ujds44" path="res://Scripts/Enemies/cashew.gd" id="1_y0ttw"]
+[ext_resource type="Script" uid="uid://ciwcpj38n5rdw" path="res://Scripts/Enemies/enemy.gd" id="1_y0ttw"]
 [ext_resource type="Texture2D" uid="uid://cq1ucyfh5s54" path="res://Sprites/Enemies/catchew(3).png" id="2_y0ttw"]
 
-[node name="Cashew" type="PathFollow2D" unique_id=848236373]
+[node name="Cashew" type="PathFollow2D" unique_id=848236373 node_paths=PackedStringArray("burn_timer")]
 script = ExtResource("1_y0ttw")
+burn_timer = NodePath("BurnTimer")
 
-[node name="CashewSprite" type="Sprite2D" parent="." unique_id=674722710]
+[node name="Sprite" type="Sprite2D" parent="." unique_id=674722710]
 position = Vector2(-7.1525574e-07, 4.7683716e-07)
 texture = ExtResource("2_y0ttw")
 
-[node name="CashewArea" type="Area2D" parent="." unique_id=1961882758]
+[node name="Hitbox" type="Area2D" parent="." unique_id=1961882758]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CashewArea" unique_id=1294305329]
+[node name="CollisionPolygon" type="CollisionPolygon2D" parent="Hitbox" unique_id=1294305329]
 polygon = PackedVector2Array(-17, -25, -12, -35, 3, -36, 17, -24, 18, -3, 17, 22, 1, 35, -9, 34, -19, 24, -6, 12, -3, 0, -7, -16)
+
+[node name="BurnTimer" type="Timer" parent="." unique_id=2066613799]
+one_shot = true
+
+[connection signal="timeout" from="BurnTimer" to="." method="_on_burn_timer_timeout"]

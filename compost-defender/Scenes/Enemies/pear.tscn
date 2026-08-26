@@ -1,21 +1,25 @@
 [gd_scene format=3 uid="uid://cbju3xlv4m3rs"]
 
-[ext_resource type="Script" uid="uid://b12snaskslgtv" path="res://Scripts/Enemies/pear.gd" id="1_wl0tx"]
+[ext_resource type="Script" uid="uid://ciwcpj38n5rdw" path="res://Scripts/Enemies/enemy.gd" id="1_wl0tx"]
 [ext_resource type="Texture2D" uid="uid://pq4gqsv4cmq" path="res://Sprites/Enemies/paer.png" id="2_wl0tx"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wl0tx"]
 radius = 27.0
 height = 66.0
 
-[node name="Pear" type="PathFollow2D" unique_id=1438226589]
+[node name="Pear" type="PathFollow2D" unique_id=1438226589 node_paths=PackedStringArray("burn_timer")]
 script = ExtResource("1_wl0tx")
+burn_timer = NodePath("BurnTimer")
 
-[node name="PearSprite" type="Sprite2D" parent="." unique_id=1907922814]
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1907922814]
 position = Vector2(0.9999993, 4.7683716e-07)
 texture = ExtResource("2_wl0tx")
 
-[node name="PearArea" type="Area2D" parent="." unique_id=1323129039]
+[node name="Hurtbox" type="Area2D" parent="." unique_id=1323129039]
 
-[node name="PearCollisionShape" type="CollisionShape2D" parent="PearArea" unique_id=677474707]
+[node name="CollisionShape" type="CollisionShape2D" parent="Hurtbox" unique_id=677474707]
 position = Vector2(-2, -2)
 shape = SubResource("CapsuleShape2D_wl0tx")
+
+[node name="BurnTimer" type="Timer" parent="." unique_id=1239136082]
+one_shot = true

@@ -1,15 +1,19 @@
 [gd_scene format=3 uid="uid://dsf6n5bhf45lr"]
 
-[ext_resource type="Script" uid="uid://demkh16ald00n" path="res://Scripts/Enemies/banana.gd" id="1_4nc0y"]
+[ext_resource type="Script" uid="uid://ciwcpj38n5rdw" path="res://Scripts/Enemies/enemy.gd" id="1_4nc0y"]
 [ext_resource type="Texture2D" uid="uid://dl0bn65pr5nsx" path="res://Sprites/Enemies/bashmana.png" id="2_4nc0y"]
 
-[node name="Banana" type="PathFollow2D" unique_id=848236373]
+[node name="Banana" type="PathFollow2D" unique_id=848236373 node_paths=PackedStringArray("burn_timer")]
 script = ExtResource("1_4nc0y")
+burn_timer = NodePath("BurnTimer")
 
-[node name="BananaSprite" type="Sprite2D" parent="." unique_id=674722710]
+[node name="Sprite" type="Sprite2D" parent="." unique_id=674722710]
 texture = ExtResource("2_4nc0y")
 
-[node name="BananaArea" type="Area2D" parent="." unique_id=1961882758]
+[node name="Hurtbox" type="Area2D" parent="." unique_id=1961882758]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BananaArea" unique_id=1356315420]
+[node name="CollisionPolygon" type="CollisionPolygon2D" parent="Hurtbox" unique_id=1356315420]
 polygon = PackedVector2Array(-20, -33, -12, -42, 1, -42, 18, -30, 23, -2, 23, 21, 8, 34, -8, 40, -24, 27, -6, 12, -5, -2, -6, -18)
+
+[node name="BurnTimer" type="Timer" parent="." unique_id=1808182433]
+one_shot = true

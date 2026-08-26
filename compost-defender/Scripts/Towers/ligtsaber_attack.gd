@@ -18,9 +18,7 @@ func _physics_process(delta: float) -> void:
 		
 		if(potential_enemy.is_in_group("Enemies")):
 			attack_enemy(potential_enemy)
-			burn_enemy(potential_enemy)
-			return
-		
+
 
 func attack_enemy(enemy: Node2D) -> void:
 	if(enemy.has_method("damage")):
@@ -32,20 +30,3 @@ func attack_enemy(enemy: Node2D) -> void:
 		
 		set_physics_process(false)
 		$AttackCooldown.start(burn_cooldown_in_seconds)
-
-func burn_enemy(enemy: Node2D) -> void:
-	if(enemy.has_method("add_fire")):
-		enemy.add_fire(fire)
-		attacked.emit()
-		print("I burnt the orange with fire!")
-		#print_debug("Enemy attacked")
-		
-		$BurnCooldown.start(burn_cooldown_in_seconds)
-		
-		set_physics_process(false)
-		$BurnCooldown.start(burn_cooldown_in_seconds)
-	else:
-		printerr("Enemy doesn't have burn() method")
-
-func _on_attack_cooldown_timeout() -> void:
-	set_physics_process(true)
