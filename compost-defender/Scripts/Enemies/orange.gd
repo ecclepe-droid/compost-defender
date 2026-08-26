@@ -5,6 +5,8 @@ const MAX_HEALTH = 15
 var health
 var fire = 0
 var flaming
+#class Fruits:
+#		print(health)
 func _ready() -> void:
 	health = MAX_HEALTH
 	progress = 0

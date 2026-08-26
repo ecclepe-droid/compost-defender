@@ -3,7 +3,7 @@ var enemy_level = 2
 const SPEED = 250
 const MAX_HEALTH = 5
 var health
-
+#class Fruits:
 
 func _ready() -> void:
 	health = MAX_HEALTH

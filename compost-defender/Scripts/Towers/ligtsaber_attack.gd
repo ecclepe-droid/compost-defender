@@ -5,7 +5,7 @@ signal attacked
 var damage = 50.0
 var cooldown_in_seconds = 2.5
 var burn_cooldown_in_seconds = 0.1
-var fire = 1
+var fire = 5
 
 func _ready() -> void:
 	$AttackCooldown.start(cooldown_in_seconds)
