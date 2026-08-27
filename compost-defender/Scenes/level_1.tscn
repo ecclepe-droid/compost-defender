@@ -83,6 +83,7 @@ curve = SubResource("Curve2D_8ffim")
 [node name="Apple" parent="EnemySpawner/EnemyPath" unique_id=848236373 groups=["Enemies"] instance=ExtResource("6_evi0p")]
 position = Vector2(-1811, -824)
 rotation = -0.008620476
+compost_dropped = 15
 
 [node name="Pear" parent="EnemySpawner/EnemyPath" unique_id=1438226589 groups=["Enemies"] instance=ExtResource("7_lsmp6")]
 position = Vector2(-1811, -824)
@@ -90,6 +91,7 @@ rotation = -0.008620476
 enemy_level = 2
 speed = 155.0
 max_health = 8
+compost_dropped = 15
 
 [node name="Banana" parent="EnemySpawner/EnemyPath" unique_id=1456422614 groups=["Enemies"] instance=ExtResource("8_6r07y")]
 position = Vector2(-1811, -824)
@@ -97,6 +99,7 @@ rotation = -0.008620476
 enemy_level = 3
 speed = 125.0
 max_health = 13
+compost_dropped = 15
 
 [node name="Pomagranite" parent="EnemySpawner/EnemyPath" unique_id=807753426 groups=["Enemies"] instance=ExtResource("10_oovug")]
 position = Vector2(-1811, -824)
@@ -104,6 +107,7 @@ rotation = -0.008620476
 enemy_level = 4
 speed = 100.0
 max_health = 16
+compost_dropped = 15
 
 [node name="Orange" parent="EnemySpawner/EnemyPath" unique_id=1231008779 groups=["Enemies"] instance=ExtResource("12_8yhm2")]
 position = Vector2(-1811, -824)
@@ -111,6 +115,7 @@ rotation = -0.008620476
 enemy_level = 5
 speed = 125.0
 max_health = 11
+compost_dropped = 15
 
 [node name="Leaf" parent="EnemySpawner/EnemyPath" unique_id=1554251388 groups=["Enemies"] instance=ExtResource("13_pjppf")]
 position = Vector2(-1811, -824)
@@ -118,6 +123,7 @@ rotation = -0.008620476
 enemy_level = 6
 speed = 180.0
 max_health = 5
+compost_dropped = 15
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=425287912]
 libraries/ = SubResource("AnimationLibrary_6r07y")
@@ -128,6 +134,7 @@ blend_mode = 1
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1575172489]
 
-[node name="WormSelectUI" parent="CanvasLayer" unique_id=1566003896 instance=ExtResource("12_uy8f0")]
+[node name="InLevelUI" parent="CanvasLayer" unique_id=1566003896 instance=ExtResource("12_uy8f0")]
 
-[connection signal="user_wants_worm" from="CanvasLayer/WormSelectUI" to="." method="_on_worm_select_ui_user_wants_worm"]
+[connection signal="enemy_died" from="EnemySpawner" to="." method="_on_enemy_spawner_enemy_died"]
+[connection signal="user_wants_worm" from="CanvasLayer/InLevelUI" to="." method="_on_in_level_ui_user_wants_worm"]
