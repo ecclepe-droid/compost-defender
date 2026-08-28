@@ -23,12 +23,12 @@ func update_compost_amount(compost_amount: int) -> void: # updates compost ammon
 	compost_label.text = str(compost_amount)
 
 
-func _on_item_list_empty_clicked(_at_position: Vector2, _mouse_button_index: int) -> void: # deselects the towers when you click on somthing that isn't a worm
+func _on_item_list_empty_clicked(_at_position: Vector2, _mouse_button_index: int) -> void: # deselects the towers when you click on an empty space in the ui
 	worm_list.deselect_all()
 	anyworm_selected = false
 
 
-func _on_item_list_item_clicked(index: int, _at_position: Vector2, _mouse_button_index: int) -> void:
+func _on_item_list_item_clicked(index: int, _at_position: Vector2, _mouse_button_index: int) -> void: # places the selected tower at the location of the mouse if you have enough compost
 	var worm_name: String = worm_list.get_item_text(index)
 	var worm_file_path = "res://Scenes/Towers/" + worm_name.to_snake_case() + ".tscn"
 	packed_scene_of_selected_worm = load(worm_file_path)
