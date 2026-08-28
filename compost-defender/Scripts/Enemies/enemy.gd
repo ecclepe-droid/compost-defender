@@ -43,6 +43,7 @@ func apply_fire_stacks(fire_stacks_to_apply: int) -> void:
 func _consume_burn_stack() -> void:
 	take_damage(fire_stacks * FIRE_DAMAGE_MULTIPLIER)
 	fire_stacks -= 1
+	print(health)
 	
 	if fire_stacks >= 1:
 		burn_timer.start(SECONDS_BETWEEN_FIRE_STACKS)
