@@ -2,6 +2,7 @@ extends Node2D
 
 signal enemy_died(enemy_compost_value)
 signal wave_ended()
+signal out_of_waves()
 
 var future_waves: Array[Wave]
 var in_between_wave_timer: Timer
@@ -18,8 +19,14 @@ func _enemy_died(enemy_compost_value: int) -> void:
 	
 	var number_of_enemies = get_children().size() - 2
 	if number_of_enemies == 0:
-		in_between_wave_timer.start(future_waves.get(0).secsAfterPreviousWave)
 		wave_ended.emit()
+		
+		var has_next_wave = future_waves.size() >= 1
+		if has_next_wave:
+			in_between_wave_timer.start(future_waves.get(0).secsAfterPreviousWave)
+		else:
+			wave_active = false
+			out_of_waves.emit()
 
 
 func _spawn_enemy(enemyScene: PackedScene) -> void:

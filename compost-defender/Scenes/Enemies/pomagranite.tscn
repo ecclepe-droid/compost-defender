@@ -8,6 +8,7 @@ radius = 24.005207
 
 [node name="Pomagranite" type="PathFollow2D" unique_id=848236373 node_paths=PackedStringArray("burn_timer")]
 script = ExtResource("1_ocwqr")
+compost_dropped = 15
 burn_timer = NodePath("BurnTimer")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=674722710]
