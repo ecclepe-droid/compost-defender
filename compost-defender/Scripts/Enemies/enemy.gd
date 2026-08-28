@@ -1,5 +1,7 @@
 extends PathFollow2D
 
+signal died(compost_value: int)
+
 const FIRE_FX = preload("res://Scenes/fire_fx.tscn")
 const FIRE_DAMAGE_MULTIPLIER = 1
 const SECONDS_BETWEEN_FIRE_STACKS = 1.0
@@ -49,5 +51,5 @@ func _consume_burn_stack() -> void:
 
 
 func _die() -> void:
-	Globals.compost += compost_dropped
+	died.emit(compost_dropped)
 	queue_free()

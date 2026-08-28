@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://cupv03t4evic4"]
 
 [ext_resource type="Texture2D" uid="uid://dpuq0c6sm2glo" path="res://Sprites/Towers/download (7).png" id="1_d85gg"]
-[ext_resource type="Script" uid="uid://b6ku4jk3t4nnt" path="res://Scripts/worm_select_ui.gd" id="1_ug3km"]
+[ext_resource type="Script" uid="uid://b6ku4jk3t4nnt" path="res://Scripts/in_level_ui.gd" id="1_ug3km"]
 [ext_resource type="Texture2D" uid="uid://dv0bxy3xefpjd" path="res://Sprites/Towers/fire(13).png" id="2_iwru2"]
+[ext_resource type="Texture2D" uid="uid://bpnce0qv5f2rj" path="res://Sprites/Enemies/pleaf(3).png" id="2_ypw88"]
 
-[node name="WormSelectUI" type="Control" unique_id=1566003896]
+[node name="InLevelUI" type="Control" unique_id=1566003896]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -16,17 +17,45 @@ size_flags_vertical = 3
 script = ExtResource("1_ug3km")
 metadata/_edit_use_anchors_ = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=557206799]
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1994095263]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.8
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-metadata/_edit_use_anchors_ = true
 
-[node name="ItemList" type="ItemList" parent="VBoxContainer" unique_id=717254525]
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=1120988652]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer" unique_id=816914967]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="CompostIcon" type="TextureRect" parent="HBoxContainer/VBoxContainer/HBoxContainer" unique_id=1427949318]
+layout_mode = 2
+texture = ExtResource("2_ypw88")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="CompostLabel" type="RichTextLabel" parent="HBoxContainer/VBoxContainer/HBoxContainer" unique_id=322326828]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 8
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_font_sizes/normal_font_size = 32
+text = "Compost"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 1
+
+[node name="WormList" type="ItemList" parent="HBoxContainer" unique_id=717254525]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 3
@@ -41,5 +70,5 @@ item_1/text = "Fire Worm"
 item_1/icon = ExtResource("2_iwru2")
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
-[connection signal="empty_clicked" from="VBoxContainer/ItemList" to="." method="_on_item_list_empty_clicked"]
-[connection signal="item_clicked" from="VBoxContainer/ItemList" to="." method="_on_item_list_item_clicked"]
+[connection signal="empty_clicked" from="HBoxContainer/WormList" to="." method="_on_item_list_empty_clicked"]
+[connection signal="item_clicked" from="HBoxContainer/WormList" to="." method="_on_item_list_item_clicked"]
