@@ -14,16 +14,16 @@ func _ready() -> void:
 	compost_label = $HBoxContainer/VBoxContainer/HBoxContainer/CompostLabel
 	update_compost_amount(0)
 
-func _on_gui_input(event: InputEvent) -> void:
+func _on_gui_input(event: InputEvent) -> void: # selects the towers when you click on them
 	if event.is_action_pressed("Select") and anyworm_selected:
 		user_wants_worm.emit(packed_scene_of_selected_worm)
 
 
-func update_compost_amount(compost_amount: int) -> void:
+func update_compost_amount(compost_amount: int) -> void: # updates compost ammont
 	compost_label.text = str(compost_amount)
 
 
-func _on_item_list_empty_clicked(_at_position: Vector2, _mouse_button_index: int) -> void:
+func _on_item_list_empty_clicked(_at_position: Vector2, _mouse_button_index: int) -> void: # deselects the towers when you click on somthing that isn't a worm
 	worm_list.deselect_all()
 	anyworm_selected = false
 
