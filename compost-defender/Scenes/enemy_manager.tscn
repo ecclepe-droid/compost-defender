@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dwkd0bege35xs"]
+
+[ext_resource type="Script" uid="uid://cjyq6e6vl4f4a" path="res://Scripts/enemy_manager.gd" id="1_lc6ll"]
+
+[node name="EnemyManager" type="Path2D" unique_id=1701372891]
+script = ExtResource("1_lc6ll")
+
+[node name="InbetweenWaveTimer" type="Timer" parent="." unique_id=1254614839]
+one_shot = true
+
+[connection signal="timeout" from="InbetweenWaveTimer" to="." method="_on_inbetween_wave_timer_timeout"]

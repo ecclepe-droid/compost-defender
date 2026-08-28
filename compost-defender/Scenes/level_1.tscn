@@ -3,16 +3,10 @@
 [ext_resource type="Script" uid="uid://g3h2opbgjf31" path="res://Scripts/level_1.gd" id="1_vk57k"]
 [ext_resource type="PackedScene" uid="uid://bhav1kvwveyf7" path="res://Scenes/Towers/darth_worm.tscn" id="2_8ffim"]
 [ext_resource type="Texture2D" uid="uid://0pp8rvsdbrjw" path="res://Sprites/icon.svg" id="2_xfk5q"]
-[ext_resource type="Script" uid="uid://cjyq6e6vl4f4a" path="res://Scripts/enemy_spawner.gd" id="4_6444e"]
-[ext_resource type="PackedScene" uid="uid://cy5jaopi0ojal" path="res://Scenes/Enemies/apple.tscn" id="6_evi0p"]
-[ext_resource type="PackedScene" uid="uid://cbju3xlv4m3rs" path="res://Scenes/Enemies/pear.tscn" id="7_lsmp6"]
-[ext_resource type="PackedScene" uid="uid://dsf6n5bhf45lr" path="res://Scenes/Enemies/banana.tscn" id="8_6r07y"]
-[ext_resource type="PackedScene" uid="uid://cokkh6i15lofd" path="res://Scenes/Enemies/pomagranite.tscn" id="10_oovug"]
-[ext_resource type="PackedScene" uid="uid://dp3mdbcka8adl" path="res://Scenes/Enemies/orange.tscn" id="12_8yhm2"]
+[ext_resource type="PackedScene" uid="uid://dwkd0bege35xs" path="res://Scenes/enemy_manager.tscn" id="4_6444e"]
 [ext_resource type="PackedScene" uid="uid://cupv03t4evic4" path="res://Scenes/worm_select_ui.tscn" id="12_uy8f0"]
-[ext_resource type="PackedScene" uid="uid://c8i27y1vpy8i6" path="res://Scenes/Enemies/leaf.tscn" id="13_pjppf"]
 
-[sub_resource type="Curve2D" id="Curve2D_8ffim"]
+[sub_resource type="Curve2D" id="Curve2D_6444e"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, -1811, -824, 0, 0, 0, 0, -1463, -827, 0, 0, 0, 0, -1227, -772, 0, 0, 0, 0, -1105, -671, 0, 0, 0, 0, -1043.273, -602.59705, 0, 0, 0, 0, -1043, -515, 0, 0, 0, 0, -1060, -447, 0, 0, 0, 0, -1142, -369, 0, 0, 0, 0, -1258, -298, 0, 0, 0, 0, -1288, -223, 0, 0, 0, 0, -1211, -154, 0, 0, 0, 0, -1069, -124, 0, 0, 0, 0, -871, -185, 0, 0, 0, 0, -763, -258, 0, 0, 0, 0, -685, -385, 0, 0, 0, 0, -621, -513, 0, 0, 0, 0, -496, -602, 0, 0, 0, 0, -303, -647, 0, 0, 0, 0, -114, -621, 0, 0, 0, 0, 69, -540, 0, 0, 0, 0, 230, -412, 0, 0, 0, 0, 301, -301, 0, 0, 0, 0, 345, -202, 0, 0, 0, 0, 341, -75, 0, 0, 0, 0, 237, 24, 0, 0, 0, 0, 126, 109, 0, 0, 0, 0, -25, 156, 0, 0, 0, 0, -206, 142, 0, 0, 0, 0, -331, 73, 0, 0, 0, 0, -437, -4, 0, 0, 0, 0, -548, -44, 0, 0, 0, 0, -680, -49, 0, 0, 0, 0, -801, -4, 0, 0, 0, 0, -925, 45, 0, 0, 0, 0, -1034, 130, 0, 0, 0, 0, -1154, 149, 0, 0, 0, 0, -1282, 83, 0, 0, 0, 0, -1399, 52, 0, 0, 0, 0, -1494, 95, 0, 0, 0, 0, -1522, 187, 0, 0, 0, 0, -1473, 305, 0, 0, 0, 0, -1371, 394, 0, 0, 0, 0, -1213, 451, 0, 0, 0, 0, -1086, 496, 0, 0, 0, 0, -907, 505, 0, 0, 0, 0, -758, 465, 0, 0, 0, 0, -546, 444, 0, 0, 0, 0, -298, 465, 0, 0, 0, 0, -39, 533, 0, 0, 0, 0, 272, 585, 0, 0, 0, 0, 485, 538, 0, 0, 0, 0, 612, 446, 0, 0, 0, 0, 692, 302, 0, 0, 0, 0, 791, 121, 0, 0, 0, 0, 817, -70, 0, 0, 0, 0, 782, -308, 0, 0, 0, 0, 742, -509, 0, 0, 0, 0, 784, -650, 0, 0, 0, 0, 888, -733, 0, 0, 0, 0, 1072, -705, 0, 0, 0, 0, 1232, -636, 0, 0, 0, 0, 1315, -476, 0, 0, 0, 0, 1329, -313, 0, 0, 0, 0, 1282, -176, 0, 0, 0, 0, 1239, -56, 0, 0, 0, 0, 1187, 85, 0, 0, 0, 0, 1140, 215, 0, 0, 0, 0, 1133, 378, 0, 0, 0, 0, 1208, 517, 0, 0, 0, 0, 1345, 642, 0, 0, 0, 0, 1515, 736, 0, 0, 0, 0, 1903, 736)
 }
@@ -73,57 +67,9 @@ texture = ExtResource("2_xfk5q")
 [node name="DarthWorm" parent="." unique_id=1069538837 instance=ExtResource("2_8ffim")]
 position = Vector2(-833, -76)
 
-[node name="EnemySpawner" type="Node" parent="." unique_id=1406375486]
-script = ExtResource("4_6444e")
-
-[node name="EnemyPath" type="Path2D" parent="EnemySpawner" unique_id=158417071]
+[node name="EnemyManager" parent="." unique_id=1806982580 instance=ExtResource("4_6444e")]
 position = Vector2(-7, 21)
-curve = SubResource("Curve2D_8ffim")
-
-[node name="Apple" parent="EnemySpawner/EnemyPath" unique_id=848236373 groups=["Enemies"] instance=ExtResource("6_evi0p")]
-position = Vector2(-1811, -824)
-rotation = -0.008620476
-compost_dropped = 15
-
-[node name="Pear" parent="EnemySpawner/EnemyPath" unique_id=1438226589 groups=["Enemies"] instance=ExtResource("7_lsmp6")]
-position = Vector2(-1811, -824)
-rotation = -0.008620476
-enemy_level = 2
-speed = 155.0
-max_health = 8
-compost_dropped = 15
-
-[node name="Banana" parent="EnemySpawner/EnemyPath" unique_id=1456422614 groups=["Enemies"] instance=ExtResource("8_6r07y")]
-position = Vector2(-1811, -824)
-rotation = -0.008620476
-enemy_level = 3
-speed = 125.0
-max_health = 13
-compost_dropped = 15
-
-[node name="Pomagranite" parent="EnemySpawner/EnemyPath" unique_id=807753426 groups=["Enemies"] instance=ExtResource("10_oovug")]
-position = Vector2(-1811, -824)
-rotation = -0.008620476
-enemy_level = 4
-speed = 100.0
-max_health = 16
-compost_dropped = 15
-
-[node name="Orange" parent="EnemySpawner/EnemyPath" unique_id=1231008779 groups=["Enemies"] instance=ExtResource("12_8yhm2")]
-position = Vector2(-1811, -824)
-rotation = -0.008620476
-enemy_level = 5
-speed = 125.0
-max_health = 11
-compost_dropped = 15
-
-[node name="Leaf" parent="EnemySpawner/EnemyPath" unique_id=1554251388 groups=["Enemies"] instance=ExtResource("13_pjppf")]
-position = Vector2(-1811, -824)
-rotation = -0.008620476
-enemy_level = 6
-speed = 180.0
-max_health = 5
-compost_dropped = 15
+curve = SubResource("Curve2D_6444e")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=425287912]
 libraries/ = SubResource("AnimationLibrary_6r07y")
@@ -136,5 +82,5 @@ blend_mode = 1
 
 [node name="InLevelUI" parent="CanvasLayer" unique_id=1566003896 instance=ExtResource("12_uy8f0")]
 
-[connection signal="enemy_died" from="EnemySpawner" to="." method="_on_enemy_spawner_enemy_died"]
+[connection signal="enemy_died" from="EnemyManager" to="." method="_on_enemy_spawner_enemy_died"]
 [connection signal="user_wants_worm" from="CanvasLayer/InLevelUI" to="." method="_on_in_level_ui_user_wants_worm"]
