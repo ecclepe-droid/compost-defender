@@ -53,6 +53,7 @@ _data = {
 }
 
 [node name="Level1" type="Node2D" unique_id=1674712715]
+position = Vector2(0, 1)
 script = ExtResource("1_vk57k")
 
 [node name="LevelView" type="Camera2D" parent="." unique_id=752227584]
