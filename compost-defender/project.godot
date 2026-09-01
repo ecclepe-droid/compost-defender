@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Compost Defencer"
+config/name="Compost Defender"
 run/main_scene="uid://wo6ikdj2tex3"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="uid://f0lenvmgjjtv"
