@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bqv7u8rn4dnph"]
 
 [ext_resource type="Texture2D" uid="uid://dseyy450u8cy" path="res://Sprites/A totally normal regular worm(13).png" id="1_nf16f"]
+[ext_resource type="Script" uid="uid://oi4qer8vsius" path="res://Scripts/game_user_interface.gd" id="1_vvvpa"]
 [ext_resource type="Texture2D" uid="uid://f0lenvmgjjtv" path="res://Sprites/weerm(3).png" id="2_vvvpa"]
 [ext_resource type="Texture2D" uid="uid://bkb8elo1gr0hl" path="res://Sprites/a rubber band (22).png" id="3_d4jpd"]
 [ext_resource type="Texture2D" uid="uid://w3cd5tvtlin6" path="res://Sprites/download (15).png" id="4_e5uxp"]
@@ -9,14 +10,19 @@
 [ext_resource type="Texture2D" uid="uid://jmgsgqwtf81g" path="res://Sprites/download (20).png" id="7_51chi"]
 [ext_resource type="Texture2D" uid="uid://bs0jeqa18d0qq" path="res://Sprites/generator(idk what to use it for but ye)(13).png" id="8_jnxqb"]
 [ext_resource type="Texture2D" uid="uid://d2lgbm721s68u" path="res://Sprites/Agent wormy7(13).png" id="9_7iw8k"]
+[ext_resource type="Texture2D" uid="uid://0pp8rvsdbrjw" path="res://Sprites/icon.svg" id="11_d4jpd"]
 
-[node name="GameUserInterface" type="Control" unique_id=650166834]
+[node name="GameUserInterface" type="Control" unique_id=650166834 node_paths=PackedStringArray("menu_screen", "level_select_screen", "controls_screen")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_vvvpa")
+menu_screen = NodePath("MenuScreen")
+level_select_screen = NodePath("LevelSelectScreen")
+controls_screen = NodePath("ControlsScreen")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=736080248]
 
@@ -57,19 +63,15 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/separation = 20
 
-[node name="PlayGameButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=348135700]
+[node name="ToggleLevelSelectMenuButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=348135700]
 layout_mode = 2
 text = "Play Game"
 
-[node name="ButtonButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=478049765]
+[node name="ToggleControlsMenuButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=478049765]
 layout_mode = 2
 text = "Controls"
 
-[node name="HelpButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=879498724]
-layout_mode = 2
-text = "Help"
-
-[node name="OptionsButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=1556283211]
+[node name="ToggleOptionsMenuButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=1556283211]
 layout_mode = 2
 text = "Options"
 
@@ -84,20 +86,25 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("3_d4jpd")
 
-[node name="LevelSelectBackround" type="NinePatchRect" parent="." unique_id=577128008]
+[node name="LevelSelectScreen" type="MarginContainer" parent="." unique_id=827482751]
+visible = false
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.13975695
-anchor_top = 0.22839506
-anchor_right = 1.1814237
-anchor_bottom = 0.76851857
-offset_left = 14.0
-offset_top = 2.0
-offset_right = -386.0
-offset_bottom = 1.9999695
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 200.0
+offset_top = 200.0
+offset_right = -152.0
+offset_bottom = -148.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LevelSelectBackround" type="NinePatchRect" parent="LevelSelectScreen" unique_id=577128008]
+layout_mode = 2
+texture = ExtResource("11_d4jpd")
 metadata/_edit_use_anchors_ = true
 
-[node name="LevelSelectContainer" type="VBoxContainer" parent="LevelSelectBackround" unique_id=782127569]
+[node name="LevelSelectContainer" type="VBoxContainer" parent="LevelSelectScreen/LevelSelectBackround" unique_id=782127569]
 custom_minimum_size = Vector2(40, 0)
 layout_mode = 1
 anchors_preset = -1
@@ -105,24 +112,24 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 50
+theme_override_constants/separation = 35
 metadata/_edit_use_anchors_ = true
 
-[node name="Seporator" type="Control" parent="LevelSelectBackround/LevelSelectContainer" unique_id=271689089]
+[node name="Seporator" type="Control" parent="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer" unique_id=271689089]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="LevelSelectBackround/LevelSelectContainer" unique_id=1393661298]
+[node name="HBoxContainer" type="HBoxContainer" parent="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer" unique_id=1393661298]
 layout_mode = 2
 theme_override_constants/separation = 48
 
-[node name="LevelSelectSeperator" type="Control" parent="LevelSelectBackround/LevelSelectContainer/HBoxContainer" unique_id=719725455]
+[node name="LevelSelectSeperator" type="Control" parent="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer" unique_id=719725455]
 layout_mode = 2
 
-[node name="Level1Button" type="Button" parent="LevelSelectBackround/LevelSelectContainer/HBoxContainer" unique_id=680928296]
+[node name="Level1Button" type="Button" parent="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer" unique_id=680928296]
 layout_mode = 2
 icon = ExtResource("4_e5uxp")
 
-[node name="Level1Label" type="Label" parent="LevelSelectBackround/LevelSelectContainer/HBoxContainer/Level1Button" unique_id=273369038]
+[node name="Level1Label" type="Label" parent="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer/Level1Button" unique_id=273369038]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -134,11 +141,11 @@ text = "
        Level 1"
 metadata/_edit_use_anchors_ = true
 
-[node name="Level2Button" type="Button" parent="LevelSelectBackround/LevelSelectContainer/HBoxContainer" unique_id=2065225802]
+[node name="Level2Button" type="Button" parent="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer" unique_id=2065225802]
 layout_mode = 2
 icon = ExtResource("5_vljpe")
 
-[node name="Level2Label" type="Label" parent="LevelSelectBackround/LevelSelectContainer/HBoxContainer/Level2Button" unique_id=184972840]
+[node name="Level2Label" type="Label" parent="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer/Level2Button" unique_id=184972840]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -150,11 +157,11 @@ text = "
        Level 2"
 metadata/_edit_use_anchors_ = true
 
-[node name="Level3Button" type="Button" parent="LevelSelectBackround/LevelSelectContainer/HBoxContainer" unique_id=426779875]
+[node name="Level3Button" type="Button" parent="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer" unique_id=426779875]
 layout_mode = 2
 icon = ExtResource("6_osrqe")
 
-[node name="Level3Label" type="Label" parent="LevelSelectBackround/LevelSelectContainer/HBoxContainer/Level3Button" unique_id=1800822078]
+[node name="Level3Label" type="Label" parent="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer/Level3Button" unique_id=1800822078]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -166,11 +173,11 @@ text = "
        Level 3"
 metadata/_edit_use_anchors_ = true
 
-[node name="Level4Button" type="Button" parent="LevelSelectBackround/LevelSelectContainer/HBoxContainer" unique_id=1664815987]
+[node name="Level4Button" type="Button" parent="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer" unique_id=1664815987]
 layout_mode = 2
 icon = ExtResource("7_51chi")
 
-[node name="Level4Label" type="Label" parent="LevelSelectBackround/LevelSelectContainer/HBoxContainer/Level4Button" unique_id=2010195398]
+[node name="Level4Label" type="Label" parent="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer/Level4Button" unique_id=2010195398]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -182,11 +189,11 @@ text = "
        Level 4"
 metadata/_edit_use_anchors_ = true
 
-[node name="Level5Button" type="Button" parent="LevelSelectBackround/LevelSelectContainer/HBoxContainer" unique_id=1067584124]
+[node name="Level5Button" type="Button" parent="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer" unique_id=1067584124]
 layout_mode = 2
 icon = ExtResource("8_jnxqb")
 
-[node name="Level5Label" type="Label" parent="LevelSelectBackround/LevelSelectContainer/HBoxContainer/Level5Button" unique_id=1926303140]
+[node name="Level5Label" type="Label" parent="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer/Level5Button" unique_id=1926303140]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -198,18 +205,18 @@ text = "
        Level 5"
 metadata/_edit_use_anchors_ = true
 
-[node name="BackButtonContainer" type="HBoxContainer" parent="LevelSelectBackround/LevelSelectContainer" unique_id=1447530055]
+[node name="BackButtonContainer" type="HBoxContainer" parent="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer" unique_id=1447530055]
 layout_mode = 2
 theme_override_constants/separation = 352
 
-[node name="Seporator" type="Control" parent="LevelSelectBackround/LevelSelectContainer/BackButtonContainer" unique_id=879527013]
+[node name="Seporator" type="Control" parent="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/BackButtonContainer" unique_id=879527013]
 layout_mode = 2
 
-[node name="BackButton" type="Button" parent="LevelSelectBackround/LevelSelectContainer/BackButtonContainer" unique_id=2090581689]
+[node name="BackButton" type="Button" parent="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/BackButtonContainer" unique_id=2090581689]
 layout_mode = 2
 icon = ExtResource("9_7iw8k")
 
-[node name="BackLabel" type="Label" parent="LevelSelectBackround/LevelSelectContainer/BackButtonContainer/BackButton" unique_id=67080857]
+[node name="BackLabel" type="Label" parent="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/BackButtonContainer/BackButton" unique_id=67080857]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -0.08173077
@@ -223,16 +230,31 @@ text = "
 Back To Menu"
 metadata/_edit_use_anchors_ = true
 
-[node name="HelpBackround" type="NinePatchRect" parent="." unique_id=2041514313]
+[node name="ToggleLevelSelectMenuButton" type="Button" parent="LevelSelectScreen" unique_id=1944525218]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+text = "X"
+
+[node name="ControlsScreen" type="MarginContainer" parent="." unique_id=1125564509]
 visible = false
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
 anchor_left = 0.1736111
 anchor_top = 0.15432099
 anchor_right = 0.8680556
 anchor_bottom = 0.77160496
+grow_horizontal = 2
+grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="HelpMenuMarginContainer" type="MarginContainer" parent="HelpBackround" unique_id=163504631]
+[node name="ControlsBackround" type="NinePatchRect" parent="ControlsScreen" unique_id=2041514313]
+layout_mode = 2
+texture = ExtResource("11_d4jpd")
+metadata/_edit_use_anchors_ = true
+
+[node name="ControlsMenuMarginContainer" type="MarginContainer" parent="ControlsScreen/ControlsBackround" unique_id=163504631]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -245,63 +267,76 @@ theme_override_constants/margin_right = 40
 theme_override_constants/margin_bottom = 40
 metadata/_edit_use_anchors_ = true
 
-[node name="HelpVContainerForImmages" type="VBoxContainer" parent="HelpBackround/HelpMenuMarginContainer" unique_id=1373483719]
+[node name="ControlsVContainerForImmages" type="VBoxContainer" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer" unique_id=1373483719]
 layout_mode = 2
 theme_override_constants/separation = 50
 
-[node name="HelpSeperator" type="Control" parent="HelpBackround/HelpMenuMarginContainer/HelpVContainerForImmages" unique_id=1441684105]
+[node name="ControlsSeperator" type="Control" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages" unique_id=1441684105]
 layout_mode = 2
 
-[node name="HelpImmageHBoxContainer" type="HBoxContainer" parent="HelpBackround/HelpMenuMarginContainer/HelpVContainerForImmages" unique_id=26443457]
+[node name="ControlsImmageHBoxContainer" type="HBoxContainer" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages" unique_id=26443457]
 layout_mode = 2
 theme_override_constants/separation = 50
 
-[node name="HelpSeperator" type="Control" parent="HelpBackround/HelpMenuMarginContainer/HelpVContainerForImmages/HelpImmageHBoxContainer" unique_id=369271822]
+[node name="ControlsSeperator" type="Control" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsImmageHBoxContainer" unique_id=369271822]
 layout_mode = 2
 
-[node name="HelpImmage" type="TextureRect" parent="HelpBackround/HelpMenuMarginContainer/HelpVContainerForImmages/HelpImmageHBoxContainer" unique_id=1203986841]
-layout_mode = 2
-texture = ExtResource("2_vvvpa")
-
-[node name="HelpSeperator2" type="Control" parent="HelpBackround/HelpMenuMarginContainer/HelpVContainerForImmages/HelpImmageHBoxContainer" unique_id=292569505]
-layout_mode = 2
-
-[node name="HelpSeperator3" type="Control" parent="HelpBackround/HelpMenuMarginContainer/HelpVContainerForImmages/HelpImmageHBoxContainer" unique_id=240072999]
-layout_mode = 2
-
-[node name="HelpImmage2" type="TextureRect" parent="HelpBackround/HelpMenuMarginContainer/HelpVContainerForImmages/HelpImmageHBoxContainer" unique_id=194025344]
+[node name="ControlsImmage" type="TextureRect" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsImmageHBoxContainer" unique_id=1203986841]
 layout_mode = 2
 texture = ExtResource("2_vvvpa")
 
-[node name="HelpSeperator4" type="Control" parent="HelpBackround/HelpMenuMarginContainer/HelpVContainerForImmages/HelpImmageHBoxContainer" unique_id=1147111367]
+[node name="ControlsSeperator2" type="Control" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsImmageHBoxContainer" unique_id=292569505]
 layout_mode = 2
 
-[node name="HelpSeperator5" type="Control" parent="HelpBackround/HelpMenuMarginContainer/HelpVContainerForImmages/HelpImmageHBoxContainer" unique_id=21719797]
+[node name="ControlsSeperator3" type="Control" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsImmageHBoxContainer" unique_id=240072999]
 layout_mode = 2
 
-[node name="HelpImmage3" type="TextureRect" parent="HelpBackround/HelpMenuMarginContainer/HelpVContainerForImmages/HelpImmageHBoxContainer" unique_id=1306242540]
+[node name="ControlsImmage2" type="TextureRect" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsImmageHBoxContainer" unique_id=194025344]
 layout_mode = 2
 texture = ExtResource("2_vvvpa")
 
-[node name="HelpLabelHContainer" type="HBoxContainer" parent="HelpBackround/HelpMenuMarginContainer/HelpVContainerForImmages" unique_id=398569650]
+[node name="ControlsSeperator4" type="Control" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsImmageHBoxContainer" unique_id=1147111367]
+layout_mode = 2
+
+[node name="ControlsSeperator5" type="Control" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsImmageHBoxContainer" unique_id=21719797]
+layout_mode = 2
+
+[node name="ControlsImmage3" type="TextureRect" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsImmageHBoxContainer" unique_id=1306242540]
+layout_mode = 2
+texture = ExtResource("2_vvvpa")
+
+[node name="ControlsLabelHContainer" type="HBoxContainer" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages" unique_id=398569650]
 layout_mode = 2
 theme_override_constants/separation = 35
 metadata/_edit_use_anchors_ = true
 
-[node name="HelpLabel" type="Label" parent="HelpBackround/HelpMenuMarginContainer/HelpVContainerForImmages/HelpLabelHContainer" unique_id=805158413]
+[node name="UsingShopControlsLabel" type="Label" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsLabelHContainer" unique_id=805158413]
 layout_mode = 2
 text = "Click on the Towers
 from the shop and place
 them on the battlefield"
 
-[node name="HelpLabel2" type="Label" parent="HelpBackround/HelpMenuMarginContainer/HelpVContainerForImmages/HelpLabelHContainer" unique_id=664352084]
+[node name="OpeningShopControlsLabel2" type="Label" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsLabelHContainer" unique_id=664352084]
 layout_mode = 2
 text = "Open the shop by pressing
 the Shop button on the top
 right in the level"
 
-[node name="HelpLabel3" type="Label" parent="HelpBackround/HelpMenuMarginContainer/HelpVContainerForImmages/HelpLabelHContainer" unique_id=663364949]
+[node name="ClosingMenuControlsLabel3" type="Label" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsLabelHContainer" unique_id=663364949]
 layout_mode = 2
 text = "To close this menu and
 other's like it press the red
 X in the top right corner"
+
+[node name="ToggleControlsMenuButton" type="Button" parent="ControlsScreen" unique_id=1946216915]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+text = "X"
+
+[connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/ToggleLevelSelectMenuButton" to="." method="_on_toggle_level_select_menu_button_pressed"]
+[connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/ToggleControlsMenuButton" to="." method="_on_toggle_controls_menu_button_pressed"]
+[connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="LevelSelectScreen/ToggleLevelSelectMenuButton" to="." method="_on_toggle_level_select_menu_button_pressed"]
+[connection signal="pressed" from="ControlsScreen/ToggleControlsMenuButton" to="." method="_on_toggle_controls_menu_button_pressed"]
