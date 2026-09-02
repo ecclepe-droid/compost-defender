@@ -18,6 +18,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=736080248]
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=1988087023]
+color = Color(0.23921569, 1, 1, 1)
+energy = 0.0
+
 [node name="MenuScreen" type="HBoxContainer" parent="." unique_id=269593080]
 layout_mode = 0
 anchor_top = 0.07716049
@@ -51,19 +57,23 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/separation = 20
 
-[node name="Play game" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=348135700]
+[node name="PlayGameButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=348135700]
 layout_mode = 2
 text = "Play Game"
 
-[node name="Tutorial" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=879498724]
+[node name="ButtonButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=478049765]
 layout_mode = 2
-text = "Tutorial"
+text = "Controls"
 
-[node name="Options" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=1556283211]
+[node name="HelpButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=879498724]
+layout_mode = 2
+text = "Help"
+
+[node name="OptionsButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=1556283211]
 layout_mode = 2
 text = "Options"
 
-[node name="Quit" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=369544090]
+[node name="QuitButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=369544090]
 layout_mode = 2
 text = "Exit"
 
@@ -105,7 +115,7 @@ layout_mode = 2
 layout_mode = 2
 theme_override_constants/separation = 48
 
-[node name="Seporator" type="Control" parent="LevelSelectBackround/LevelSelectContainer/HBoxContainer" unique_id=719725455]
+[node name="LevelSelectSeperator" type="Control" parent="LevelSelectBackround/LevelSelectContainer/HBoxContainer" unique_id=719725455]
 layout_mode = 2
 
 [node name="Level1Button" type="Button" parent="LevelSelectBackround/LevelSelectContainer/HBoxContainer" unique_id=680928296]
@@ -212,3 +222,86 @@ grow_vertical = 2
 text = "
 Back To Menu"
 metadata/_edit_use_anchors_ = true
+
+[node name="HelpBackround" type="NinePatchRect" parent="." unique_id=2041514313]
+visible = false
+layout_mode = 0
+anchor_left = 0.1736111
+anchor_top = 0.15432099
+anchor_right = 0.8680556
+anchor_bottom = 0.77160496
+metadata/_edit_use_anchors_ = true
+
+[node name="HelpMenuMarginContainer" type="MarginContainer" parent="HelpBackround" unique_id=163504631]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+metadata/_edit_use_anchors_ = true
+
+[node name="HelpVContainerForImmages" type="VBoxContainer" parent="HelpBackround/HelpMenuMarginContainer" unique_id=1373483719]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="HelpSeperator" type="Control" parent="HelpBackround/HelpMenuMarginContainer/HelpVContainerForImmages" unique_id=1441684105]
+layout_mode = 2
+
+[node name="HelpImmageHBoxContainer" type="HBoxContainer" parent="HelpBackround/HelpMenuMarginContainer/HelpVContainerForImmages" unique_id=26443457]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="HelpSeperator" type="Control" parent="HelpBackround/HelpMenuMarginContainer/HelpVContainerForImmages/HelpImmageHBoxContainer" unique_id=369271822]
+layout_mode = 2
+
+[node name="HelpImmage" type="TextureRect" parent="HelpBackround/HelpMenuMarginContainer/HelpVContainerForImmages/HelpImmageHBoxContainer" unique_id=1203986841]
+layout_mode = 2
+texture = ExtResource("2_vvvpa")
+
+[node name="HelpSeperator2" type="Control" parent="HelpBackround/HelpMenuMarginContainer/HelpVContainerForImmages/HelpImmageHBoxContainer" unique_id=292569505]
+layout_mode = 2
+
+[node name="HelpSeperator3" type="Control" parent="HelpBackround/HelpMenuMarginContainer/HelpVContainerForImmages/HelpImmageHBoxContainer" unique_id=240072999]
+layout_mode = 2
+
+[node name="HelpImmage2" type="TextureRect" parent="HelpBackround/HelpMenuMarginContainer/HelpVContainerForImmages/HelpImmageHBoxContainer" unique_id=194025344]
+layout_mode = 2
+texture = ExtResource("2_vvvpa")
+
+[node name="HelpSeperator4" type="Control" parent="HelpBackround/HelpMenuMarginContainer/HelpVContainerForImmages/HelpImmageHBoxContainer" unique_id=1147111367]
+layout_mode = 2
+
+[node name="HelpSeperator5" type="Control" parent="HelpBackround/HelpMenuMarginContainer/HelpVContainerForImmages/HelpImmageHBoxContainer" unique_id=21719797]
+layout_mode = 2
+
+[node name="HelpImmage3" type="TextureRect" parent="HelpBackround/HelpMenuMarginContainer/HelpVContainerForImmages/HelpImmageHBoxContainer" unique_id=1306242540]
+layout_mode = 2
+texture = ExtResource("2_vvvpa")
+
+[node name="HelpLabelHContainer" type="HBoxContainer" parent="HelpBackround/HelpMenuMarginContainer/HelpVContainerForImmages" unique_id=398569650]
+layout_mode = 2
+theme_override_constants/separation = 35
+metadata/_edit_use_anchors_ = true
+
+[node name="HelpLabel" type="Label" parent="HelpBackround/HelpMenuMarginContainer/HelpVContainerForImmages/HelpLabelHContainer" unique_id=805158413]
+layout_mode = 2
+text = "Click on the Towers
+from the shop and place
+them on the battlefield"
+
+[node name="HelpLabel2" type="Label" parent="HelpBackround/HelpMenuMarginContainer/HelpVContainerForImmages/HelpLabelHContainer" unique_id=664352084]
+layout_mode = 2
+text = "Open the shop by pressing
+the Shop button on the top
+right in the level"
+
+[node name="HelpLabel3" type="Label" parent="HelpBackround/HelpMenuMarginContainer/HelpVContainerForImmages/HelpLabelHContainer" unique_id=663364949]
+layout_mode = 2
+text = "To close this menu and
+other's like it press the red
+X in the top right corner"
