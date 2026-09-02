@@ -11,22 +11,27 @@ func _ready() -> void:
 	user_interface.update_compost_amount(Globals.compost)
 	fade_out()
 	
-	var enemy_name: String = "almond"
+	var wave1: Wave = Wave.new()
+	wave1.enemyScenes.push_back(_enemy_packed_from_name("apple"))
+	wave1.enemyScenes.push_back(_enemy_packed_from_name("almond"))
+	wave1.enemyScenes.push_back(_enemy_packed_from_name("almond"))
+	enemy_manager.request_wave(wave1)
+	var wave2: Wave = Wave.new()
+	wave2.enemyScenes.push_back(_enemy_packed_from_name("banana"))
+	wave2.enemyScenes.push_back(_enemy_packed_from_name("banana"))
+	wave2.enemyScenes.push_back(_enemy_packed_from_name("orange"))
+	enemy_manager.request_wave(wave2)
+	var wave3: Wave = Wave.new()
+	wave3.enemyScenes.push_back(_enemy_packed_from_name("pomagranite"))
+	wave3.enemyScenes.push_back(_enemy_packed_from_name("leaf"))
+	wave3.enemyScenes.push_back(_enemy_packed_from_name("cashew"))
+	enemy_manager.request_wave(wave3)
+
+
+func _enemy_packed_from_name(enemy_name: String):
 	var enemy_file_path = "res://Scenes/Enemies/" + enemy_name.to_snake_case() + ".tscn"
 	var packed_scene_of_enemy = load(enemy_file_path)
-	enemy_manager.request_wave(Wave.new([packed_scene_of_enemy], 2.5))
-	enemy_name = "apple"
-	enemy_file_path = "res://Scenes/Enemies/" + enemy_name.to_snake_case() + ".tscn"
-	packed_scene_of_enemy = load(enemy_file_path)
-	enemy_manager.request_wave(Wave.new([packed_scene_of_enemy], 2.5))
-	enemy_name = "banana"
-	enemy_file_path = "res://Scenes/Enemies/" + enemy_name.to_snake_case() + ".tscn"
-	packed_scene_of_enemy = load(enemy_file_path)
-	enemy_manager.request_wave(Wave.new([packed_scene_of_enemy], 2.5))
-	enemy_name = "cashew"
-	enemy_file_path = "res://Scenes/Enemies/" + enemy_name.to_snake_case() + ".tscn"
-	packed_scene_of_enemy = load(enemy_file_path)
-	enemy_manager.request_wave(Wave.new([packed_scene_of_enemy], 2.5))
+	return packed_scene_of_enemy
 
 
 func fade_out():

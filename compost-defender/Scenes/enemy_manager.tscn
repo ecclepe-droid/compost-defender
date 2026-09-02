@@ -8,4 +8,8 @@ script = ExtResource("1_lc6ll")
 [node name="InbetweenWaveTimer" type="Timer" parent="." unique_id=1254614839]
 one_shot = true
 
+[node name="InBetweenEnemyTimer" type="Timer" parent="." unique_id=1409915694]
+one_shot = true
+
 [connection signal="timeout" from="InbetweenWaveTimer" to="." method="_on_inbetween_wave_timer_timeout"]
+[connection signal="timeout" from="InBetweenEnemyTimer" to="." method="_on_in_between_enemy_timer_timeout"]
