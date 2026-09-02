@@ -61,12 +61,16 @@ size_flags_horizontal = 8
 size_flags_vertical = 3
 allow_rmb_select = true
 allow_search = false
+max_text_lines = 2
 auto_width = true
 item_count = 2
+same_column_width = true
+fixed_column_width = 96
 icon_mode = 0
-item_0/text = "Darth Worm"
+fixed_icon_size = Vector2i(96, 96)
+item_0/text = "Darth Worm $50"
 item_0/icon = ExtResource("1_d85gg")
-item_1/text = "Fire Worm"
+item_1/text = "Fire Worm  $50"
 item_1/icon = ExtResource("2_iwru2")
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
