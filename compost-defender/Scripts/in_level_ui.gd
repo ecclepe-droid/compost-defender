@@ -1,22 +1,28 @@
 extends Control
 
-signal user_wants_worm(worm: PackedScene)
+signal user_wants_worm(worm: Worm)
 
-var path_of_last_selected_worm: String
 var anyworm_selected
-var packed_scene_of_selected_worm
+var last_selected_worm
 var worm_list: ItemList
 var compost_label: RichTextLabel
+var worms: Array[Worm]
 
 
 func _ready() -> void:
+	worms.push_back(Worm.new("Fire Worm", 25, "res://Scenes/Towers/fire_worm.tscn", "res://Sprites/Towers/fire(13).png"))
+	worms.push_back(Worm.new("Darth Worm", 25, "res://Scenes/Towers/darth_worm.tscn", "res://Sprites/Towers/download (7).png"))
+	
 	worm_list = $HBoxContainer/WormList
+	for worm in worms:
+		var item_index = worm_list.add_item(worm.name + "\n$" + str(worm.price), worm.icon)
+		worm_list.set_item_metadata(item_index, worm)
 	compost_label = $HBoxContainer/VBoxContainer/HBoxContainer/CompostLabel
 	update_compost_amount(0)
 
 func _on_gui_input(event: InputEvent) -> void: # selects the towers when you click on them
 	if event.is_action_pressed("Select") and anyworm_selected:
-		user_wants_worm.emit(packed_scene_of_selected_worm)
+		user_wants_worm.emit(last_selected_worm)
 
 
 func update_compost_amount(compost_amount: int) -> void: # updates compost ammont
@@ -29,8 +35,5 @@ func _on_item_list_empty_clicked(_at_position: Vector2, _mouse_button_index: int
 
 
 func _on_item_list_item_clicked(index: int, _at_position: Vector2, _mouse_button_index: int) -> void: # places the selected tower at the location of the mouse if you have enough compost
-	var worm_name: String = worm_list.get_item_text(index)
-	var worm_file_path = "res://Scenes/Towers/" + worm_name.to_snake_case() + ".tscn"
-	packed_scene_of_selected_worm = load(worm_file_path)
-	
+	last_selected_worm = worm_list.get_item_metadata(index)
 	anyworm_selected = true
