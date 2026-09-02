@@ -9,6 +9,10 @@ const SECONDS_BETWEEN_WAVES = 2.5
 const SECONDS_BETWEEN_ENEMIES = 0.5
 const DEFAULT_CHILD_COUNT = 3
 
+const SECONDS_BETWEEN_WAVES = 2.5
+const SECONDS_BETWEEN_ENEMIES = 0.5
+const DEFAULT_CHILD_COUNT = 3
+
 var future_waves: Array[Wave]
 var in_between_wave_timer: Timer
 var in_between_enemy_timer: Timer
@@ -24,7 +28,6 @@ func _ready() -> void:
 
 func _enemy_died(enemy_compost_value: int) -> void:
 	enemy_died.emit(enemy_compost_value)
-	
 	_update_wave_ended_status()
 
 

@@ -25,20 +25,17 @@ func toggle_visibility(object):
 	print(animation_type + str(object.name))
 
 
-
 func _on_quit_button_pressed() -> void:
 	get_tree().quit(0)
 
 
 func _on_toggle_controls_menu_button_pressed() -> void:
 	toggle_visibility(controls_screen)
-	print(controls_screen.name)
 	toggle_visibility(menu_screen)
 
 
 func _on_toggle_level_select_menu_button_pressed() -> void:
 	toggle_visibility(level_select_screen)
-	print(level_select_screen.name)
 	toggle_visibility(menu_screen)
 
 func fade_in(): # this function fades the screen to black
