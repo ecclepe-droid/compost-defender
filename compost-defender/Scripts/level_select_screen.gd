@@ -38,5 +38,5 @@ func _on_level_five_button_pressed() -> void: # when the level 5 button gets pre
 	await $AnimationPlayer.animation_finished
 
 
-func fade_in(): # when the level 1 button gets pressed it goes to the level 1 scene and plays a fade in animation
+func fade_in(): # this function fades the screen to black
 	$AnimationPlayer.play("Fade_in")

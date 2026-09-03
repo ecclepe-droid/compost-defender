@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://bqv7u8rn4dnph"]
 
-[ext_resource type="Texture2D" uid="uid://dseyy450u8cy" path="res://Sprites/A totally normal regular worm(13).png" id="1_nf16f"]
 [ext_resource type="Script" uid="uid://oi4qer8vsius" path="res://Scripts/game_user_interface.gd" id="1_vvvpa"]
 [ext_resource type="Texture2D" uid="uid://f0lenvmgjjtv" path="res://Sprites/weerm(3).png" id="2_vvvpa"]
 [ext_resource type="Texture2D" uid="uid://bkb8elo1gr0hl" path="res://Sprites/a rubber band (22).png" id="3_d4jpd"]
@@ -11,6 +10,58 @@
 [ext_resource type="Texture2D" uid="uid://bs0jeqa18d0qq" path="res://Sprites/generator(idk what to use it for but ye)(13).png" id="8_jnxqb"]
 [ext_resource type="Texture2D" uid="uid://d2lgbm721s68u" path="res://Sprites/Agent wormy7(13).png" id="9_7iw8k"]
 [ext_resource type="Texture2D" uid="uid://0pp8rvsdbrjw" path="res://Sprites/icon.svg" id="11_d4jpd"]
+
+[sub_resource type="Animation" id="Animation_60q08"]
+resource_name = "Fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_bc1jf"]
+resource_name = "new_animation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_ls13d"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vvvpa"]
+_data = {
+&"Fade_in": SubResource("Animation_60q08"),
+&"Fade_out": SubResource("Animation_bc1jf"),
+&"RESET": SubResource("Animation_ls13d")
+}
 
 [node name="GameUserInterface" type="Control" unique_id=650166834 node_paths=PackedStringArray("menu_screen", "level_select_screen", "controls_screen")]
 layout_mode = 3
@@ -24,11 +75,8 @@ menu_screen = NodePath("MenuScreen")
 level_select_screen = NodePath("LevelSelectScreen")
 controls_screen = NodePath("ControlsScreen")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=736080248]
-
-[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=1988087023]
-color = Color(0.23921569, 1, 1, 1)
-energy = 0.0
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1371331413]
+libraries/ = SubResource("AnimationLibrary_vvvpa")
 
 [node name="MenuScreen" type="HBoxContainer" parent="." unique_id=269593080]
 layout_mode = 0
@@ -46,7 +94,7 @@ custom_minimum_size = Vector2(400, 500)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture = ExtResource("1_nf16f")
+texture = ExtResource("6_osrqe")
 
 [node name="MainMenuContainer" type="VBoxContainer" parent="MenuScreen" unique_id=4133672]
 layout_mode = 2
@@ -335,8 +383,22 @@ size_flags_horizontal = 8
 size_flags_vertical = 0
 text = "X"
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1024985705]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+
 [connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/ToggleLevelSelectMenuButton" to="." method="_on_toggle_level_select_menu_button_pressed"]
 [connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/ToggleControlsMenuButton" to="." method="_on_toggle_controls_menu_button_pressed"]
 [connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer/Level1Button" to="." method="_on_level_1_button_pressed"]
+[connection signal="pressed" from="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer/Level2Button" to="." method="_on_level_2_button_pressed"]
+[connection signal="pressed" from="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer/Level3Button" to="." method="_on_level_3_button_pressed"]
+[connection signal="pressed" from="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer/Level4Button" to="." method="_on_level_4_button_pressed"]
+[connection signal="pressed" from="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer/Level5Button" to="." method="_on_level_5_button_pressed"]
 [connection signal="pressed" from="LevelSelectScreen/ToggleLevelSelectMenuButton" to="." method="_on_toggle_level_select_menu_button_pressed"]
 [connection signal="pressed" from="ControlsScreen/ToggleControlsMenuButton" to="." method="_on_toggle_controls_menu_button_pressed"]
