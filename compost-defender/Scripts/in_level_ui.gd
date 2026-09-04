@@ -1,9 +1,9 @@
 extends Control
 
-signal user_wants_worm(worm: Worm)
+signal user_wants_worm_at_mouse(worm: Worm, where: Vector2i)
 
-var anyworm_selected
-var last_selected_worm
+var anyworm_selected: bool
+var last_selected_worm: Worm
 var worm_list: ItemList
 var compost_label: RichTextLabel
 var worms: Array[Worm]
@@ -18,11 +18,14 @@ func _ready() -> void:
 		var item_index = worm_list.add_item(worm.name + "\n$" + str(worm.price), worm.icon)
 		worm_list.set_item_metadata(item_index, worm)
 	compost_label = $HBoxContainer/VBoxContainer/HBoxContainer/CompostLabel
-	update_compost_amount(0)
+	
+	Globals.compost_amount_changed.connect(update_compost_amount)
+	update_compost_amount(Globals.compost_amount())
+
 
 func _on_gui_input(event: InputEvent) -> void: # selects the towers when you click on them
 	if event.is_action_pressed("Select") and anyworm_selected:
-		user_wants_worm.emit(last_selected_worm)
+		user_wants_worm_at_mouse.emit(last_selected_worm)
 
 
 func update_compost_amount(compost_amount: int) -> void: # updates compost ammont
