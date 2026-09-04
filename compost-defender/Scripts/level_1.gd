@@ -6,9 +6,8 @@ var enemy_manager: Node2D
 
 func _ready() -> void:
 	enemy_manager = $EnemyManager
-	Globals.compost = 0
+	Globals.set_compost_amount(0)
 	user_interface = $CanvasLayer/InLevelUI
-	user_interface.update_compost_amount(Globals.compost)
 	fade_out()
 	
 	var wave1: Wave = Wave.new()
@@ -39,16 +38,14 @@ func fade_out():
 
 
 func _on_enemy_spawner_enemy_died(enemy_compost_value: Variant) -> void:
-	Globals.compost += enemy_compost_value
-	user_interface.update_compost_amount(Globals.compost)
+	Globals.change_compost_amount(enemy_compost_value)
 
 
-func _on_in_level_ui_user_wants_worm(worm: PackedScene) -> void:
-	if (Globals.compost < 50): # 50 is placeholder; we should make each worm's cost different
+func _on_in_level_ui_user_wants_worm_at_mouse(worm: Worm) -> void:
+	if Globals.compost_amount() < worm.price:
 		return
-	Globals.compost -= 50
-	user_interface.update_compost_amount(Globals.compost)
+	Globals.change_compost_amount(-worm.price)
 	
-	var worm_instance: StaticBody2D = worm.instantiate()
+	var worm_instance: StaticBody2D = worm.scene.instantiate()
 	worm_instance.position = get_global_mouse_position()
 	add_child(worm_instance)
