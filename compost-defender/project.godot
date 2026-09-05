@@ -20,6 +20,10 @@ config/icon="uid://f0lenvmgjjtv"
 Globals="*uid://cqs5lw7h4512j"
 GlobalFunctions="*uid://cdrp5umafj1cg"
 
+[display]
+
+window/stretch/mode="canvas_items"
+
 [dotnet]
 
 project/assembly_name="Compost Defencer"
