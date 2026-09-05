@@ -5,25 +5,29 @@ signal died(compost_value: int)
 const FIRE_FX = preload("res://Scenes/fire_fx.tscn")
 const FIRE_DAMAGE_MULTIPLIER = 1
 const SECONDS_BETWEEN_FIRE_STACKS = 1.0
+const DEFAULT_SPEED_MULTIPLIER = 3.0
 
 @export var enemy_level: int = 1
 @export var speed: float = 150.0
 @export var max_health: int = 10
 @export var compost_dropped: int = 10
 @export var burn_timer: Timer
+
+var actual_speed
 var fire_stacks
 var health
 var fire_fx: Sprite2D
 
 
 func _ready() -> void:
+	actual_speed = speed * DEFAULT_SPEED_MULTIPLIER
 	health = max_health
 	fire_stacks = 0
 	progress = 0
 	burn_timer.timeout.connect(_consume_burn_stack)
 
 func _process(delta: float) -> void:
-	progress += speed * delta
+	progress += actual_speed * delta
 
 
 func take_damage(damage_amount: int) -> void:
