@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://b50nk2tknm20e"]
 
 [ext_resource type="Texture2D" uid="uid://dv0bxy3xefpjd" path="res://Sprites/Towers/fire(13).png" id="2_3irfd"]
-[ext_resource type="PackedScene" uid="uid://bchmqi1i2qfvf" path="res://Scenes/Towers/melee_attack.tscn" id="3_hp1kf"]
+[ext_resource type="PackedScene" uid="uid://bchmqi1i2qfvf" path="res://Scenes/Towers/melee_area_attack.tscn" id="3_hp1kf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6nsud"]
 size = Vector2(57, 68)
 
-[node name="DarthWorm" type="StaticBody2D" unique_id=1069538837]
+[node name="FireWorm" type="StaticBody2D" unique_id=1069538837]
 
 [node name="CollisionShape" type="CollisionShape2D" parent="." unique_id=356165788]
 position = Vector2(0.5, 0)
@@ -18,7 +18,8 @@ texture = ExtResource("2_3irfd")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=776124042]
 
-[node name="FireAttack" parent="." unique_id=919355094 instance=ExtResource("3_hp1kf")]
+[node name="MeleeAreaAttack" parent="." unique_id=919355094 instance=ExtResource("3_hp1kf")]
 damage = 1
-seconds_between_attacks = 1.0
-fire_stacks_effect = 4
+seconds_between_attacks = 0.7
+hurt_box_scale = 1.7
+fire_stacks_effect = 3
