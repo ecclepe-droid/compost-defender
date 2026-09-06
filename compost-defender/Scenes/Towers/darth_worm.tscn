@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bhav1kvwveyf7"]
 
-[ext_resource type="PackedScene" uid="uid://dqxnqwgpkyyea" path="res://Scenes/Towers/melee_area_attack.tscn" id="2_6nsud"]
+[ext_resource type="PackedScene" uid="uid://bchmqi1i2qfvf" path="res://Scenes/Towers/melee_area_attack.tscn" id="2_6nsud"]
 [ext_resource type="Texture2D" uid="uid://dpuq0c6sm2glo" path="res://Sprites/Towers/download (7).png" id="2_7borv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6nsud"]
@@ -19,3 +19,4 @@ texture = ExtResource("2_7borv")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=776124042]
 
 [node name="MeleeAreaAttack" parent="." unique_id=919355094 instance=ExtResource("2_6nsud")]
+damage = 4
