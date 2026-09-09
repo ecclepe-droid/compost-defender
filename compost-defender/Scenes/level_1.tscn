@@ -84,4 +84,7 @@ blend_mode = 1
 [node name="InLevelUI" parent="CanvasLayer" unique_id=1566003896 instance=ExtResource("12_uy8f0")]
 
 [connection signal="enemy_died" from="EnemyManager" to="." method="_on_enemy_spawner_enemy_died"]
+[connection signal="enemy_reached_end" from="EnemyManager" to="." method="_on_enemy_manager_enemy_reached_end"]
+[connection signal="out_of_waves" from="EnemyManager" to="." method="_on_enemy_manager_out_of_waves"]
+[connection signal="wave_ended" from="EnemyManager" to="." method="_on_enemy_manager_wave_ended"]
 [connection signal="user_wants_worm_at_mouse" from="CanvasLayer/InLevelUI" to="." method="_on_in_level_ui_user_wants_worm_at_mouse"]
