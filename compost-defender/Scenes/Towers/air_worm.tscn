@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://bnjb4kwmgaq4e"]
+
+[ext_resource type="Texture2D" uid="uid://ceqne2mbjas5b" path="res://Sprites/Towers/air(13).png" id="1_15oul"]
+[ext_resource type="PackedScene" uid="uid://bchmqi1i2qfvf" path="res://Scenes/Towers/melee_area_attack.tscn" id="2_a7hb8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6nsud"]
+size = Vector2(57, 68)
+
+[node name="AirWorm" type="StaticBody2D" unique_id=1069538837]
+
+[node name="CollisionShape" type="CollisionShape2D" parent="." unique_id=356165788]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_6nsud")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1813466560]
+position = Vector2(10, -8)
+texture = ExtResource("1_15oul")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=776124042]
+
+[node name="MeleeAreaAttack" parent="." unique_id=919355094 instance=ExtResource("2_a7hb8")]
+damage = 1
+seconds_between_attacks = 3.6
+hurt_box_scale = 2.15
