@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://bqv7u8rn4dnph"]
 
-[ext_resource type="Texture2D" uid="uid://dseyy450u8cy" path="res://Sprites/A totally normal regular worm(13).png" id="1_nf16f"]
 [ext_resource type="Script" uid="uid://oi4qer8vsius" path="res://Scripts/game_user_interface.gd" id="1_vvvpa"]
 [ext_resource type="Texture2D" uid="uid://f0lenvmgjjtv" path="res://Sprites/weerm(3).png" id="2_vvvpa"]
 [ext_resource type="Texture2D" uid="uid://bkb8elo1gr0hl" path="res://Sprites/a rubber band (22).png" id="3_d4jpd"]
@@ -131,7 +130,7 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsImmage3:visible")
+tracks/9/path = NodePath("ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsLabelHContainer/UsingShopControlsLabel:visible")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
@@ -143,7 +142,7 @@ tracks/9/keys = {
 tracks/10/type = "value"
 tracks/10/imported = false
 tracks/10/enabled = true
-tracks/10/path = NodePath("ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsLabelHContainer/UsingShopControlsLabel:visible")
+tracks/10/path = NodePath("ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsLabelHContainer/OpeningShopControlsLabel2:visible")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
@@ -155,7 +154,7 @@ tracks/10/keys = {
 tracks/11/type = "value"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsLabelHContainer/OpeningShopControlsLabel2:visible")
+tracks/11/path = NodePath("ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsLabelHContainer/ClosingMenuControlsLabel3:visible")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
@@ -167,14 +166,50 @@ tracks/11/keys = {
 tracks/12/type = "value"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsLabelHContainer/ClosingMenuControlsLabel3:visible")
+tracks/12/path = NodePath("LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer/Level5Button:modulate")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
-"times": PackedFloat32Array(0.0009999999),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsImmageHBoxContainer/ControlsImmage3:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsImmageHBoxContainer/ControlsSeperator:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsImmageHBoxContainer/ControlsSeperator3:visible")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_d4jpd"]
@@ -387,11 +422,11 @@ tracks/16/keys = {
 tracks/17/type = "value"
 tracks/17/imported = false
 tracks/17/enabled = true
-tracks/17/path = NodePath("ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsImmage3:visible")
+tracks/17/path = NodePath("ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsImmageHBoxContainer/ControlsImmage2:visible")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/keys = {
-"times": PackedFloat32Array(0, 0.3),
+"times": PackedFloat32Array(0, 0.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
@@ -399,11 +434,11 @@ tracks/17/keys = {
 tracks/18/type = "value"
 tracks/18/imported = false
 tracks/18/enabled = true
-tracks/18/path = NodePath("ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsImmageHBoxContainer/ControlsImmage2:visible")
+tracks/18/path = NodePath("ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsImmageHBoxContainer/ControlsImmage:visible")
 tracks/18/interp = 1
 tracks/18/loop_wrap = true
 tracks/18/keys = {
-"times": PackedFloat32Array(0, 0.2),
+"times": PackedFloat32Array(0, 0.099999994),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
@@ -411,42 +446,91 @@ tracks/18/keys = {
 tracks/19/type = "value"
 tracks/19/imported = false
 tracks/19/enabled = true
-tracks/19/path = NodePath("ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsImmageHBoxContainer/ControlsImmage:visible")
+tracks/19/path = NodePath("ControlsScreen:visible")
 tracks/19/interp = 1
 tracks/19/loop_wrap = true
 tracks/19/keys = {
-"times": PackedFloat32Array(0, 0.099999994),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/20/type = "value"
-tracks/20/imported = false
-tracks/20/enabled = true
-tracks/20/path = NodePath("ControlsScreen:visible")
-tracks/20/interp = 1
-tracks/20/loop_wrap = true
-tracks/20/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
 }
-tracks/21/type = "value"
-tracks/21/imported = false
-tracks/21/enabled = true
-tracks/21/path = NodePath("ControlsScreen:modulate")
-tracks/21/interp = 1
-tracks/21/loop_wrap = true
-tracks/21/keys = {
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("ControlsScreen:modulate")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
 "times": PackedFloat32Array(0.2, 0.6),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsImmageHBoxContainer/ControlsImmage3:visible")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsImmageHBoxContainer/ControlsSeperator:visible")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsImmageHBoxContainer/ControlsSeperator3:visible")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsImmageHBoxContainer/ControlsSeperator4:visible")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsImmageHBoxContainer/ControlsSeperator5:visible")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
 
 [sub_resource type="Animation" id="Animation_vljpe"]
 resource_name = "close_level_select_screen"
+length = 1.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -454,7 +538,7 @@ tracks/0/path = NodePath("MenuScreen/MainMenuContainer/MainMenu/ToggleLevelSelec
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 0.6),
+"times": PackedFloat32Array(0.5, 1, 1.1),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -466,7 +550,7 @@ tracks/1/path = NodePath("MenuScreen/MainMenuContainer/MainMenu/ToggleControlsMe
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.6333333, 0.73333335),
+"times": PackedFloat32Array(0.5, 1.1333333, 1.2333333),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -478,7 +562,7 @@ tracks/2/path = NodePath("MenuScreen/MainMenuContainer/MainMenu/ToggleOptionsMen
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.76666665, 0.8666667),
+"times": PackedFloat32Array(0.5, 1.2666667, 1.3666667),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -490,7 +574,7 @@ tracks/3/path = NodePath("MenuScreen/MainMenuContainer/MainMenu/QuitButton:self_
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.9, 1),
+"times": PackedFloat32Array(0.5, 1.4, 1.5),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -502,7 +586,7 @@ tracks/4/path = NodePath("MenuScreen/MainMenuContainer/Game logo:self_modulate")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.3),
+"times": PackedFloat32Array(0.5, 0.8),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -514,7 +598,7 @@ tracks/5/path = NodePath("MenuScreen/GameplayImmage 1:self_modulate")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0, 0.4, 0.7),
+"times": PackedFloat32Array(0.5, 0.9, 1.2),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -526,7 +610,7 @@ tracks/6/path = NodePath("MenuScreen/GameplayImmage 2:self_modulate")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(0, 0.6, 0.9),
+"times": PackedFloat32Array(0.5, 1.1, 1.4),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -538,7 +622,7 @@ tracks/7/path = NodePath("LevelSelectScreen:position")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat32Array(0.33333334, 1),
+"times": PackedFloat32Array(0.5, 1.1666666),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(200, 200), Vector2(200, 660)]
@@ -550,7 +634,7 @@ tracks/8/path = NodePath("LevelSelectScreen:modulate")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"times": PackedFloat32Array(0.3324703, 1),
+"times": PackedFloat32Array(0.5, 1.1666666),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
@@ -562,7 +646,7 @@ tracks/9/path = NodePath("LevelSelectScreen/LevelSelectBackround/LevelSelectCont
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
-"times": PackedFloat32Array(0, 0.06666667),
+"times": PackedFloat32Array(0, 0.1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
@@ -574,7 +658,7 @@ tracks/10/path = NodePath("LevelSelectScreen/LevelSelectBackround/LevelSelectCon
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
-"times": PackedFloat32Array(0, 0.13333334),
+"times": PackedFloat32Array(0, 0.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
@@ -586,7 +670,7 @@ tracks/11/path = NodePath("LevelSelectScreen/LevelSelectBackround/LevelSelectCon
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0, 0.3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
@@ -598,7 +682,7 @@ tracks/12/path = NodePath("LevelSelectScreen/LevelSelectBackround/LevelSelectCon
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
-"times": PackedFloat32Array(0, 0.26666668),
+"times": PackedFloat32Array(0, 0.4),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
@@ -610,7 +694,7 @@ tracks/13/path = NodePath("LevelSelectScreen/LevelSelectBackround/LevelSelectCon
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
-"times": PackedFloat32Array(0, 0.33333334),
+"times": PackedFloat32Array(0, 1.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
@@ -618,23 +702,23 @@ tracks/13/keys = {
 tracks/14/type = "value"
 tracks/14/imported = false
 tracks/14/enabled = true
-tracks/14/path = NodePath("LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer/Level3Button:modulate")
+tracks/14/path = NodePath("MenuScreen/MainMenuContainer/MainMenu/QuitButton:visible")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+"values": [true]
 }
 tracks/15/type = "value"
 tracks/15/imported = false
 tracks/15/enabled = true
-tracks/15/path = NodePath("MenuScreen/MainMenuContainer/MainMenu/QuitButton:visible")
+tracks/15/path = NodePath("MenuScreen/MainMenuContainer/MainMenu/ToggleLevelSelectMenuButton:visible")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/keys = {
-"times": PackedFloat32Array(0),
+"times": PackedFloat32Array(0.5),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
@@ -642,11 +726,11 @@ tracks/15/keys = {
 tracks/16/type = "value"
 tracks/16/imported = false
 tracks/16/enabled = true
-tracks/16/path = NodePath("MenuScreen/MainMenuContainer/MainMenu/ToggleLevelSelectMenuButton:visible")
+tracks/16/path = NodePath("MenuScreen/MainMenuContainer/MainMenu/ToggleControlsMenuButton:visible")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/keys = {
-"times": PackedFloat32Array(0),
+"times": PackedFloat32Array(0.5),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
@@ -654,11 +738,11 @@ tracks/16/keys = {
 tracks/17/type = "value"
 tracks/17/imported = false
 tracks/17/enabled = true
-tracks/17/path = NodePath("MenuScreen/MainMenuContainer/MainMenu/ToggleControlsMenuButton:visible")
+tracks/17/path = NodePath("MenuScreen/MainMenuContainer/MainMenu/ToggleOptionsMenuButton:visible")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/keys = {
-"times": PackedFloat32Array(0),
+"times": PackedFloat32Array(0.5),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
@@ -666,11 +750,11 @@ tracks/17/keys = {
 tracks/18/type = "value"
 tracks/18/imported = false
 tracks/18/enabled = true
-tracks/18/path = NodePath("MenuScreen/MainMenuContainer/MainMenu/ToggleOptionsMenuButton:visible")
+tracks/18/path = NodePath("MenuScreen/MainMenuContainer/Game logo:visible")
 tracks/18/interp = 1
 tracks/18/loop_wrap = true
 tracks/18/keys = {
-"times": PackedFloat32Array(0),
+"times": PackedFloat32Array(0.5),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
@@ -678,11 +762,11 @@ tracks/18/keys = {
 tracks/19/type = "value"
 tracks/19/imported = false
 tracks/19/enabled = true
-tracks/19/path = NodePath("MenuScreen/MainMenuContainer/Game logo:visible")
+tracks/19/path = NodePath("MenuScreen/GameplayImmage 1:visible")
 tracks/19/interp = 1
 tracks/19/loop_wrap = true
 tracks/19/keys = {
-"times": PackedFloat32Array(1),
+"times": PackedFloat32Array(0.5),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
@@ -690,11 +774,11 @@ tracks/19/keys = {
 tracks/20/type = "value"
 tracks/20/imported = false
 tracks/20/enabled = true
-tracks/20/path = NodePath("MenuScreen/GameplayImmage 1:visible")
+tracks/20/path = NodePath("MenuScreen/GameplayImmage 2:visible")
 tracks/20/interp = 1
 tracks/20/loop_wrap = true
 tracks/20/keys = {
-"times": PackedFloat32Array(1),
+"times": PackedFloat32Array(0.5),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
@@ -702,18 +786,18 @@ tracks/20/keys = {
 tracks/21/type = "value"
 tracks/21/imported = false
 tracks/21/enabled = true
-tracks/21/path = NodePath("MenuScreen/GameplayImmage 2:visible")
+tracks/21/path = NodePath("LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer/Level5Button:modulate")
 tracks/21/interp = 1
 tracks/21/loop_wrap = true
 tracks/21/keys = {
-"times": PackedFloat32Array(1),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [true]
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_51chi"]
-resource_name = "close_MenuScreen"
+resource_name = "delayed_open_MenuScreen(5s)"
 length = 1.5
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -990,10 +1074,10 @@ tracks/8/path = NodePath("ControlsScreen/ControlsBackround/ControlsMenuMarginCon
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"times": PackedFloat32Array(1, 1.3),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 1, 1.3),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [false, true]
+"values": [false, false, true]
 }
 tracks/9/type = "value"
 tracks/9/imported = false
@@ -1002,55 +1086,55 @@ tracks/9/path = NodePath("ControlsScreen/ControlsBackround/ControlsMenuMarginCon
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
-"times": PackedFloat32Array(1, 1.4),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 1, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [false, true]
+"values": [false, false, true]
 }
 tracks/10/type = "value"
 tracks/10/imported = false
 tracks/10/enabled = true
-tracks/10/path = NodePath("ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsImmage3:visible")
+tracks/10/path = NodePath("ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsLabelHContainer/UsingShopControlsLabel:visible")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
-"times": PackedFloat32Array(1, 1.5),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 1, 1.3),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [false, true]
+"values": [false, false, true]
 }
 tracks/11/type = "value"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsLabelHContainer/UsingShopControlsLabel:visible")
+tracks/11/path = NodePath("ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsLabelHContainer/OpeningShopControlsLabel2:visible")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
-"times": PackedFloat32Array(1, 1.3),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 1, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [false, true]
+"values": [false, false, true]
 }
 tracks/12/type = "value"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsLabelHContainer/OpeningShopControlsLabel2:visible")
+tracks/12/path = NodePath("ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsLabelHContainer/ClosingMenuControlsLabel3:visible")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
-"times": PackedFloat32Array(1, 1.4),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [false, true]
+"values": [false, false, true]
 }
 tracks/13/type = "value"
 tracks/13/imported = false
 tracks/13/enabled = true
-tracks/13/path = NodePath("ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsLabelHContainer/ClosingMenuControlsLabel3:visible")
+tracks/13/path = NodePath("ControlsScreen:visible")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
-"times": PackedFloat32Array(1, 1.5),
+"times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
@@ -1058,23 +1142,23 @@ tracks/13/keys = {
 tracks/14/type = "value"
 tracks/14/imported = false
 tracks/14/enabled = true
-tracks/14/path = NodePath("ControlsScreen:visible")
+tracks/14/path = NodePath("MenuScreen/GameplayImmage 2:visible")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0, 0.4),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [false, true]
+"values": [true, false]
 }
 tracks/15/type = "value"
 tracks/15/imported = false
 tracks/15/enabled = true
-tracks/15/path = NodePath("MenuScreen/GameplayImmage 2:visible")
+tracks/15/path = NodePath("MenuScreen/GameplayImmage 1:visible")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/keys = {
-"times": PackedFloat32Array(0, 0.4),
+"times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
@@ -1082,7 +1166,7 @@ tracks/15/keys = {
 tracks/16/type = "value"
 tracks/16/imported = false
 tracks/16/enabled = true
-tracks/16/path = NodePath("MenuScreen/GameplayImmage 1:visible")
+tracks/16/path = NodePath("MenuScreen/MainMenuContainer/Game logo:visible")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/keys = {
@@ -1094,11 +1178,11 @@ tracks/16/keys = {
 tracks/17/type = "value"
 tracks/17/imported = false
 tracks/17/enabled = true
-tracks/17/path = NodePath("MenuScreen/MainMenuContainer/Game logo:visible")
+tracks/17/path = NodePath("MenuScreen/MainMenuContainer/MainMenu/QuitButton:visible")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0, 0.9),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
@@ -1106,7 +1190,7 @@ tracks/17/keys = {
 tracks/18/type = "value"
 tracks/18/imported = false
 tracks/18/enabled = true
-tracks/18/path = NodePath("MenuScreen/MainMenuContainer/MainMenu/QuitButton:visible")
+tracks/18/path = NodePath("MenuScreen/MainMenuContainer/MainMenu/ToggleOptionsMenuButton:visible")
 tracks/18/interp = 1
 tracks/18/loop_wrap = true
 tracks/18/keys = {
@@ -1118,7 +1202,7 @@ tracks/18/keys = {
 tracks/19/type = "value"
 tracks/19/imported = false
 tracks/19/enabled = true
-tracks/19/path = NodePath("MenuScreen/MainMenuContainer/MainMenu/ToggleOptionsMenuButton:visible")
+tracks/19/path = NodePath("MenuScreen/MainMenuContainer/MainMenu/ToggleControlsMenuButton:visible")
 tracks/19/interp = 1
 tracks/19/loop_wrap = true
 tracks/19/keys = {
@@ -1130,7 +1214,7 @@ tracks/19/keys = {
 tracks/20/type = "value"
 tracks/20/imported = false
 tracks/20/enabled = true
-tracks/20/path = NodePath("MenuScreen/MainMenuContainer/MainMenu/ToggleControlsMenuButton:visible")
+tracks/20/path = NodePath("MenuScreen/MainMenuContainer/MainMenu/ToggleLevelSelectMenuButton:visible")
 tracks/20/interp = 1
 tracks/20/loop_wrap = true
 tracks/20/keys = {
@@ -1142,14 +1226,74 @@ tracks/20/keys = {
 tracks/21/type = "value"
 tracks/21/imported = false
 tracks/21/enabled = true
-tracks/21/path = NodePath("MenuScreen/MainMenuContainer/MainMenu/ToggleLevelSelectMenuButton:visible")
+tracks/21/path = NodePath("ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsImmageHBoxContainer/ControlsSeperator5:visible")
 tracks/21/interp = 1
 tracks/21/loop_wrap = true
 tracks/21/keys = {
-"times": PackedFloat32Array(0, 0.9),
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsImmageHBoxContainer/ControlsSeperator4:visible")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsImmageHBoxContainer/ControlsSeperator3:visible")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsImmageHBoxContainer/ControlsSeperator2:visible")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsImmageHBoxContainer/ControlsSeperator:visible")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsImmageHBoxContainer/ControlsImmage3:visible")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(0, 1.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [true, false]
+"values": [false, true]
 }
 
 [sub_resource type="Animation" id="Animation_vvvpa"]
@@ -1314,19 +1458,19 @@ tracks/12/keys = {
 tracks/13/type = "value"
 tracks/13/imported = false
 tracks/13/enabled = true
-tracks/13/path = NodePath("LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer/Level3Button:modulate")
+tracks/13/path = NodePath("MenuScreen/MainMenuContainer/MainMenu/ToggleLevelSelectMenuButton:visible")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
-"times": PackedFloat32Array(0, 1.3),
+"times": PackedFloat32Array(0, 0.76666665),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+"values": [true, false]
 }
 tracks/14/type = "value"
 tracks/14/imported = false
 tracks/14/enabled = true
-tracks/14/path = NodePath("MenuScreen/MainMenuContainer/MainMenu/ToggleLevelSelectMenuButton:visible")
+tracks/14/path = NodePath("MenuScreen/MainMenuContainer/MainMenu/ToggleControlsMenuButton:visible")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
@@ -1338,7 +1482,7 @@ tracks/14/keys = {
 tracks/15/type = "value"
 tracks/15/imported = false
 tracks/15/enabled = true
-tracks/15/path = NodePath("MenuScreen/MainMenuContainer/MainMenu/ToggleControlsMenuButton:visible")
+tracks/15/path = NodePath("MenuScreen/MainMenuContainer/MainMenu/ToggleOptionsMenuButton:visible")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/keys = {
@@ -1350,7 +1494,7 @@ tracks/15/keys = {
 tracks/16/type = "value"
 tracks/16/imported = false
 tracks/16/enabled = true
-tracks/16/path = NodePath("MenuScreen/MainMenuContainer/MainMenu/ToggleOptionsMenuButton:visible")
+tracks/16/path = NodePath("MenuScreen/MainMenuContainer/MainMenu/QuitButton:visible")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/keys = {
@@ -1362,11 +1506,11 @@ tracks/16/keys = {
 tracks/17/type = "value"
 tracks/17/imported = false
 tracks/17/enabled = true
-tracks/17/path = NodePath("MenuScreen/MainMenuContainer/MainMenu/QuitButton:visible")
+tracks/17/path = NodePath("MenuScreen/MainMenuContainer/Game logo:visible")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/keys = {
-"times": PackedFloat32Array(0, 0.76666665),
+"times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
@@ -1374,7 +1518,7 @@ tracks/17/keys = {
 tracks/18/type = "value"
 tracks/18/imported = false
 tracks/18/enabled = true
-tracks/18/path = NodePath("MenuScreen/MainMenuContainer/Game logo:visible")
+tracks/18/path = NodePath("MenuScreen/GameplayImmage 1:visible")
 tracks/18/interp = 1
 tracks/18/loop_wrap = true
 tracks/18/keys = {
@@ -1386,7 +1530,7 @@ tracks/18/keys = {
 tracks/19/type = "value"
 tracks/19/imported = false
 tracks/19/enabled = true
-tracks/19/path = NodePath("MenuScreen/GameplayImmage 1:visible")
+tracks/19/path = NodePath("MenuScreen/GameplayImmage 2:visible")
 tracks/19/interp = 1
 tracks/19/loop_wrap = true
 tracks/19/keys = {
@@ -1398,26 +1542,26 @@ tracks/19/keys = {
 tracks/20/type = "value"
 tracks/20/imported = false
 tracks/20/enabled = true
-tracks/20/path = NodePath("MenuScreen/GameplayImmage 2:visible")
+tracks/20/path = NodePath("LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer/Level3Button:visible")
 tracks/20/interp = 1
 tracks/20/loop_wrap = true
 tracks/20/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/21/type = "value"
-tracks/21/imported = false
-tracks/21/enabled = true
-tracks/21/path = NodePath("LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer/Level3Button:visible")
-tracks/21/interp = 1
-tracks/21/loop_wrap = true
-tracks/21/keys = {
 "times": PackedFloat32Array(0, 1.3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer/Level5Button:modulate")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(1.5),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_e5uxp"]
@@ -1598,7 +1742,7 @@ _data = {
 &"RESET": SubResource("Animation_ls13d"),
 &"close_ControlsScreen": SubResource("Animation_d4jpd"),
 &"close_LevelSelectScreen": SubResource("Animation_vljpe"),
-&"close_MenuScreen": SubResource("Animation_51chi"),
+&"delayed_open_MenuScreen(5s)": SubResource("Animation_51chi"),
 &"open_ControlsScreen": SubResource("Animation_osrqe"),
 &"open_LevelSelectScreen": SubResource("Animation_vvvpa"),
 &"open_MenuScreen": SubResource("Animation_e5uxp")
@@ -1620,78 +1764,17 @@ controls_screen = NodePath("ControlsScreen")
 libraries/ = SubResource("AnimationLibrary_vvvpa")
 autoplay = &"RESET"
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=736080248]
-
-[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=1988087023]
-color = Color(0.23921569, 1, 1, 1)
-energy = 0.0
-
-[node name="MenuScreen" type="HBoxContainer" parent="." unique_id=269593080]
-layout_mode = 0
-anchor_top = 0.07716049
-anchor_right = 1.0
-anchor_bottom = 0.84876543
-theme_override_constants/separation = 13
-metadata/_edit_use_anchors_ = true
-
-[node name="Seperator" type="Control" parent="MenuScreen" unique_id=225173549]
-layout_mode = 2
-
-[node name="GameplayImmage 1" type="TextureRect" parent="MenuScreen" unique_id=953227424]
-custom_minimum_size = Vector2(400, 500)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-texture = ExtResource("6_osrqe")
-
-[node name="MainMenuContainer" type="VBoxContainer" parent="MenuScreen" unique_id=4133672]
-layout_mode = 2
-
-[node name="Game logo" type="TextureRect" parent="MenuScreen/MainMenuContainer" unique_id=716212163]
-layout_mode = 2
-size_flags_horizontal = 4
-texture = ExtResource("2_vvvpa")
-
-[node name="MainMenu" type="VBoxContainer" parent="MenuScreen/MainMenuContainer" unique_id=2094300266]
-custom_minimum_size = Vector2(300, 350)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_constants/separation = 20
-
-[node name="ToggleLevelSelectMenuButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=348135700]
-layout_mode = 2
-text = "Play Game"
-
-[node name="ToggleControlsMenuButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=478049765]
-layout_mode = 2
-text = "Controls"
-
-[node name="ToggleOptionsMenuButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=1556283211]
-layout_mode = 2
-text = "Options"
-
-[node name="QuitButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=369544090]
-layout_mode = 2
-text = "Exit"
-
-[node name="GameplayImmage 2" type="TextureRect" parent="MenuScreen" unique_id=652140848]
-custom_minimum_size = Vector2(400, 500)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-texture = ExtResource("3_d4jpd")
-
 [node name="LevelSelectScreen" type="MarginContainer" parent="." unique_id=827482751]
 visible = false
+modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 200.0
-offset_top = 200.0
+offset_top = 660.0
 offset_right = -152.0
-offset_bottom = -148.0
+offset_bottom = 312.00012
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -1722,6 +1805,7 @@ theme_override_constants/separation = 48
 layout_mode = 2
 
 [node name="Level1Button" type="Button" parent="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer" unique_id=680928296]
+visible = false
 layout_mode = 2
 icon = ExtResource("4_e5uxp")
 
@@ -1738,6 +1822,7 @@ text = "
 metadata/_edit_use_anchors_ = true
 
 [node name="Level2Button" type="Button" parent="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer" unique_id=2065225802]
+visible = false
 layout_mode = 2
 icon = ExtResource("5_vljpe")
 
@@ -1754,6 +1839,7 @@ text = "
 metadata/_edit_use_anchors_ = true
 
 [node name="Level3Button" type="Button" parent="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer" unique_id=426779875]
+visible = false
 layout_mode = 2
 icon = ExtResource("6_osrqe")
 
@@ -1770,6 +1856,7 @@ text = "
 metadata/_edit_use_anchors_ = true
 
 [node name="Level4Button" type="Button" parent="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer" unique_id=1664815987]
+visible = false
 layout_mode = 2
 icon = ExtResource("7_51chi")
 
@@ -1786,6 +1873,7 @@ text = "
 metadata/_edit_use_anchors_ = true
 
 [node name="Level5Button" type="Button" parent="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer" unique_id=1067584124]
+visible = false
 layout_mode = 2
 icon = ExtResource("8_jnxqb")
 
@@ -1878,7 +1966,6 @@ theme_override_constants/separation = 50
 layout_mode = 2
 
 [node name="ControlsImmage" type="TextureRect" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsImmageHBoxContainer" unique_id=1203986841]
-visible = false
 layout_mode = 2
 texture = ExtResource("2_vvvpa")
 
@@ -1889,7 +1976,6 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="ControlsImmage2" type="TextureRect" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsImmageHBoxContainer" unique_id=194025344]
-visible = false
 layout_mode = 2
 texture = ExtResource("2_vvvpa")
 
@@ -1900,6 +1986,8 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="ControlsImmage3" type="TextureRect" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsImmageHBoxContainer" unique_id=1306242540]
+visible = false
+clip_contents = true
 layout_mode = 2
 texture = ExtResource("2_vvvpa")
 
@@ -1909,30 +1997,22 @@ theme_override_constants/separation = 35
 metadata/_edit_use_anchors_ = true
 
 [node name="UsingShopControlsLabel" type="Label" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsLabelHContainer" unique_id=805158413]
-visible = false
 layout_mode = 2
 text = "Click on the Towers
 from the shop and place
 them on the battlefield"
 
 [node name="OpeningShopControlsLabel2" type="Label" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsLabelHContainer" unique_id=664352084]
-visible = false
 layout_mode = 2
 text = "Open the shop by pressing
 the Shop button on the top
 right in the level"
 
 [node name="ClosingMenuControlsLabel3" type="Label" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsLabelHContainer" unique_id=663364949]
-visible = false
 layout_mode = 2
 text = "To close this menu and
 other's like it press the red
 X in the top right corner"
-
-[node name="ControlsImmage3" type="TextureRect" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer" unique_id=1306242540]
-visible = false
-layout_mode = 2
-texture = ExtResource("2_vvvpa")
 
 [node name="ToggleControlsMenuButton" type="Button" parent="ControlsScreen" unique_id=1946216915]
 custom_minimum_size = Vector2(50, 50)
@@ -1941,14 +2021,83 @@ size_flags_horizontal = 8
 size_flags_vertical = 0
 text = "X"
 
-[connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/ToggleLevelSelectMenuButton" to="." method="_on_toggle_level_select_menu_button_pressed"]
-[connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/ToggleControlsMenuButton" to="." method="_on_toggle_controls_menu_button_pressed"]
-[connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/QuitButton" to="." method="_on_quit_button_pressed"]
+[node name="MenuScreen" type="HBoxContainer" parent="." unique_id=269593080]
+layout_mode = 0
+anchor_top = 0.07716049
+anchor_right = 1.0
+anchor_bottom = 0.84876543
+theme_override_constants/separation = 13
+metadata/_edit_use_anchors_ = true
+
+[node name="Seperator" type="Control" parent="MenuScreen" unique_id=225173549]
+layout_mode = 2
+
+[node name="GameplayImmage 1" type="TextureRect" parent="MenuScreen" unique_id=953227424]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(400, 500)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("6_osrqe")
+
+[node name="MainMenuContainer" type="VBoxContainer" parent="MenuScreen" unique_id=4133672]
+layout_mode = 2
+
+[node name="Game logo" type="TextureRect" parent="MenuScreen/MainMenuContainer" unique_id=716212163]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("2_vvvpa")
+
+[node name="MainMenu" type="VBoxContainer" parent="MenuScreen/MainMenuContainer" unique_id=2094300266]
+custom_minimum_size = Vector2(300, 350)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 20
+
+[node name="ToggleLevelSelectMenuButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=348135700]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+text = "Play Game"
+
+[node name="ToggleControlsMenuButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=478049765]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+text = "Controls"
+
+[node name="ToggleOptionsMenuButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=1556283211]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+text = "Options"
+
+[node name="QuitButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=369544090]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+text = "Exit"
+
+[node name="GameplayImmage 2" type="TextureRect" parent="MenuScreen" unique_id=652140848]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(400, 500)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("3_d4jpd")
+
 [connection signal="pressed" from="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer/Level1Button" to="." method="_on_level_1_button_pressed"]
 [connection signal="pressed" from="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer/Level2Button" to="." method="_on_level_2_button_pressed"]
 [connection signal="pressed" from="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer/Level3Button" to="." method="_on_level_3_button_pressed"]
 [connection signal="pressed" from="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer/Level4Button" to="." method="_on_level_4_button_pressed"]
 [connection signal="pressed" from="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer/Level5Button" to="." method="_on_level_5_button_pressed"]
 [connection signal="pressed" from="LevelSelectScreen/ToggleLevelSelectMenuButton" to="." method="_on_toggle_level_select_menu_button_pressed"]
-[connection signal="pressed" from="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/BackButtonContainer/ToggleLevelSelectMenuButton" to="." method="_on_toggle_level_select_menu_button_pressed"]
 [connection signal="pressed" from="ControlsScreen/ToggleControlsMenuButton" to="." method="_on_toggle_controls_menu_button_pressed"]
+[connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/ToggleLevelSelectMenuButton" to="." method="_on_toggle_level_select_menu_button_pressed"]
+[connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/ToggleControlsMenuButton" to="." method="_on_toggle_controls_menu_button_pressed"]
+[connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/QuitButton" to="." method="_on_quit_button_pressed"]

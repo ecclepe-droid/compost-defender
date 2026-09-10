@@ -9,9 +9,9 @@ const SECONDS_BETWEEN_WAVES = 2.5
 const SECONDS_BETWEEN_ENEMIES = 0.5
 const DEFAULT_CHILD_COUNT = 3
 
-const SECONDS_BETWEEN_WAVES = 2.5
-const SECONDS_BETWEEN_ENEMIES = 0.5
-const DEFAULT_CHILD_COUNT = 3
+#const SECONDS_BETWEEN_WAVES = 2.5
+#const SECONDS_BETWEEN_ENEMIES = 0.5
+#const DEFAULT_CHILD_COUNT = 3
 
 var future_waves: Array[Wave]
 var in_between_wave_timer: Timer

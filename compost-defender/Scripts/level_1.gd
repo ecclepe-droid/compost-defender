@@ -33,19 +33,19 @@ func _ready() -> void:
 func _enemy_packed_from_name(enemy_name: String):
 	var enemy_file_path = "res://Scenes/Enemies/" + enemy_name.to_snake_case() + ".tscn"
 	var packed_scene_of_enemy = load(enemy_file_path)
-	enemy_manager.request_wave(Wave.new([packed_scene_of_enemy], 2.5))
+#	enemy_manager.request_wave(Wave.new([packed_scene_of_enemy], 2.5))
 	enemy_name = "apple"
 	enemy_file_path = "res://Scenes/Enemies/" + enemy_name.to_snake_case() + ".tscn"
 	packed_scene_of_enemy = load(enemy_file_path)
-	enemy_manager.request_wave(Wave.new([packed_scene_of_enemy], 2.5))
+#	enemy_manager.request_wave(Wave.new([packed_scene_of_enemy], 2.5))
 	enemy_name = "banana"
 	enemy_file_path = "res://Scenes/Enemies/" + enemy_name.to_snake_case() + ".tscn"
 	packed_scene_of_enemy = load(enemy_file_path)
-	enemy_manager.request_wave(Wave.new([packed_scene_of_enemy], 2.5))
+#	enemy_manager.request_wave(Wave.new([packed_scene_of_enemy], 2.5))
 	enemy_name = "cashew"
 	enemy_file_path = "res://Scenes/Enemies/" + enemy_name.to_snake_case() + ".tscn"
 	packed_scene_of_enemy = load(enemy_file_path)
-	enemy_manager.request_wave(Wave.new([packed_scene_of_enemy], 2.5))
+#	enemy_manager.request_wave(Wave.new([packed_scene_of_enemy], 2.5))
 	return packed_scene_of_enemy
 
 
