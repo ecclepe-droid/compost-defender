@@ -211,6 +211,18 @@ tracks/15/keys = {
 "update": 1,
 "values": [true]
 }
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("ControlsScreen:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(200, 100)]
+}
 
 [sub_resource type="Animation" id="Animation_d4jpd"]
 resource_name = "start_game"
@@ -462,7 +474,7 @@ tracks/20/path = NodePath("ControlsScreen:modulate")
 tracks/20/interp = 1
 tracks/20/loop_wrap = true
 tracks/20/keys = {
-"times": PackedFloat32Array(0.2, 0.6),
+"times": PackedFloat32Array(0.2, 0.8),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
@@ -526,6 +538,18 @@ tracks/25/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("ControlsScreen:position")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(0.2, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(200, 100), Vector2(-810, 100)]
 }
 
 [sub_resource type="Animation" id="Animation_vljpe"]
@@ -1062,7 +1086,7 @@ tracks/7/path = NodePath("ControlsScreen:modulate")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat32Array(1, 1.2),
+"times": PackedFloat32Array(0.7, 1.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -1134,7 +1158,7 @@ tracks/13/path = NodePath("ControlsScreen:visible")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0, 0.7),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
@@ -1294,6 +1318,18 @@ tracks/26/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("ControlsScreen:position")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(0.7, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1160, 100), Vector2(200, 100)]
 }
 
 [sub_resource type="Animation" id="Animation_vvvpa"]
@@ -1923,12 +1959,14 @@ text = "X"
 
 [node name="ControlsScreen" type="MarginContainer" parent="." unique_id=1125564509]
 visible = false
+modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.1736111
 anchor_top = 0.15432099
 anchor_right = 0.8680556
 anchor_bottom = 0.77160496
+offset_right = -0.00024414063
 grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
@@ -1966,6 +2004,7 @@ theme_override_constants/separation = 50
 layout_mode = 2
 
 [node name="ControlsImmage" type="TextureRect" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsImmageHBoxContainer" unique_id=1203986841]
+visible = false
 layout_mode = 2
 texture = ExtResource("2_vvvpa")
 
@@ -1976,13 +2015,16 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="ControlsImmage2" type="TextureRect" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsImmageHBoxContainer" unique_id=194025344]
+visible = false
 layout_mode = 2
 texture = ExtResource("2_vvvpa")
 
 [node name="ControlsSeperator4" type="Control" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsImmageHBoxContainer" unique_id=1147111367]
+visible = false
 layout_mode = 2
 
 [node name="ControlsSeperator5" type="Control" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsImmageHBoxContainer" unique_id=21719797]
+visible = false
 layout_mode = 2
 
 [node name="ControlsImmage3" type="TextureRect" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsImmageHBoxContainer" unique_id=1306242540]
@@ -1997,18 +2039,21 @@ theme_override_constants/separation = 35
 metadata/_edit_use_anchors_ = true
 
 [node name="UsingShopControlsLabel" type="Label" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsLabelHContainer" unique_id=805158413]
+visible = false
 layout_mode = 2
 text = "Click on the Towers
 from the shop and place
 them on the battlefield"
 
 [node name="OpeningShopControlsLabel2" type="Label" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsLabelHContainer" unique_id=664352084]
+visible = false
 layout_mode = 2
 text = "Open the shop by pressing
 the Shop button on the top
 right in the level"
 
 [node name="ClosingMenuControlsLabel3" type="Label" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsLabelHContainer" unique_id=663364949]
+visible = false
 layout_mode = 2
 text = "To close this menu and
 other's like it press the red
@@ -2033,8 +2078,6 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 2
 
 [node name="GameplayImmage 1" type="TextureRect" parent="MenuScreen" unique_id=953227424]
-visible = false
-self_modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(400, 500)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -2045,8 +2088,6 @@ texture = ExtResource("6_osrqe")
 layout_mode = 2
 
 [node name="Game logo" type="TextureRect" parent="MenuScreen/MainMenuContainer" unique_id=716212163]
-visible = false
-self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 texture = ExtResource("2_vvvpa")
@@ -2059,32 +2100,22 @@ size_flags_vertical = 4
 theme_override_constants/separation = 20
 
 [node name="ToggleLevelSelectMenuButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=348135700]
-visible = false
-self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 text = "Play Game"
 
 [node name="ToggleControlsMenuButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=478049765]
-visible = false
-self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 text = "Controls"
 
 [node name="ToggleOptionsMenuButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=1556283211]
-visible = false
-self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 text = "Options"
 
 [node name="QuitButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=369544090]
-visible = false
-self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 text = "Exit"
 
 [node name="GameplayImmage 2" type="TextureRect" parent="MenuScreen" unique_id=652140848]
-visible = false
-self_modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(400, 500)
 layout_mode = 2
 size_flags_horizontal = 4
