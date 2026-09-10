@@ -1,8 +1,9 @@
-extends Node2D
+extends Path2D
 
 signal enemy_died(enemy_compost_value)
 signal wave_ended()
 signal out_of_waves()
+signal enemy_reached_end(enemy_health: int)
 
 const SECONDS_BETWEEN_WAVES = 2.5
 const SECONDS_BETWEEN_ENEMIES = 0.5
@@ -24,13 +25,18 @@ func _ready() -> void:
 func _enemy_died(enemy_compost_value: int) -> void:
 	enemy_died.emit(enemy_compost_value)
 	
+	_update_wave_ended_status()
+
+
+func _update_wave_ended_status() -> void:
 	var number_of_enemies = get_children().size() - DEFAULT_CHILD_COUNT
 	if number_of_enemies == 0:
 		wave_ended.emit()
 		
 		var has_next_wave = future_waves.size() >= 1
 		if has_next_wave:
-			in_between_wave_timer.start(SECONDS_BETWEEN_WAVES)
+			if in_between_wave_timer.is_inside_tree():
+				in_between_wave_timer.start(SECONDS_BETWEEN_WAVES)
 		else:
 			wave_active = false
 			out_of_waves.emit()
@@ -41,6 +47,14 @@ func _spawn_enemy(enemyScene: PackedScene) -> void:
 	add_child(enemy)
 	enemy.add_to_group("Enemies")
 	enemy.connect("died", _enemy_died)
+	enemy.connect("looped_end", _enemy_reached_end)
+
+
+func _enemy_reached_end(enemy: Enemy):
+	enemy.queue_free()
+	enemy_reached_end.emit(enemy.health)
+	
+	_update_wave_ended_status()
 
 
 func _spawn_wave(wave: Wave):

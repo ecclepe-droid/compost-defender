@@ -1,6 +1,9 @@
 extends PathFollow2D
 
+class_name Enemy
+
 signal died(compost_value: int)
+signal looped_end(enemy: Enemy)
 
 const FIRE_FX = preload("res://Scenes/fire_fx.tscn")
 const FIRE_DAMAGE_MULTIPLIER = 1
@@ -27,7 +30,10 @@ func _ready() -> void:
 	burn_timer.timeout.connect(_consume_burn_stack)
 
 func _process(delta: float) -> void:
+	var pre_movement_progress = progress
 	progress += actual_speed * delta
+	if pre_movement_progress > progress:
+		looped_end.emit(self)
 
 
 func take_damage(damage_amount: int) -> void:

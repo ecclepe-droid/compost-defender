@@ -1,5 +1,7 @@
 extends Node2D
 
+const LEVEL_SELECT_SCREEN = "res://Scenes/level_select_screen.tscn"
+
 var user_interface: Control
 var enemy_manager: Node2D
 
@@ -7,6 +9,7 @@ var enemy_manager: Node2D
 func _ready() -> void:
 	enemy_manager = $EnemyManager
 	Globals.set_compost_amount(0)
+	Globals.compost_integrity = 20
 	user_interface = $CanvasLayer/InLevelUI
 	fade_out()
 	
@@ -49,3 +52,20 @@ func _on_in_level_ui_user_wants_worm_at_mouse(worm: Worm) -> void:
 	var worm_instance: StaticBody2D = worm.scene.instantiate()
 	worm_instance.position = get_global_mouse_position()
 	add_child(worm_instance)
+
+
+func _on_enemy_manager_out_of_waves() -> void:
+	print("You Won")
+	get_tree().change_scene_to_file(LEVEL_SELECT_SCREEN)
+
+
+func _on_enemy_manager_enemy_reached_end(enemy_health: int) -> void:
+	Globals.compost_integrity -= enemy_health
+	print("Compost integrity:" + str(Globals.compost_integrity))
+	if Globals.compost_integrity <= 0:
+		print("You died")
+		get_tree().change_scene_to_file(LEVEL_SELECT_SCREEN)
+
+
+func _on_enemy_manager_wave_ended() -> void:
+	pass
