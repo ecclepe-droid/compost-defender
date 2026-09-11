@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bqv7u8rn4dnph"]
 
 [ext_resource type="Script" uid="uid://oi4qer8vsius" path="res://Scripts/game_user_interface.gd" id="1_vvvpa"]
+[ext_resource type="Texture2D" uid="uid://e51l0qqnulhw" path="res://Sprites/Towers/unlit pillar(8).png" id="2_vljpe"]
 [ext_resource type="Texture2D" uid="uid://f0lenvmgjjtv" path="res://Sprites/weerm(3).png" id="2_vvvpa"]
-[ext_resource type="Texture2D" uid="uid://bkb8elo1gr0hl" path="res://Sprites/a rubber band (22).png" id="3_d4jpd"]
 [ext_resource type="Texture2D" uid="uid://w3cd5tvtlin6" path="res://Sprites/download (15).png" id="4_e5uxp"]
 [ext_resource type="Texture2D" uid="uid://cmqeb1ofjah5n" path="res://Sprites/button3(23).png" id="5_osrqe"]
 [ext_resource type="Texture2D" uid="uid://by4e3svvkthfy" path="res://Sprites/download (21).png" id="5_vljpe"]
@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://577kbe1o8vpm" path="res://Sprites/Button1(23).png" id="7_jnxqb"]
 [ext_resource type="Texture2D" uid="uid://bs0jeqa18d0qq" path="res://Sprites/generator(idk what to use it for but ye)(13).png" id="8_jnxqb"]
 [ext_resource type="Texture2D" uid="uid://d2lgbm721s68u" path="res://Sprites/Agent wormy7(13).png" id="9_7iw8k"]
-[ext_resource type="Texture2D" uid="uid://0pp8rvsdbrjw" path="res://Sprites/icon.svg" id="11_d4jpd"]
+[ext_resource type="Texture2D" uid="uid://csgkmqbqwavyt" path="res://Sprites/BG(25).png" id="9_osrqe"]
 
 [sub_resource type="Animation" id="Animation_60q08"]
 resource_name = "Fade_in"
@@ -1688,7 +1688,7 @@ custom_minimum_size = Vector2(400, 500)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture = ExtResource("6_osrqe")
+texture = ExtResource("2_vljpe")
 
 [node name="MainMenuContainer" type="VBoxContainer" parent="MenuScreen" unique_id=4133672]
 layout_mode = 2
@@ -1725,7 +1725,7 @@ custom_minimum_size = Vector2(400, 500)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture = ExtResource("3_d4jpd")
+texture = ExtResource("2_vljpe")
 
 [node name="ControlsScreen" type="MarginContainer" parent="." unique_id=1125564509]
 visible = false
@@ -1743,7 +1743,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="ControlsBackround" type="NinePatchRect" parent="ControlsScreen" unique_id=2041514313]
 layout_mode = 2
-texture = ExtResource("11_d4jpd")
+texture = ExtResource("9_osrqe")
 metadata/_edit_use_anchors_ = true
 
 [node name="ControlsMenuMarginContainer" type="MarginContainer" parent="ControlsScreen/ControlsBackround" unique_id=163504631]
@@ -1852,7 +1852,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="LevelSelectBackround" type="NinePatchRect" parent="LevelSelectScreen" unique_id=577128008]
 layout_mode = 2
-texture = ExtResource("11_d4jpd")
+texture = ExtResource("9_osrqe")
 metadata/_edit_use_anchors_ = true
 
 [node name="LevelSelectContainer" type="VBoxContainer" parent="LevelSelectScreen/LevelSelectBackround" unique_id=782127569]
