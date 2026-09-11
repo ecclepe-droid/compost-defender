@@ -56,6 +56,8 @@ _data = {
 position = Vector2(0, 1)
 script = ExtResource("1_vk57k")
 
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1012264711]
+
 [node name="LevelView" type="Camera2D" parent="." unique_id=752227584]
 zoom = Vector2(0.34, 0.34)
 

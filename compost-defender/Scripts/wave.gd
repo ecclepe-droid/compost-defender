@@ -4,7 +4,7 @@ var enemyScenes: Array
 
 #Code written by CEB
 #[packed_scene_of_enemy], 2.5
-static func create(enemy_array, number):
+static func create(enemy_array, _number):
 	var new_scene = Wave.new()
 	new_scene.enemyScenes = enemy_array
 	#TODO: figure out what that number does
