@@ -626,7 +626,7 @@ tracks/7/path = NodePath("LevelSelectScreen:modulate")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat32Array(0.5, 1.1666666),
+"times": PackedFloat32Array(0.5, 1.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
@@ -638,7 +638,7 @@ tracks/8/path = NodePath("LevelSelectScreen/LevelSelectBackround/LevelSelectCont
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"times": PackedFloat32Array(0, 0.1),
+"times": PackedFloat32Array(0.5, 1.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
@@ -774,6 +774,190 @@ tracks/19/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("LevelSelectScreen:visible")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_jnxqb"]
+resource_name = "close_MenuScreen"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MenuScreen/MainMenuContainer/MainMenu/ToggleLevelSelectMenuButton:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MenuScreen/MainMenuContainer/MainMenu/ToggleControlsMenuButton:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MenuScreen/MainMenuContainer/MainMenu/ToggleOptionsMenuButton:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.7667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MenuScreen/MainMenuContainer/MainMenu/QuitButton:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("MenuScreen/MainMenuContainer/Game logo:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.3, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("MenuScreen/GameplayImmage 1:self_modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("MenuScreen/GameplayImmage 2:self_modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("MenuScreen/GameplayImmage 2:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("MenuScreen/GameplayImmage 1:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("MenuScreen/MainMenuContainer/Game logo:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("MenuScreen/MainMenuContainer/MainMenu/QuitButton:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("MenuScreen/MainMenuContainer/MainMenu/ToggleOptionsMenuButton:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("MenuScreen/MainMenuContainer/MainMenu/ToggleControlsMenuButton:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("MenuScreen/MainMenuContainer/MainMenu/ToggleLevelSelectMenuButton:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
 }
 
 [sub_resource type="Animation" id="Animation_51chi"]
@@ -1427,6 +1611,7 @@ tracks/15/type = "value"
 tracks/15/imported = false
 tracks/15/enabled = true
 tracks/15/path = NodePath("MenuScreen/MainMenuContainer/Game logo:visible")
+tracks/15/path = NodePath("MenuScreen/MainMenuContainer/MainMenu/QuitButton:visible")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/keys = {
@@ -1439,6 +1624,7 @@ tracks/16/type = "value"
 tracks/16/imported = false
 tracks/16/enabled = true
 tracks/16/path = NodePath("MenuScreen/GameplayImmage 1:visible")
+tracks/16/path = NodePath("MenuScreen/MainMenuContainer/Game logo:visible")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/keys = {
@@ -1451,6 +1637,7 @@ tracks/17/type = "value"
 tracks/17/imported = false
 tracks/17/enabled = true
 tracks/17/path = NodePath("MenuScreen/GameplayImmage 2:visible")
+tracks/17/path = NodePath("MenuScreen/GameplayImmage 1:visible")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/keys = {
@@ -1466,6 +1653,22 @@ tracks/18/path = NodePath("LevelSelectScreen/LevelSelectBackround/LevelSelectCon
 tracks/18/interp = 1
 tracks/18/loop_wrap = true
 tracks/18/keys = {
+tracks/18/path = NodePath("MenuScreen/GameplayImmage 2:visible")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer/Level3Button:visible")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
 "times": PackedFloat32Array(0, 1.3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
@@ -1490,6 +1693,30 @@ tracks/20/path = NodePath("LevelSelectScreen:visible")
 tracks/20/interp = 1
 tracks/20/loop_wrap = true
 tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer/Level5Button:modulate")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer/Level5Button:visible")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -1643,6 +1870,201 @@ tracks/11/keys = {
 "values": [true]
 }
 
+[sub_resource type="Animation" id="Animation_7iw8k"]
+resource_name = "start_game"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MenuScreen/MainMenuContainer/MainMenu/ToggleLevelSelectMenuButton:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MenuScreen/MainMenuContainer/MainMenu/ToggleControlsMenuButton:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6333333, 0.73333335),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MenuScreen/MainMenuContainer/MainMenu/ToggleOptionsMenuButton:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.76666665, 0.8666667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MenuScreen/MainMenuContainer/MainMenu/QuitButton:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("MenuScreen/MainMenuContainer/Game logo:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("MenuScreen/GameplayImmage 1:self_modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.16666669, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("MenuScreen/GameplayImmage 2:self_modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("MenuScreen/MainMenuContainer/MainMenu/ToggleLevelSelectMenuButton:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("MenuScreen/MainMenuContainer/MainMenu/ToggleControlsMenuButton:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("MenuScreen/MainMenuContainer/MainMenu/ToggleOptionsMenuButton:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("MenuScreen/MainMenuContainer/MainMenu/QuitButton:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("MenuScreen/GameplayImmage 2:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("MenuScreen/GameplayImmage 1:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("MenuScreen/MainMenuContainer/Game logo:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("ControlsScreen:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("LevelSelectScreen:visible")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vvvpa"]
 _data = {
 &"Fade_in": SubResource("Animation_60q08"),
@@ -1650,10 +2072,12 @@ _data = {
 &"RESET": SubResource("Animation_ls13d"),
 &"close_ControlsScreen": SubResource("Animation_d4jpd"),
 &"close_LevelSelectScreen": SubResource("Animation_vljpe"),
+&"close_MenuScreen": SubResource("Animation_jnxqb"),
 &"delayed_open_MenuScreen(5s)": SubResource("Animation_51chi"),
 &"open_ControlsScreen": SubResource("Animation_osrqe"),
 &"open_LevelSelectScreen": SubResource("Animation_vvvpa"),
-&"open_MenuScreen": SubResource("Animation_e5uxp")
+&"open_MenuScreen": SubResource("Animation_e5uxp"),
+&"start_game": SubResource("Animation_7iw8k")
 }
 
 [node name="GameUserInterface" type="Control" unique_id=650166834 node_paths=PackedStringArray("menu_screen", "level_select_screen", "controls_screen")]
@@ -1670,7 +2094,7 @@ controls_screen = NodePath("ControlsScreen")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1371331413]
 libraries/ = SubResource("AnimationLibrary_vvvpa")
-autoplay = &"RESET"
+autoplay = &"start_game"
 
 [node name="MenuScreen" type="HBoxContainer" parent="." unique_id=269593080]
 layout_mode = 0
@@ -1751,6 +2175,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 200.0
+offset_top = 640.0
+offset_right = -152.0
+offset_bottom = 292.00024
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 40
@@ -1999,6 +2427,177 @@ text = "X"
 [connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/QuitButton" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="ControlsScreen/CloseControlsMenuButton" to="." method="_on_toggle_controls_menu_button_pressed"]
 [connection signal="pressed" from="ControlsScreen/CloseControlsMenuButton" to="." method="_on_close_controls_menu_button_pressed"]
+[node name="MenuScreen" type="HBoxContainer" parent="." unique_id=269593080]
+layout_mode = 0
+anchor_top = 0.07716049
+anchor_right = 1.0
+anchor_bottom = 0.84876543
+theme_override_constants/separation = 13
+metadata/_edit_use_anchors_ = true
+
+[node name="Seperator" type="Control" parent="MenuScreen" unique_id=225173549]
+layout_mode = 2
+
+[node name="GameplayImmage 1" type="TextureRect" parent="MenuScreen" unique_id=953227424]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(400, 500)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("6_osrqe")
+
+[node name="MainMenuContainer" type="VBoxContainer" parent="MenuScreen" unique_id=4133672]
+layout_mode = 2
+
+[node name="Game logo" type="TextureRect" parent="MenuScreen/MainMenuContainer" unique_id=716212163]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("2_vvvpa")
+
+[node name="MainMenu" type="VBoxContainer" parent="MenuScreen/MainMenuContainer" unique_id=2094300266]
+custom_minimum_size = Vector2(300, 350)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 20
+
+[node name="ToggleLevelSelectMenuButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=348135700]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+text = "Play Game"
+
+[node name="ToggleControlsMenuButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=478049765]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+text = "Controls"
+
+[node name="ToggleOptionsMenuButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=1556283211]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+text = "Options"
+
+[node name="QuitButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=369544090]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+text = "Exit"
+
+[node name="GameplayImmage 2" type="TextureRect" parent="MenuScreen" unique_id=652140848]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(400, 500)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("3_d4jpd")
+
+[node name="ControlsScreen" type="MarginContainer" parent="." unique_id=1125564509]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1736111
+anchor_top = 0.15432099
+anchor_right = 0.8680556
+anchor_bottom = 0.77160496
+offset_right = -0.00012207031
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="ControlsBackround" type="NinePatchRect" parent="ControlsScreen" unique_id=2041514313]
+layout_mode = 2
+texture = ExtResource("11_d4jpd")
+metadata/_edit_use_anchors_ = true
+
+[node name="ControlsMenuMarginContainer" type="MarginContainer" parent="ControlsScreen/ControlsBackround" unique_id=163504631]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+metadata/_edit_use_anchors_ = true
+
+[node name="ControlsVContainerForImmages" type="VBoxContainer" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer" unique_id=1373483719]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="ControlsSeperator" type="Control" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages" unique_id=1441684105]
+layout_mode = 2
+
+[node name="ControlsImmageHBoxContainer" type="HBoxContainer" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages" unique_id=26443457]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="ControlsSeperator" type="Control" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsImmageHBoxContainer" unique_id=369271822]
+layout_mode = 2
+
+[node name="ControlsImmage" type="TextureRect" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsImmageHBoxContainer" unique_id=1203986841]
+layout_mode = 2
+texture = ExtResource("2_vvvpa")
+
+[node name="ControlsSeperator2" type="Control" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsImmageHBoxContainer" unique_id=292569505]
+layout_mode = 2
+
+[node name="ControlsSeperator3" type="Control" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsImmageHBoxContainer" unique_id=240072999]
+layout_mode = 2
+
+[node name="ControlsImmage2" type="TextureRect" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsImmageHBoxContainer" unique_id=194025344]
+layout_mode = 2
+texture = ExtResource("2_vvvpa")
+
+[node name="ControlsSeperator4" type="Control" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsImmageHBoxContainer" unique_id=1147111367]
+layout_mode = 2
+
+[node name="ControlsSeperator5" type="Control" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsImmageHBoxContainer" unique_id=21719797]
+layout_mode = 2
+
+[node name="ControlsImmage3" type="TextureRect" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsImmageHBoxContainer" unique_id=1306242540]
+visible = false
+clip_contents = true
+layout_mode = 2
+texture = ExtResource("2_vvvpa")
+
+[node name="ControlsLabelHContainer" type="HBoxContainer" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages" unique_id=398569650]
+layout_mode = 2
+theme_override_constants/separation = 35
+metadata/_edit_use_anchors_ = true
+
+[node name="UsingShopControlsLabel" type="Label" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsLabelHContainer" unique_id=805158413]
+layout_mode = 2
+text = "Click on the Towers
+from the shop and place
+them on the battlefield"
+
+[node name="OpeningShopControlsLabel2" type="Label" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsLabelHContainer" unique_id=664352084]
+layout_mode = 2
+text = "Open the shop by pressing
+the Shop button on the top
+right in the level"
+
+[node name="ClosingMenuControlsLabel3" type="Label" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsLabelHContainer" unique_id=663364949]
+layout_mode = 2
+text = "To close this menu and
+other's like it press the red
+X in the top right corner"
+
+[node name="ToggleControlsMenuButton" type="Button" parent="ControlsScreen" unique_id=1946216915]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+text = "X"
+
 [connection signal="pressed" from="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer/Level1Button" to="." method="_on_level_1_button_pressed"]
 [connection signal="pressed" from="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer/Level2Button" to="." method="_on_level_2_button_pressed"]
 [connection signal="pressed" from="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer/Level3Button" to="." method="_on_level_3_button_pressed"]
@@ -2006,3 +2605,8 @@ text = "X"
 [connection signal="pressed" from="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer/Level5Button" to="." method="_on_level_5_button_pressed"]
 [connection signal="pressed" from="LevelSelectScreen/CloseLevelSelectMenu" to="." method="_on_toggle_level_select_menu_button_pressed"]
 [connection signal="pressed" from="LevelSelectScreen/CloseLevelSelectMenu" to="." method="_on_close_level_select_menu_pressed"]
+[connection signal="pressed" from="LevelSelectScreen/ToggleLevelSelectMenuButton" to="." method="_on_toggle_level_select_menu_button_pressed"]
+[connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/ToggleLevelSelectMenuButton" to="." method="_on_toggle_level_select_menu_button_pressed"]
+[connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/ToggleControlsMenuButton" to="." method="_on_toggle_controls_menu_button_pressed"]
+[connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="ControlsScreen/ToggleControlsMenuButton" to="." method="_on_toggle_controls_menu_button_pressed"]
