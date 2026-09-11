@@ -1,6 +1,6 @@
 extends Node2D
 
-const LEVEL_SELECT_SCREEN = "res://Scenes/level_select_screen.tscn"
+const LEVEL_SELECT_SCREEN = "res://Scenes/game_user_interface.tscn"
 
 var user_interface: Control
 var enemy_manager: Node2D
