@@ -33,19 +33,6 @@ func _ready() -> void:
 func _enemy_packed_from_name(enemy_name: String):
 	var enemy_file_path = "res://Scenes/Enemies/" + enemy_name.to_snake_case() + ".tscn"
 	var packed_scene_of_enemy = load(enemy_file_path)
-	enemy_manager.request_wave(Wave.create([packed_scene_of_enemy], 1))
-	enemy_name = "apple"
-	enemy_file_path = "res://Scenes/Enemies/" + enemy_name.to_snake_case() + ".tscn"
-	packed_scene_of_enemy = load(enemy_file_path)
-	enemy_manager.request_wave(Wave.create([packed_scene_of_enemy], 1))
-	enemy_name = "banana"
-	enemy_file_path = "res://Scenes/Enemies/" + enemy_name.to_snake_case() + ".tscn"
-	packed_scene_of_enemy = load(enemy_file_path)
-	enemy_manager.request_wave(Wave.create([packed_scene_of_enemy], 1))
-	enemy_name = "cashew"
-	enemy_file_path = "res://Scenes/Enemies/" + enemy_name.to_snake_case() + ".tscn"
-	packed_scene_of_enemy = load(enemy_file_path)
-	enemy_manager.request_wave(Wave.create([packed_scene_of_enemy], 1))
 	return packed_scene_of_enemy
 
 
@@ -69,6 +56,7 @@ func _on_in_level_ui_user_wants_worm_at_mouse(worm: Worm) -> void:
 
 func _on_enemy_manager_out_of_waves() -> void:
 	print("You Won")
+	get_tree().current_scene.queue_free()
 	get_tree().change_scene_to_file(LEVEL_SELECT_SCREEN)
 
 
@@ -77,6 +65,7 @@ func _on_enemy_manager_enemy_reached_end(enemy_health: int) -> void:
 	print("Compost integrity:" + str(Globals.compost_integrity))
 	if Globals.compost_integrity <= 0:
 		print("You died")
+		get_tree().current_scene.queue_free()
 		get_tree().change_scene_to_file(LEVEL_SELECT_SCREEN)
 
 
