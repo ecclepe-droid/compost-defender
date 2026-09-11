@@ -1385,7 +1385,7 @@ tracks/11/keys = {
 "times": PackedFloat32Array(0, 1.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [false, true]
+"values": [true, true]
 }
 tracks/12/type = "value"
 tracks/12/imported = false
@@ -1478,10 +1478,22 @@ tracks/19/path = NodePath("LevelSelectScreen/LevelSelectBackround/LevelSelectCon
 tracks/19/interp = 1
 tracks/19/loop_wrap = true
 tracks/19/keys = {
-"times": PackedFloat32Array(1.5),
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("LevelSelectScreen:visible")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_e5uxp"]
@@ -1672,7 +1684,6 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 2
 
 [node name="GameplayImmage 1" type="TextureRect" parent="MenuScreen" unique_id=953227424]
-self_modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(400, 500)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -1683,7 +1694,6 @@ texture = ExtResource("6_osrqe")
 layout_mode = 2
 
 [node name="Game logo" type="TextureRect" parent="MenuScreen/MainMenuContainer" unique_id=716212163]
-self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 texture = ExtResource("2_vvvpa")
@@ -1696,25 +1706,21 @@ size_flags_vertical = 4
 theme_override_constants/separation = 20
 
 [node name="OpenLevelSelectMenuButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=348135700]
-self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 text = "Play Game"
 icon = ExtResource("5_osrqe")
 
 [node name="OpenControlsMenuButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=478049765]
-self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 text = "Controls"
 icon = ExtResource("6_51chi")
 
 [node name="QuitButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=369544090]
-self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 text = "Exit"
 icon = ExtResource("7_jnxqb")
 
 [node name="GameplayImmage 2" type="TextureRect" parent="MenuScreen" unique_id=652140848]
-self_modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(400, 500)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -1831,12 +1837,15 @@ size_flags_vertical = 0
 text = "X"
 
 [node name="LevelSelectScreen" type="MarginContainer" parent="." unique_id=827482751]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.1736111
 anchor_top = 0.30864197
 anchor_right = 0.8680556
 anchor_bottom = 0.7716053
+offset_top = 440.0
+offset_bottom = 440.0
 grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
@@ -1868,6 +1877,7 @@ theme_override_constants/separation = 48
 layout_mode = 2
 
 [node name="Level1Button" type="Button" parent="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer" unique_id=680928296]
+visible = false
 layout_mode = 2
 icon = ExtResource("4_e5uxp")
 
@@ -1884,6 +1894,7 @@ text = "
 metadata/_edit_use_anchors_ = true
 
 [node name="Level2Button" type="Button" parent="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer" unique_id=2065225802]
+visible = false
 layout_mode = 2
 icon = ExtResource("5_vljpe")
 
@@ -1900,6 +1911,7 @@ text = "
 metadata/_edit_use_anchors_ = true
 
 [node name="Level3Button" type="Button" parent="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer" unique_id=426779875]
+visible = false
 layout_mode = 2
 icon = ExtResource("6_osrqe")
 
@@ -1916,6 +1928,7 @@ text = "
 metadata/_edit_use_anchors_ = true
 
 [node name="Level4Button" type="Button" parent="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer" unique_id=1664815987]
+visible = false
 layout_mode = 2
 icon = ExtResource("7_51chi")
 
