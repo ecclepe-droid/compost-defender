@@ -13,30 +13,29 @@ const LEVEL_TWO_PACKED = preload("res://Scenes/level_2.tscn")
 func _ready() -> void:
 	$AnimationPlayer.play("open_MenuScreen")
 
-func toggle_visibility(object):
-	var anim = $AnimationPlayer
-	var animation_type: String
-	print(object.name)
-	if object.visible:
-		animation_type = "close_"
-	else:
-		animation_type = "open_"
-	anim.play(animation_type + str(object.name))
-	print(animation_type + str(object.name))
+#func toggle_visibility(object):
+#	var anim = $AnimationPlayer
+#	var animation_type: String
+#	print(object.name)
+#	if object.visible:
+#		animation_type = "close_"
+#	else:
+#		animation_type = "open_"
+#	anim.play(animation_type + str(object.name))
+#	print(animation_type + str(object.name))
 
 
 func _on_quit_button_pressed() -> void:
 	get_tree().quit(0)
 
+#func _on_toggle_controls_menu_button_pressed() -> void:
+#	toggle_visibility(controls_screen)
+#	toggle_visibility(menu_screen)
 
-func _on_toggle_controls_menu_button_pressed() -> void:
-	toggle_visibility(controls_screen)
-	toggle_visibility(menu_screen)
 
-
-func _on_toggle_level_select_menu_button_pressed() -> void:
-	toggle_visibility(level_select_screen)
-	toggle_visibility(menu_screen)
+#func _on_toggle_level_select_menu_button_pressed() -> void:
+#	toggle_visibility(level_select_screen)
+#	toggle_visibility(menu_screen)
 
 func fade_in(): # this function fades the screen to black
 	$AnimationPlayer.play("Fade_in")
@@ -60,3 +59,19 @@ func _on_level_4_button_pressed() -> void:
 func _on_level_5_button_pressed() -> void:
 #	get_tree().change_scene_to_packed(LEVEL_FIVE_PACKED)
 	pass
+
+
+func _on_close_level_select_menu_pressed() -> void:
+	$AnimationPlayer.play("close_LevelSelectScreen")
+
+
+func _on_open_level_select_menu_button_pressed() -> void:
+	$AnimationPlayer.play("open_LevelSelectScreen")
+
+
+func _on_close_controls_menu_button_pressed() -> void:
+	$AnimationPlayer.play("close_ControlsScreen")
+
+
+func _on_open_controls_menu_button_pressed() -> void:
+	$AnimationPlayer.play("open_ControlsScreen")
