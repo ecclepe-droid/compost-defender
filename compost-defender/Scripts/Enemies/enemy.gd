@@ -6,6 +6,7 @@ signal died(compost_value: int)
 signal looped_end(enemy: Enemy)
 
 const FIRE_FX = preload("res://Scenes/fire_fx.tscn")
+const TEMP_POP_FX = preload("res://Scenes/temporary_pop_fx.tscn")
 const FIRE_DAMAGE_MULTIPLIER = 1
 const SECONDS_BETWEEN_FIRE_STACKS = 1.0
 const DEFAULT_SPEED_MULTIPLIER = 3.0
@@ -40,14 +41,17 @@ func take_damage(damage_amount: int) -> void:
 	health -= damage_amount
 	if health <= 0:
 		_die()
+	else:
+		var temp_pop_fx_node = TEMP_POP_FX.instantiate()
+		add_child(temp_pop_fx_node)
 
 
 func apply_fire_stacks(fire_stacks_to_apply: int) -> void:
 	fire_stacks = max(0, fire_stacks_to_apply)
-	if(fire_stacks >= 1):
+	if fire_stacks >= 1:
 		burn_timer.start(SECONDS_BETWEEN_FIRE_STACKS)
-		fire_fx = FIRE_FX.instantiate()
-		add_child(fire_fx)
+		var fire_fx_node = FIRE_FX.instantiate()
+		add_child(fire_fx_node)
 
 
 func _consume_burn_stack() -> void:
