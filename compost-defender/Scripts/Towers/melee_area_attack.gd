@@ -11,7 +11,7 @@ var attack_area: Area2D
 
 func _ready() -> void: # applies the attack range from above to the melee attack and starts the attack cooldown timer
 	attack_area = $Hitbox
-	attack_area.scale *= hurt_box_scale
+	self.scale *= hurt_box_scale
 	attack_cooldown = $AttackCooldown
 	attack_cooldown.start(seconds_between_attacks)
 
