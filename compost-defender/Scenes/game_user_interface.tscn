@@ -650,10 +650,10 @@ tracks/8/path = NodePath("LevelSelectScreen/LevelSelectBackround/LevelSelectCont
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
 "update": 1,
-"values": [false]
+"values": []
 }
 tracks/9/type = "value"
 tracks/9/imported = false
@@ -798,178 +798,6 @@ tracks/20/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_jnxqb"]
-resource_name = "close_MenuScreen"
-length = 1.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("MenuScreen/MainMenuContainer/MainMenu/ToggleLevelSelectMenuButton:self_modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("MenuScreen/MainMenuContainer/MainMenu/ToggleControlsMenuButton:self_modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.6333333),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("MenuScreen/MainMenuContainer/MainMenu/ToggleOptionsMenuButton:self_modulate")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.7667),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("MenuScreen/MainMenuContainer/MainMenu/QuitButton:self_modulate")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.9),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("MenuScreen/MainMenuContainer/Game logo:self_modulate")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0.3, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("MenuScreen/GameplayImmage 1:self_modulate")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("MenuScreen/GameplayImmage 2:self_modulate")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("MenuScreen/GameplayImmage 2:visible")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("MenuScreen/GameplayImmage 1:visible")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("MenuScreen/MainMenuContainer/Game logo:visible")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/10/type = "value"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath("MenuScreen/MainMenuContainer/MainMenu/QuitButton:visible")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
-"times": PackedFloat32Array(0, 0.9),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/11/type = "value"
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/path = NodePath("MenuScreen/MainMenuContainer/MainMenu/ToggleOptionsMenuButton:visible")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/keys = {
-"times": PackedFloat32Array(0, 0.9),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/12/type = "value"
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/path = NodePath("MenuScreen/MainMenuContainer/MainMenu/ToggleControlsMenuButton:visible")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/keys = {
-"times": PackedFloat32Array(0, 0.9),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/13/type = "value"
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/path = NodePath("MenuScreen/MainMenuContainer/MainMenu/ToggleLevelSelectMenuButton:visible")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/keys = {
-"times": PackedFloat32Array(0, 0.9),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
 }
 
 [sub_resource type="Animation" id="Animation_51chi"]
@@ -1904,124 +1732,7 @@ controls_screen = NodePath("ControlsScreen")
 libraries/ = SubResource("AnimationLibrary_vvvpa")
 autoplay = &"RESET"
 
-[node name="MenuScreen" type="HBoxContainer" parent="." unique_id=269593080]
-layout_mode = 0
-anchor_top = 0.07716049
-anchor_right = 1.0
-anchor_bottom = 0.84876543
-theme_override_constants/separation = 13
-metadata/_edit_use_anchors_ = true
-
-[node name="Seperator" type="Control" parent="MenuScreen" unique_id=225173549]
-layout_mode = 2
-
-[node name="GameplayImmage 1" type="TextureRect" parent="MenuScreen" unique_id=953227424]
-custom_minimum_size = Vector2(400, 500)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 0
-texture = ExtResource("2_vljpe")
-
-[node name="MainMenuContainer" type="VBoxContainer" parent="MenuScreen" unique_id=4133672]
-layout_mode = 2
-
-[node name="Game logo" type="TextureRect" parent="MenuScreen/MainMenuContainer" unique_id=716212163]
-layout_mode = 2
-size_flags_horizontal = 4
-texture = ExtResource("2_vvvpa")
-
-[node name="MainMenu" type="VBoxContainer" parent="MenuScreen/MainMenuContainer" unique_id=2094300266]
-custom_minimum_size = Vector2(300, 350)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_constants/separation = 20
-
-[node name="OpenLevelSelectMenuButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=348135700]
-layout_mode = 2
-text = "Play Game"
-icon = ExtResource("5_osrqe")
-
-[node name="OpenControlsMenuButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=478049765]
-layout_mode = 2
-text = "Controls"
-icon = ExtResource("6_51chi")
-
-[node name="QuitButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=369544090]
-layout_mode = 2
-text = "Exit"
-icon = ExtResource("7_jnxqb")
-
-[node name="ToggleLevelSelectMenuButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=1155819415]
-visible = false
-self_modulate = Color(1, 1, 1, 0)
-layout_mode = 2
-text = "Play Game"
-
-[node name="ToggleControlsMenuButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=1439070433]
-visible = false
-self_modulate = Color(1, 1, 1, 0)
-layout_mode = 2
-text = "Controls"
-
-[node name="ToggleOptionsMenuButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=1556283211]
-visible = false
-self_modulate = Color(1, 1, 1, 0)
-layout_mode = 2
-text = "Options"
-
-[node name="QuitButton2" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=59389669]
-visible = false
-self_modulate = Color(1, 1, 1, 0)
-layout_mode = 2
-text = "Exit"
-
-[node name="Game logo2" type="TextureRect" parent="MenuScreen/MainMenuContainer" unique_id=227677575]
-visible = false
-self_modulate = Color(1, 1, 1, 0)
-layout_mode = 2
-size_flags_horizontal = 4
-texture = ExtResource("2_vvvpa")
-
-[node name="MainMenu2" type="VBoxContainer" parent="MenuScreen/MainMenuContainer" unique_id=1968214411]
-custom_minimum_size = Vector2(300, 350)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_constants/separation = 20
-
-[node name="GameplayImmage 2" type="TextureRect" parent="MenuScreen" unique_id=652140848]
-custom_minimum_size = Vector2(400, 500)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 0
-texture = ExtResource("2_vljpe")
-
-[node name="Seperator2" type="Control" parent="MenuScreen" unique_id=663088382]
-layout_mode = 2
-
-[node name="GameplayImmage 3" type="TextureRect" parent="MenuScreen" unique_id=269216158]
-visible = false
-self_modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(400, 500)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-texture = ExtResource("6_osrqe")
-
-[node name="MainMenuContainer2" type="VBoxContainer" parent="MenuScreen" unique_id=382445725]
-layout_mode = 2
-
-[node name="GameplayImmage 4" type="TextureRect" parent="MenuScreen" unique_id=2049900740]
-visible = false
-self_modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(400, 500)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-
 [node name="ControlsScreen" type="MarginContainer" parent="." unique_id=1125564509]
-visible = false
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = -1
@@ -2083,43 +1794,12 @@ layout_mode = 2
 texture = ExtResource("2_vvvpa")
 
 [node name="ControlsSeperator4" type="Control" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsImmageHBoxContainer" unique_id=1147111367]
-visible = false
 layout_mode = 2
 
 [node name="ControlsSeperator5" type="Control" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsImmageHBoxContainer" unique_id=21719797]
-visible = false
 layout_mode = 2
 
 [node name="ControlsImmage3" type="TextureRect" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsImmageHBoxContainer" unique_id=1306242540]
-visible = false
-clip_contents = true
-layout_mode = 2
-texture = ExtResource("2_vvvpa")
-
-[node name="ControlsSeperator6" type="Control" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsImmageHBoxContainer" unique_id=248528308]
-layout_mode = 2
-
-[node name="ControlsImmage4" type="TextureRect" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsImmageHBoxContainer" unique_id=1033138822]
-layout_mode = 2
-texture = ExtResource("2_vvvpa")
-
-[node name="ControlsSeperator7" type="Control" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsImmageHBoxContainer" unique_id=1360385553]
-layout_mode = 2
-
-[node name="ControlsSeperator8" type="Control" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsImmageHBoxContainer" unique_id=1036656787]
-layout_mode = 2
-
-[node name="ControlsImmage5" type="TextureRect" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsImmageHBoxContainer" unique_id=1593857607]
-layout_mode = 2
-texture = ExtResource("2_vvvpa")
-
-[node name="ControlsSeperator9" type="Control" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsImmageHBoxContainer" unique_id=1401024755]
-layout_mode = 2
-
-[node name="ControlsSeperator10" type="Control" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsImmageHBoxContainer" unique_id=1725565186]
-layout_mode = 2
-
-[node name="ControlsImmage6" type="TextureRect" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsImmageHBoxContainer" unique_id=1213750432]
 visible = false
 clip_contents = true
 layout_mode = 2
@@ -2151,65 +1831,7 @@ text = "To close this menu and
 other's like it press the red
 X in the top right corner"
 
-[node name="UsingShopControlsLabel2" type="Label" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsLabelHContainer" unique_id=1551198318]
-layout_mode = 2
-text = "Click on the Towers
-from the shop and place
-them on the battlefield"
-
-[node name="OpeningShopControlsLabel3" type="Label" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsLabelHContainer" unique_id=133534496]
-layout_mode = 2
-text = "Open the shop by pressing
-the Shop button on the top
-right in the level"
-
-[node name="ClosingMenuControlsLabel4" type="Label" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages/ControlsLabelHContainer" unique_id=91130525]
-layout_mode = 2
-text = "To close this menu and
-other's like it press the red
-X in the top right corner"
-
-[node name="ControlsSeperator2" type="Control" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages" unique_id=385722549]
-layout_mode = 2
-
-[node name="ControlsImmageHBoxContainer2" type="HBoxContainer" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages" unique_id=702918698]
-layout_mode = 2
-theme_override_constants/separation = 50
-
-[node name="ControlsLabelHContainer2" type="HBoxContainer" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer/ControlsVContainerForImmages" unique_id=1120859955]
-layout_mode = 2
-theme_override_constants/separation = 35
-metadata/_edit_use_anchors_ = true
-
-[node name="ControlsVContainerForImmages2" type="VBoxContainer" parent="ControlsScreen/ControlsBackround/ControlsMenuMarginContainer" unique_id=892990223]
-layout_mode = 2
-theme_override_constants/separation = 50
-
-[node name="ControlsMenuMarginContainer2" type="MarginContainer" parent="ControlsScreen/ControlsBackround" unique_id=707842703]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 40
-theme_override_constants/margin_top = 40
-theme_override_constants/margin_right = 40
-theme_override_constants/margin_bottom = 40
-metadata/_edit_use_anchors_ = true
-
 [node name="CloseControlsMenuButton" type="Button" parent="ControlsScreen" unique_id=1946216915]
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 0
-text = "X"
-
-[node name="ControlsBackround2" type="NinePatchRect" parent="ControlsScreen" unique_id=55286377]
-layout_mode = 2
-metadata/_edit_use_anchors_ = true
-
-[node name="ToggleControlsMenuButton" type="Button" parent="ControlsScreen" unique_id=164497480]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_horizontal = 8
@@ -2373,16 +1995,102 @@ size_flags_horizontal = 8
 size_flags_vertical = 0
 text = "X"
 
-[connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/OpenLevelSelectMenuButton" to="." method="_on_open_level_select_menu_button_pressed"]
-[connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/OpenLevelSelectMenuButton" to="." method="_on_toggle_level_select_menu_button_pressed"]
-[connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/OpenControlsMenuButton" to="." method="_on_open_controls_menu_button_pressed"]
-[connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/OpenControlsMenuButton" to="." method="_on_toggle_controls_menu_button_pressed"]
-[connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/QuitButton" to="." method="_on_quit_button_pressed"]
-[connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/ToggleLevelSelectMenuButton" to="." method="_on_toggle_level_select_menu_button_pressed"]
-[connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/ToggleControlsMenuButton" to="." method="_on_toggle_controls_menu_button_pressed"]
+[node name="MenuScreen" type="HBoxContainer" parent="." unique_id=269593080]
+layout_mode = 0
+anchor_top = 0.07716049
+anchor_right = 1.0
+anchor_bottom = 0.84876543
+offset_bottom = 306.0
+theme_override_constants/separation = 13
+metadata/_edit_use_anchors_ = true
+
+[node name="Seperator" type="Control" parent="MenuScreen" unique_id=225173549]
+layout_mode = 2
+
+[node name="GameplayImmage 1" type="TextureRect" parent="MenuScreen" unique_id=953227424]
+custom_minimum_size = Vector2(400, 500)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture = ExtResource("2_vljpe")
+
+[node name="MainMenuContainer" type="VBoxContainer" parent="MenuScreen" unique_id=4133672]
+layout_mode = 2
+
+[node name="Game logo" type="TextureRect" parent="MenuScreen/MainMenuContainer" unique_id=716212163]
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("2_vvvpa")
+
+[node name="MainMenu" type="VBoxContainer" parent="MenuScreen/MainMenuContainer" unique_id=2094300266]
+custom_minimum_size = Vector2(300, 350)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 20
+
+[node name="OpenLevelSelectMenuButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=348135700]
+layout_mode = 2
+text = "Play Game"
+icon = ExtResource("5_osrqe")
+
+[node name="OpenControlsMenuButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=478049765]
+layout_mode = 2
+text = "Controls"
+icon = ExtResource("6_51chi")
+
+[node name="QuitButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=369544090]
+layout_mode = 2
+text = "Exit"
+icon = ExtResource("7_jnxqb")
+
+[node name="ToggleLevelSelectMenuButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=1155819415]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+text = "Play Game"
+
+[node name="ToggleControlsMenuButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=1439070433]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+text = "Controls"
+
+[node name="ToggleOptionsMenuButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=1556283211]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+text = "Options"
+
+[node name="QuitButton2" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=59389669]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+text = "Exit"
+
+[node name="Game logo2" type="TextureRect" parent="MenuScreen/MainMenuContainer" unique_id=227677575]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("2_vvvpa")
+
+[node name="MainMenu2" type="VBoxContainer" parent="MenuScreen/MainMenuContainer" unique_id=1968214411]
+custom_minimum_size = Vector2(300, 350)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 20
+
+[node name="GameplayImmage 2" type="TextureRect" parent="MenuScreen" unique_id=652140848]
+custom_minimum_size = Vector2(400, 500)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture = ExtResource("2_vljpe")
+
 [connection signal="pressed" from="ControlsScreen/CloseControlsMenuButton" to="." method="_on_close_controls_menu_button_pressed"]
 [connection signal="pressed" from="ControlsScreen/CloseControlsMenuButton" to="." method="_on_toggle_controls_menu_button_pressed"]
-[connection signal="pressed" from="ControlsScreen/ToggleControlsMenuButton" to="." method="_on_toggle_controls_menu_button_pressed"]
 [connection signal="pressed" from="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer/Level1Button" to="." method="_on_level_1_button_pressed"]
 [connection signal="pressed" from="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer/Level2Button" to="." method="_on_level_2_button_pressed"]
 [connection signal="pressed" from="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer/Level3Button" to="." method="_on_level_3_button_pressed"]
@@ -2390,3 +2098,10 @@ text = "X"
 [connection signal="pressed" from="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer/Level5Button" to="." method="_on_level_5_button_pressed"]
 [connection signal="pressed" from="LevelSelectScreen/CloseLevelSelectMenu" to="." method="_on_close_level_select_menu_pressed"]
 [connection signal="pressed" from="LevelSelectScreen/CloseLevelSelectMenu" to="." method="_on_toggle_level_select_menu_button_pressed"]
+[connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/OpenLevelSelectMenuButton" to="." method="_on_open_level_select_menu_button_pressed"]
+[connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/OpenLevelSelectMenuButton" to="." method="_on_toggle_level_select_menu_button_pressed"]
+[connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/OpenControlsMenuButton" to="." method="_on_toggle_controls_menu_button_pressed"]
+[connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/OpenControlsMenuButton" to="." method="_on_open_controls_menu_button_pressed"]
+[connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/ToggleLevelSelectMenuButton" to="." method="_on_toggle_level_select_menu_button_pressed"]
+[connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/ToggleControlsMenuButton" to="." method="_on_toggle_controls_menu_button_pressed"]
