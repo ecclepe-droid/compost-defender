@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cslhets8ecpss"]
+
+[ext_resource type="Script" uid="uid://18egtarbwty2" path="res://Scripts/temporary_pop_fx.gd" id="1_i7yy3"]
+[ext_resource type="Texture2D" uid="uid://bu7desh67giua" path="res://Sprites/Biglightsaber14).png" id="1_tq2ko"]
+
+[node name="TemporaryPopFX" type="Sprite2D" unique_id=564970267]
+texture = ExtResource("1_tq2ko")
+script = ExtResource("1_i7yy3")
+
+[node name="LifeTimer" type="Timer" parent="." unique_id=294295673]
+wait_time = 0.1
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="LifeTimer" to="." method="_on_life_timer_timeout"]
