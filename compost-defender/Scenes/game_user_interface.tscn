@@ -1732,7 +1732,102 @@ controls_screen = NodePath("ControlsScreen")
 libraries/ = SubResource("AnimationLibrary_vvvpa")
 autoplay = &"RESET"
 
+[node name="MenuScreen" type="HBoxContainer" parent="." unique_id=269593080]
+layout_mode = 0
+anchor_top = 0.07716049
+anchor_right = 1.0
+anchor_bottom = 0.84876543
+offset_bottom = 306.0
+theme_override_constants/separation = 13
+metadata/_edit_use_anchors_ = true
+
+[node name="Seperator" type="Control" parent="MenuScreen" unique_id=225173549]
+layout_mode = 2
+
+[node name="GameplayImmage 1" type="TextureRect" parent="MenuScreen" unique_id=953227424]
+custom_minimum_size = Vector2(400, 500)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture = ExtResource("2_vljpe")
+
+[node name="MainMenuContainer" type="VBoxContainer" parent="MenuScreen" unique_id=4133672]
+layout_mode = 2
+
+[node name="Game logo" type="TextureRect" parent="MenuScreen/MainMenuContainer" unique_id=716212163]
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("2_vvvpa")
+
+[node name="MainMenu" type="VBoxContainer" parent="MenuScreen/MainMenuContainer" unique_id=2094300266]
+custom_minimum_size = Vector2(300, 350)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 20
+
+[node name="OpenLevelSelectMenuButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=348135700]
+layout_mode = 2
+text = "Play Game"
+icon = ExtResource("5_osrqe")
+
+[node name="OpenControlsMenuButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=478049765]
+layout_mode = 2
+text = "Controls"
+icon = ExtResource("6_51chi")
+
+[node name="QuitButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=369544090]
+layout_mode = 2
+text = "Exit"
+icon = ExtResource("7_jnxqb")
+
+[node name="ToggleLevelSelectMenuButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=1155819415]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+text = "Play Game"
+
+[node name="ToggleControlsMenuButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=1439070433]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+text = "Controls"
+
+[node name="ToggleOptionsMenuButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=1556283211]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+text = "Options"
+
+[node name="QuitButton2" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=59389669]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+text = "Exit"
+
+[node name="Game logo2" type="TextureRect" parent="MenuScreen/MainMenuContainer" unique_id=227677575]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("2_vvvpa")
+
+[node name="MainMenu2" type="VBoxContainer" parent="MenuScreen/MainMenuContainer" unique_id=1968214411]
+custom_minimum_size = Vector2(300, 350)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 20
+
+[node name="GameplayImmage 2" type="TextureRect" parent="MenuScreen" unique_id=652140848]
+custom_minimum_size = Vector2(400, 500)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture = ExtResource("2_vljpe")
+
 [node name="ControlsScreen" type="MarginContainer" parent="." unique_id=1125564509]
+visible = false
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = -1
@@ -1839,6 +1934,7 @@ size_flags_vertical = 0
 text = "X"
 
 [node name="LevelSelectScreen" type="MarginContainer" parent="." unique_id=827482751]
+visible = false
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = -1
@@ -1995,100 +2091,13 @@ size_flags_horizontal = 8
 size_flags_vertical = 0
 text = "X"
 
-[node name="MenuScreen" type="HBoxContainer" parent="." unique_id=269593080]
-layout_mode = 0
-anchor_top = 0.07716049
-anchor_right = 1.0
-anchor_bottom = 0.84876543
-offset_bottom = 306.0
-theme_override_constants/separation = 13
-metadata/_edit_use_anchors_ = true
-
-[node name="Seperator" type="Control" parent="MenuScreen" unique_id=225173549]
-layout_mode = 2
-
-[node name="GameplayImmage 1" type="TextureRect" parent="MenuScreen" unique_id=953227424]
-custom_minimum_size = Vector2(400, 500)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 0
-texture = ExtResource("2_vljpe")
-
-[node name="MainMenuContainer" type="VBoxContainer" parent="MenuScreen" unique_id=4133672]
-layout_mode = 2
-
-[node name="Game logo" type="TextureRect" parent="MenuScreen/MainMenuContainer" unique_id=716212163]
-layout_mode = 2
-size_flags_horizontal = 4
-texture = ExtResource("2_vvvpa")
-
-[node name="MainMenu" type="VBoxContainer" parent="MenuScreen/MainMenuContainer" unique_id=2094300266]
-custom_minimum_size = Vector2(300, 350)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_constants/separation = 20
-
-[node name="OpenLevelSelectMenuButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=348135700]
-layout_mode = 2
-text = "Play Game"
-icon = ExtResource("5_osrqe")
-
-[node name="OpenControlsMenuButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=478049765]
-layout_mode = 2
-text = "Controls"
-icon = ExtResource("6_51chi")
-
-[node name="QuitButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=369544090]
-layout_mode = 2
-text = "Exit"
-icon = ExtResource("7_jnxqb")
-
-[node name="ToggleLevelSelectMenuButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=1155819415]
-visible = false
-self_modulate = Color(1, 1, 1, 0)
-layout_mode = 2
-text = "Play Game"
-
-[node name="ToggleControlsMenuButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=1439070433]
-visible = false
-self_modulate = Color(1, 1, 1, 0)
-layout_mode = 2
-text = "Controls"
-
-[node name="ToggleOptionsMenuButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=1556283211]
-visible = false
-self_modulate = Color(1, 1, 1, 0)
-layout_mode = 2
-text = "Options"
-
-[node name="QuitButton2" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=59389669]
-visible = false
-self_modulate = Color(1, 1, 1, 0)
-layout_mode = 2
-text = "Exit"
-
-[node name="Game logo2" type="TextureRect" parent="MenuScreen/MainMenuContainer" unique_id=227677575]
-visible = false
-self_modulate = Color(1, 1, 1, 0)
-layout_mode = 2
-size_flags_horizontal = 4
-texture = ExtResource("2_vvvpa")
-
-[node name="MainMenu2" type="VBoxContainer" parent="MenuScreen/MainMenuContainer" unique_id=1968214411]
-custom_minimum_size = Vector2(300, 350)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_constants/separation = 20
-
-[node name="GameplayImmage 2" type="TextureRect" parent="MenuScreen" unique_id=652140848]
-custom_minimum_size = Vector2(400, 500)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 0
-texture = ExtResource("2_vljpe")
-
+[connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/OpenLevelSelectMenuButton" to="." method="_on_open_level_select_menu_button_pressed"]
+[connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/OpenLevelSelectMenuButton" to="." method="_on_toggle_level_select_menu_button_pressed"]
+[connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/OpenControlsMenuButton" to="." method="_on_toggle_controls_menu_button_pressed"]
+[connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/OpenControlsMenuButton" to="." method="_on_open_controls_menu_button_pressed"]
+[connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/ToggleLevelSelectMenuButton" to="." method="_on_toggle_level_select_menu_button_pressed"]
+[connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/ToggleControlsMenuButton" to="." method="_on_toggle_controls_menu_button_pressed"]
 [connection signal="pressed" from="ControlsScreen/CloseControlsMenuButton" to="." method="_on_close_controls_menu_button_pressed"]
 [connection signal="pressed" from="ControlsScreen/CloseControlsMenuButton" to="." method="_on_toggle_controls_menu_button_pressed"]
 [connection signal="pressed" from="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer/Level1Button" to="." method="_on_level_1_button_pressed"]
@@ -2098,10 +2107,3 @@ texture = ExtResource("2_vljpe")
 [connection signal="pressed" from="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer/Level5Button" to="." method="_on_level_5_button_pressed"]
 [connection signal="pressed" from="LevelSelectScreen/CloseLevelSelectMenu" to="." method="_on_close_level_select_menu_pressed"]
 [connection signal="pressed" from="LevelSelectScreen/CloseLevelSelectMenu" to="." method="_on_toggle_level_select_menu_button_pressed"]
-[connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/OpenLevelSelectMenuButton" to="." method="_on_open_level_select_menu_button_pressed"]
-[connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/OpenLevelSelectMenuButton" to="." method="_on_toggle_level_select_menu_button_pressed"]
-[connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/OpenControlsMenuButton" to="." method="_on_toggle_controls_menu_button_pressed"]
-[connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/OpenControlsMenuButton" to="." method="_on_open_controls_menu_button_pressed"]
-[connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/QuitButton" to="." method="_on_quit_button_pressed"]
-[connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/ToggleLevelSelectMenuButton" to="." method="_on_toggle_level_select_menu_button_pressed"]
-[connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/ToggleControlsMenuButton" to="." method="_on_toggle_controls_menu_button_pressed"]
