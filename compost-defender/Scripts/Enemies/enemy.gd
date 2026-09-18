@@ -46,6 +46,10 @@ func take_damage(damage_amount: int) -> void:
 		add_child(temp_pop_fx_node)
 
 
+func be_knocked_back(knockback_stacks: int) -> void:
+	progress -= knockback_stacks * speed * 0.033
+
+
 func apply_fire_stacks(fire_stacks_to_apply: int) -> void:
 	fire_stacks = max(0, fire_stacks_to_apply)
 	if fire_stacks >= 1:
