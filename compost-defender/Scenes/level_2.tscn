@@ -117,5 +117,3 @@ blend_mode = 1
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=218505606]
 
 [node name="InLevelUI" parent="CanvasLayer" unique_id=1566003896 instance=ExtResource("6_42uki")]
-
-[connection signal="user_wants_worm_at_mouse" from="CanvasLayer/InLevelUI" to="." method="_on_in_level_ui_user_wants_worm_at_mouse"]
