@@ -2091,19 +2091,19 @@ size_flags_horizontal = 8
 size_flags_vertical = 0
 text = "X"
 
-[connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/OpenLevelSelectMenuButton" to="." method="_on_open_level_select_menu_button_pressed"]
 [connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/OpenLevelSelectMenuButton" to="." method="_on_toggle_level_select_menu_button_pressed"]
+[connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/OpenLevelSelectMenuButton" to="." method="_on_open_level_select_menu_button_pressed"]
 [connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/OpenControlsMenuButton" to="." method="_on_toggle_controls_menu_button_pressed"]
 [connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/OpenControlsMenuButton" to="." method="_on_open_controls_menu_button_pressed"]
 [connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/QuitButton" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/ToggleLevelSelectMenuButton" to="." method="_on_toggle_level_select_menu_button_pressed"]
 [connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/ToggleControlsMenuButton" to="." method="_on_toggle_controls_menu_button_pressed"]
-[connection signal="pressed" from="ControlsScreen/CloseControlsMenuButton" to="." method="_on_close_controls_menu_button_pressed"]
 [connection signal="pressed" from="ControlsScreen/CloseControlsMenuButton" to="." method="_on_toggle_controls_menu_button_pressed"]
+[connection signal="pressed" from="ControlsScreen/CloseControlsMenuButton" to="." method="_on_close_controls_menu_button_pressed"]
 [connection signal="pressed" from="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer/Level1Button" to="." method="_on_level_1_button_pressed"]
 [connection signal="pressed" from="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer/Level2Button" to="." method="_on_level_2_button_pressed"]
 [connection signal="pressed" from="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer/Level3Button" to="." method="_on_level_3_button_pressed"]
 [connection signal="pressed" from="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer/Level4Button" to="." method="_on_level_4_button_pressed"]
 [connection signal="pressed" from="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer/Level5Button" to="." method="_on_level_5_button_pressed"]
-[connection signal="pressed" from="LevelSelectScreen/CloseLevelSelectMenu" to="." method="_on_close_level_select_menu_pressed"]
 [connection signal="pressed" from="LevelSelectScreen/CloseLevelSelectMenu" to="." method="_on_toggle_level_select_menu_button_pressed"]
+[connection signal="pressed" from="LevelSelectScreen/CloseLevelSelectMenu" to="." method="_on_close_level_select_menu_pressed"]
