@@ -3,9 +3,10 @@
 [ext_resource type="Script" uid="uid://ciwcpj38n5rdw" path="res://Scripts/Enemies/enemy.gd" id="1_y0ttw"]
 [ext_resource type="Texture2D" uid="uid://cq1ucyfh5s54" path="res://Sprites/Enemies/catchew(3).png" id="2_y0ttw"]
 
-[node name="Cashew" type="PathFollow2D" unique_id=848236373 node_paths=PackedStringArray("burn_timer")]
+[node name="Cashew" type="PathFollow2D" unique_id=848236373 node_paths=PackedStringArray("burn_timer", "slow_timer")]
 script = ExtResource("1_y0ttw")
 burn_timer = NodePath("BurnTimer")
+slow_timer = NodePath("SlowTimer")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=674722710]
 position = Vector2(-7.1525574e-07, 4.7683716e-07)
@@ -18,5 +19,7 @@ polygon = PackedVector2Array(-17, -25, -12, -35, 3, -36, 17, -24, 18, -3, 17, 22
 
 [node name="BurnTimer" type="Timer" parent="." unique_id=2066613799]
 one_shot = true
+
+[node name="SlowTimer" type="Timer" parent="." unique_id=151117897]
 
 [connection signal="timeout" from="BurnTimer" to="." method="_on_burn_timer_timeout"]

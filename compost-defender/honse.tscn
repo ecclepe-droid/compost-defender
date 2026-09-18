@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dyjpou3vep21x"]
+
+[ext_resource type="Script" uid="uid://ciwcpj38n5rdw" path="res://Scripts/Enemies/enemy.gd" id="1_576gq"]
+[ext_resource type="Texture2D" uid="uid://85ngb57c2v8l" path="res://Sprites/Enemies/amond(3).png" id="2_dxq1w"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ji30e"]
+radius = 21.0
+height = 80.0
+
+[node name="Honse" type="PathFollow2D" unique_id=848236373 node_paths=PackedStringArray("burn_timer", "slow_timer")]
+script = ExtResource("1_576gq")
+burn_timer = NodePath("BurnTimer")
+slow_timer = NodePath("SlowTimer")
+
+[node name="HonseSprite" type="Sprite2D" parent="." unique_id=674722710]
+position = Vector2(-7.1525574e-07, 4.7683716e-07)
+texture = ExtResource("2_dxq1w")
+
+[node name="HonseHurtbox" type="Area2D" parent="." unique_id=1961882758]
+
+[node name="HonseCollisionShape" type="CollisionShape2D" parent="HonseHurtbox" unique_id=894666033]
+position = Vector2(-3, -3)
+shape = SubResource("CapsuleShape2D_ji30e")
+
+[node name="BurnTimer" type="Timer" parent="." unique_id=1300678709]
+one_shot = true
+
+[node name="SlowTimer" type="Timer" parent="." unique_id=718764005]

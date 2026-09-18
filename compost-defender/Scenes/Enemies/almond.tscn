@@ -7,9 +7,10 @@
 radius = 21.0
 height = 80.0
 
-[node name="Almond" type="PathFollow2D" unique_id=848236373 node_paths=PackedStringArray("burn_timer")]
+[node name="Almond" type="PathFollow2D" unique_id=848236373 node_paths=PackedStringArray("burn_timer", "slow_timer")]
 script = ExtResource("1_ji30e")
 burn_timer = NodePath("BurnTimer")
+slow_timer = NodePath("SlowTimer")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=674722710]
 position = Vector2(-7.1525574e-07, 4.7683716e-07)
@@ -22,4 +23,7 @@ position = Vector2(-3, -3)
 shape = SubResource("CapsuleShape2D_ji30e")
 
 [node name="BurnTimer" type="Timer" parent="." unique_id=1300678709]
+one_shot = true
+
+[node name="SlowTimer" type="Timer" parent="." unique_id=130186652]
 one_shot = true

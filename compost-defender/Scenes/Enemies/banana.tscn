@@ -3,9 +3,10 @@
 [ext_resource type="Script" uid="uid://ciwcpj38n5rdw" path="res://Scripts/Enemies/enemy.gd" id="1_4nc0y"]
 [ext_resource type="Texture2D" uid="uid://dl0bn65pr5nsx" path="res://Sprites/Enemies/bashmana.png" id="2_4nc0y"]
 
-[node name="Banana" type="PathFollow2D" unique_id=848236373 node_paths=PackedStringArray("burn_timer")]
+[node name="Banana" type="PathFollow2D" unique_id=848236373 node_paths=PackedStringArray("burn_timer", "slow_timer")]
 script = ExtResource("1_4nc0y")
 burn_timer = NodePath("BurnTimer")
+slow_timer = NodePath("SlowTimer")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=674722710]
 texture = ExtResource("2_4nc0y")
@@ -17,3 +18,5 @@ polygon = PackedVector2Array(-20, -33, -12, -42, 1, -42, 18, -30, 23, -2, 23, 21
 
 [node name="BurnTimer" type="Timer" parent="." unique_id=1808182433]
 one_shot = true
+
+[node name="SlowTimer" type="Timer" parent="." unique_id=2027713247]

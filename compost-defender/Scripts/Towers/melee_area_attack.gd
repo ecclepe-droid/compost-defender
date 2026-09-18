@@ -2,11 +2,12 @@ extends Node2D
 
 signal attacked_enemy
 
-@export var damage: int = 3 # the ammount of damage melee attacks do every hit  |||  10 = 10 damage per hit, 1 = 1 damage per hit
-@export var seconds_between_attacks: float = 0.85 # how fast the melee attack reloads  |||  1 = 1 attack per second, 0.1 = 10 attacks per second
-@export var hurt_box_scale: float = 1.75 # how big the range of the melee attack is  |||  1 = 100 pixels, 0.01 = 1 pixel
+@export var damage: int = 1 # the ammount of damage melee attacks do every hit  |||  10 = 10 damage per hit, 1 = 1 damage per hit
+@export var seconds_between_attacks: float = 0 # how fast the melee attack reloads  |||  1 = 1 attack per second, 0.1 = 10 attacks per second
+@export var hurt_box_scale: float = 0 # how big the range of the melee attack is  |||  1 = 100 pixels, 0.01 = 1 pixel
 @export var fire_stacks_effect: int = 0 # how many stacks of fire the melee attack inflicts  |||  10 = 10 stacks of fire, 1 = 1 stack of fire
 @export var knockback_stacks_effect: int = 0
+@export var slow_stacks_effect: int = 0
 var attack_cooldown: Timer
 var attack_area: Area2D
 
@@ -32,11 +33,14 @@ func _attack_enemy(enemy: Node2D) -> void: # damages the enemy, and applies fire
 	
 	
 	if enemy.has_method("apply_fire_stacks") and fire_stacks_effect > 0:
+		print("fired")
 		enemy.apply_fire_stacks(fire_stacks_effect)
 	
 	if enemy.has_method("be_knocked_back") and knockback_stacks_effect > 0:
 		enemy.be_knocked_back(knockback_stacks_effect)
 
+	if enemy.has_method("get_slowed"):
+		enemy.get_slowed(slow_stacks_effect)
 
 func _on_attack_cooldown_timeout() -> void: # looks for enemies in it's range with the _entity_is_enemy function and attacks it using the _attack enemy function. Then it starts the attack cooldown again
 	var areas_in_range: Array[Area2D] = attack_area.get_overlapping_areas()

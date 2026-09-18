@@ -6,9 +6,10 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_6k1qn"]
 radius = 12.5025
 
-[node name="Orange" type="PathFollow2D" unique_id=1231008779 node_paths=PackedStringArray("burn_timer")]
+[node name="Orange" type="PathFollow2D" unique_id=1231008779 node_paths=PackedStringArray("burn_timer", "slow_timer")]
 script = ExtResource("1_6k1qn")
 burn_timer = NodePath("BurnTimer")
+slow_timer = NodePath("SlowTimer")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=1560617475]
 position = Vector2(-7.1525574e-07, 4.7683716e-07)
@@ -24,3 +25,5 @@ shape = SubResource("CircleShape2D_6k1qn")
 [node name="BurnTimer" type="Timer" parent="." unique_id=1441209322]
 one_shot = true
 autostart = true
+
+[node name="SlowTimer" type="Timer" parent="." unique_id=1290163771]

@@ -7,9 +7,10 @@
 radius = 27.0
 height = 66.0
 
-[node name="Pear" type="PathFollow2D" unique_id=1438226589 node_paths=PackedStringArray("burn_timer")]
+[node name="Pear" type="PathFollow2D" unique_id=1438226589 node_paths=PackedStringArray("burn_timer", "slow_timer")]
 script = ExtResource("1_wl0tx")
 burn_timer = NodePath("BurnTimer")
+slow_timer = NodePath("SlowTimer")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=1907922814]
 position = Vector2(0.9999993, 4.7683716e-07)
@@ -23,3 +24,5 @@ shape = SubResource("CapsuleShape2D_wl0tx")
 
 [node name="BurnTimer" type="Timer" parent="." unique_id=1239136082]
 one_shot = true
+
+[node name="SlowTimer" type="Timer" parent="." unique_id=1537534623]

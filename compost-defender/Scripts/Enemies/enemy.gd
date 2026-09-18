@@ -9,6 +9,7 @@ const FIRE_FX = preload("res://Scenes/fire_fx.tscn")
 const TEMP_POP_FX = preload("res://Scenes/temporary_pop_fx.tscn")
 const FIRE_DAMAGE_MULTIPLIER = 1
 const SECONDS_BETWEEN_FIRE_STACKS = 1.0
+const SECONDS_BETWEEN_SLOW_STACKS = 1.0
 const DEFAULT_SPEED_MULTIPLIER = 3.0
 
 @export var enemy_level: int = 1
@@ -16,9 +17,11 @@ const DEFAULT_SPEED_MULTIPLIER = 3.0
 @export var max_health: int = 10
 @export var compost_dropped: int = 10
 @export var burn_timer: Timer
+@export var slow_timer: Timer
 
 var actual_speed
 var fire_stacks
+var slowing
 var health
 var fire_fx: Sprite2D
 
@@ -28,11 +31,14 @@ func _ready() -> void:
 	health = max_health
 	fire_stacks = 0
 	progress = 0
+	slowing = 1
 	burn_timer.timeout.connect(_consume_burn_stack)
 
 func _process(delta: float) -> void:
 	var pre_movement_progress = progress
-	progress += actual_speed * delta
+	progress += actual_speed * delta / slowing
+	if slowing >= 2:
+		remove_slow_stack()
 	if pre_movement_progress > progress:
 		looped_end.emit(self)
 
@@ -49,14 +55,20 @@ func take_damage(damage_amount: int) -> void:
 func be_knocked_back(knockback_stacks: int) -> void:
 	progress -= knockback_stacks * speed * 0.033
 
+func get_slowed(slow_stacks_effect):
+	slowing += slow_stacks_effect
 
-func apply_fire_stacks(fire_stacks_to_apply: int) -> void:
-	fire_stacks = max(0, fire_stacks_to_apply)
+func apply_fire_stacks(apply_burn_stacks: int) -> void:
+	fire_stacks = max(0, apply_burn_stacks)
 	if fire_stacks >= 1:
 		burn_timer.start(SECONDS_BETWEEN_FIRE_STACKS)
 		var fire_fx_node = FIRE_FX.instantiate()
 		add_child(fire_fx_node)
 
+func remove_slow_stack():
+	if slow_timer.time_left==0:
+		slowing -= 1
+	slow_timer.start(SECONDS_BETWEEN_SLOW_STACKS)
 
 func _consume_burn_stack() -> void:
 	take_damage(fire_stacks * FIRE_DAMAGE_MULTIPLIER)
