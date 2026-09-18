@@ -19,7 +19,7 @@ texture = ExtResource("1_15oul")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=776124042]
 
 [node name="MeleeAreaAttack" parent="." unique_id=919355094 instance=ExtResource("2_a7hb8")]
-damage = 1
-seconds_between_attacks = 0.45
-hurt_box_scale = 2.85
+damage = 3
+seconds_between_attacks = 0.5
+hurt_box_scale = 2.5
 knockback_stacks_effect = 9

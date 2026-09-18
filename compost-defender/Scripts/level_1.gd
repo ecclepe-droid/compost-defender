@@ -1,12 +1,6 @@
 extends Level
 
 
-func _ready() -> void:
-	enemy_manager = $EnemyManager
-	Globals.set_compost_amount(500)
-	Globals.compost_integrity = 20
-	user_interface = $CanvasLayer/InLevelUI
-	fade_out()
 func get_waves() -> Array[Wave]:
 	var waves: Array[Wave]
 	
