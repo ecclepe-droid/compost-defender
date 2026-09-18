@@ -44,7 +44,8 @@ func _on_attack_cooldown_timeout() -> void: # looks for enemies in it's range wi
 		var entity: Node = area.get_parent()
 		if _entity_is_enemy(entity):
 			_attack_enemy(entity)
-			attack_cooldown.start(seconds_between_attacks)
+			if attack_cooldown.is_inside_tree():
+				attack_cooldown.start(seconds_between_attacks)
 			return
 
 
