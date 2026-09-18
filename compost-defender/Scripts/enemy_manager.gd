@@ -1,5 +1,7 @@
 extends Node
 
+class_name EnemyManager
+
 signal enemy_died(enemy_compost_value)
 signal wave_ended()
 signal out_of_waves()
