@@ -84,6 +84,7 @@ position = Vector2(0, 1)
 script = ExtResource("1_vk57k")
 enemy_manager = NodePath("EnemyManager")
 level_ui = NodePath("CanvasLayer/InLevelUI")
+starting_compost = 25
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1012264711]
 position = Vector2(-4, 0)

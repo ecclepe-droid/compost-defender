@@ -83,6 +83,7 @@ _data = {
 script = ExtResource("1_cggpd")
 enemy_manager = NodePath("EnemyManager")
 level_ui = NodePath("CanvasLayer/InLevelUI")
+starting_compost = 25
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1803643891]
 position = Vector2(-4, 0)
