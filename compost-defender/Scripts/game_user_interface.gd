@@ -6,7 +6,7 @@ extends Control
 @export var controls_screen = MarginContainer
 const LEVEL_ONE_PACKED = preload("res://Scenes/level_1.tscn")
 const LEVEL_TWO_PACKED = preload("res://Scenes/level_2.tscn")
-#const LEVEL_THREE_PACKED = preload("res://Scenes/level_3.tscn")
+const LEVEL_THREE_PACKED = preload("res://Scenes/level_3.tscn")
 #const LEVEL_FOUR_PACKED = preload("res://Scenes/level_4.tscn")
 #const LEVEL_FIVE_PACKED = preload("res://Scenes/level_5.tscn")
 
@@ -49,8 +49,7 @@ func _on_level_2_button_pressed() -> void:
 	get_tree().change_scene_to_packed(LEVEL_TWO_PACKED)
 
 func _on_level_3_button_pressed() -> void:
-#	get_tree().change_scene_to_packed(LEVEL_THREE_PACKED)
-	pass
+	get_tree().change_scene_to_packed(LEVEL_THREE_PACKED)
 
 func _on_level_4_button_pressed() -> void:
 #	get_tree().change_scene_to_packed(LEVEL_FOUR_PACKED)

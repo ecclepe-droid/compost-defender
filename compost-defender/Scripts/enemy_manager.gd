@@ -1,4 +1,4 @@
-extends Path2D
+extends Node
 
 signal enemy_died(enemy_compost_value)
 signal wave_ended()
@@ -42,11 +42,12 @@ func _update_wave_ended_status() -> void:
 
 
 func _spawn_enemy(enemyScene: PackedScene) -> void:
-	var enemy = enemyScene.instantiate()
-	add_child(enemy)
-	enemy.add_to_group("Enemies")
-	enemy.connect("died", _enemy_died)
-	enemy.connect("looped_end", _enemy_reached_end)
+	if enemyScene:
+		var enemy = enemyScene.instantiate()
+		add_child(enemy)
+		enemy.add_to_group("Enemies")
+		enemy.connect("died", _enemy_died)
+		enemy.connect("looped_end", _enemy_reached_end)
 
 
 func _enemy_reached_end(enemy: Enemy):

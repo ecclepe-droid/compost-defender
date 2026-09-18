@@ -1,0 +1,206 @@
+[gd_scene format=4 uid="uid://bw6vbt67l1css"]
+
+[ext_resource type="Script" uid="uid://drxyxj5u18ase" path="res://Scripts/level_3.gd" id="1_53xsp"]
+[ext_resource type="Texture2D" uid="uid://dc1x1u1gs25qg" path="res://Sprites/Backgrounds/pierre9x6-japan-4524260_1920.jpg" id="2_qf6rc"]
+[ext_resource type="PackedScene" uid="uid://bhav1kvwveyf7" path="res://Scenes/Towers/darth_worm.tscn" id="3_n4vm5"]
+[ext_resource type="PackedScene" uid="uid://dwkd0bege35xs" path="res://Scenes/enemy_manager.tscn" id="4_53xsp"]
+[ext_resource type="Texture2D" uid="uid://djlhjw7jphqbd" path="res://Sprites/pixil-frame-0 (1).png" id="6_qf6rc"]
+[ext_resource type="PackedScene" uid="uid://cupv03t4evic4" path="res://Scenes/worm_select_ui.tscn" id="11_8jhox"]
+[ext_resource type="Texture2D" uid="uid://dt6vwecf5pir0" path="res://Sprites/Backgrounds/pixil-frame-0 (2).png" id="11_jtv8s"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5e78q"]
+texture = ExtResource("6_qf6rc")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_l4wr6"]
+sources/0 = SubResource("TileSetAtlasSource_5e78q")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c81s1"]
+texture = ExtResource("11_jtv8s")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_n4vm5"]
+sources/0 = SubResource("TileSetAtlasSource_c81s1")
+
+[sub_resource type="Curve2D" id="Curve2D_53xsp"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -1962, -762, 0, 0, 0, 0, -1622, -771, 0, 0, 0, 0, -1345, -771, 0, 0, 0, 0, -1031, -771, 0, 0, 0, 0, -997, -662, 0, 0, 0, 0, -989, -454, 0, 0, 0, 0, -989, -172, 0, 0, 0, 0, -991, 122, 0, 0, 0, 0, -989, 479, 0, 0, 0, 0, -900, 584, 0, 0, 0, 0, -529, 570, 0, 0, 0, 0, -409, 524, 0, 0, 0, 0, -418, 202, 0, 0, 0, 0, -407, -89, 0, 0, 0, 0, -21, -109, 0, 0, 0, 0, 381, -103, 0, 0, 0, 0, 914, -92, 0, 0, 0, 0, 934, -254, 0, 0, 0, 0, 963, -603, 0, 0, 0, 0, 575, -700, 0, 0, 0, 0, 258, -668, 0, 0, 0, 0, 255, -240, 0, 0, 0, 0, 235, 293, 0, 0, 0, 0, 318, 393, 0, 0, 0, 0, 706, 382, 0, 0, 0, 0, 1154, 376, 0, 0, 0, 0, 1203, 342, 0, 0, 0, 0, 1203, 116, 0, 0, 0, 0, 1807, 77)
+}
+point_count = 29
+
+[sub_resource type="Animation" id="Animation_60q08"]
+resource_name = "Fade_in"
+
+[sub_resource type="Animation" id="Animation_bc1jf"]
+resource_name = "new_animation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DirectionalLight2D:energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_ls13d"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DirectionalLight2D:energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6r07y"]
+_data = {
+&"Fade_in": SubResource("Animation_60q08"),
+&"Fade_out": SubResource("Animation_bc1jf"),
+&"RESET": SubResource("Animation_ls13d")
+}
+
+[node name="Level1" type="Node2D" unique_id=1674712715]
+script = ExtResource("1_53xsp")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=42374345]
+scale = Vector2(6, 6)
+tile_map_data = PackedByteArray("AADu//j/AAABAAAAAADv//j/AAABAAAAAADw//j/AAABAAAAAADx//j/AAABAAAAAADy//j/AAABAAAAAADz//j/AAABAAAAAAD0//j/AAABAAAAAAD1//j/AAAAAAEAAAD1//n/AAAAAAAAAAD1//r/AAAAAAAAAAD1//v/AAAAAAAAAAD1//z/AAAAAAAAAAD1//3/AAAAAAAAAAD1//7/AAAAAAAAAAD1////AAAAAAAAAAD1/wAAAAAAAAAAAAD1/wEAAAAAAAAAAAD1/wIAAAAAAAAAAAD1/wMAAAAAAAAAAAD1/wQAAAAAAAAAAAD1/wUAAAAAAAAAAAD1/wYAAAACAAEAAAD2/wYAAAABAAAAAAD3/wYAAAABAAAAAAD4/wYAAAABAAAAAAD5/wYAAAABAAAAAAD6/wYAAAABAAAAAAD7/wYAAAABAAEAAAD7/wUAAAAAAAAAAAD7/wQAAAAAAAAAAAD7/wMAAAAAAAAAAAD7/wIAAAAAAAAAAAD7/wEAAAAAAAAAAAD7/wAAAAAAAAAAAAD7////AAADAAEAAAD8////AAABAAAAAAD9////AAABAAAAAAD+////AAABAAAAAAD/////AAABAAAAAAAAAP//AAABAAAAAAABAP//AAABAAAAAAACAP//AAABAAAAAAADAP//AAABAAAAAAAEAP//AAABAAAAAAAFAP//AAABAAAAAAAGAP//AAABAAAAAAAHAP//AAABAAAAAAAIAP//AAABAAAAAAAJAP//AAABAAEAAAAJAP7/AAAAAAAAAAAJAP3/AAAAAAAAAAAJAPz/AAAAAAAAAAAJAPv/AAAAAAAAAAAJAPr/AAAAAAAAAAAJAPn/AAAAAAEAAAAIAPn/AAABAAAAAAAHAPn/AAABAAAAAAAGAPn/AAABAAAAAAAFAPn/AAABAAAAAAAEAPn/AAABAAAAAAADAPn/AAABAAAAAAACAPn/AAADAAEAAAACAPr/AAAAAAAAAAACAPv/AAAAAAAAAAACAPz/AAAAAAAAAAACAP3/AAAAAAAAAAACAP7/AAAAAAAAAAACAAAAAAAAAAAAAAACAAEAAAAAAAAAAAACAAIAAAAAAAAAAAACAAMAAAAAAAAAAAACAAQAAAACAAEAAAADAAQAAAABAAAAAAAEAAQAAAABAAAAAAAFAAQAAAABAAAAAAAGAAQAAAABAAAAAAAHAAQAAAABAAAAAAAIAAQAAAABAAAAAAAJAAQAAAABAAAAAADw/wkAAAAAAAYAAADw/wgAAAAAAAYAAADw/wcAAAAAAAUAAADw/wYAAAAAAAYAAADx/wkAAAABAAYAAADx/wgAAAAAAAUAAADx/wcAAAABAAYAAADx/wYAAAABAAYAAAD3//r/AAABAAkAAAD4//r/AAACAAkAAAD5//r/AAADAAkAAAD6//r/AAAEAAkAAAD7//r/AAAFAAkAAAD8//r/AAAGAAkAAAD5//n/AAADAAgAAAD4//n/AAACAAgAAAD6//n/AAAEAAgAAAD7//n/AAAFAAgAAAD5//j/AAADAAcAAAD6//j/AAAEAAcAAAAFAPr/AAAHAAIAAAAEAPr/AAAGAAIAAAAGAAMAAAAEAAIAAAAHAAMAAAAFAAIAAAD+/wAAAAACAAIAAAD//wAAAAADAAIAAAD3/wcAAAAAAAIAAAD4/wcAAAABAAIAAADx//v/AAACAAYAAADx//r/AAACAAUAAADx//n/AAACAAQAAAD4/wUAAAACAAYAAAD4/wQAAAACAAUAAAD4/wMAAAACAAQAAAAIAP7/AAACAAYAAAAIAP3/AAACAAUAAAAIAPz/AAACAAQAAADy/wkAAAABAAQAAADy/wgAAAABAAQAAADy/wcAAAAAAAUAAADy/wYAAAAAAAUAAADy/wUAAAAAAAUAAADx/wUAAAAAAAUAAADw/wUAAAABAAQAAADw/wQAAAABAAQAAADx/wQAAAAAAAUAAADy/wQAAAABAAQAAADy/wMAAAABAAQAAADx/wMAAAAAAAUAAADw/wMAAAABAAQAAADw/wIAAAABAAQAAADx/wIAAAABAAQAAADy/wIAAAABAAQAAAD9/wEAAAAAAAMAAAD9/wIAAAAAAAMAAAD9/wMAAAAAAAMAAAD9/wQAAAAAAAMAAAD9/wUAAAAAAAMAAAD9/wYAAAAAAAMAAAD+/wYAAAAAAAQAAAD+/wUAAAAAAAQAAAD+/wQAAAAAAAQAAAD+/wMAAAAAAAQAAAD+/wIAAAAAAAQAAAD+/wEAAAAAAAQAAAD//wEAAAAAAAUAAAD//wIAAAAAAAUAAAD//wMAAAAAAAUAAAD//wQAAAAAAAUAAAD//wUAAAAAAAUAAAD//wYAAAAAAAUAAAD///7/AAAAAAYAAAAAAP7/AAAAAAYAAAD///3/AAABAAUAAAAAAP3/AAABAAUAAAD///z/AAABAAYAAAAAAPz/AAABAAYAAAD///v/AAABAAUAAAAAAPv/AAABAAUAAAAFAAkAAAAAAAMAAAAFAAgAAAAAAAMAAAAFAAcAAAAAAAQAAAAFAAYAAAAAAAQAAAAGAAkAAAAAAAMAAAAGAAgAAAAAAAMAAAAGAAcAAAAAAAQAAAAGAAYAAAAAAAQAAAAHAAkAAAAAAAMAAAAHAAgAAAAAAAQAAAAHAAcAAAAAAAMAAAAHAAYAAAAAAAQAAAAKAAQAAAABAAAAAAALAAQAAAABAAAAAAAMAAQAAAABAAEAAAAMAAEAAAADAAEAAAAMAAMAAAAAAAAAAAAMAAIAAAAAAAAAAAANAAEAAAABAAAAAAAOAAEAAAABAAAAAAAPAAEAAAABAAAAAAAQAAEAAAABAAAAAAARAAEAAAABAAAAAAASAAEAAAABAAAAAAA=")
+tile_set = SubResource("TileSet_l4wr6")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="TileMapLayer" unique_id=1393360104]
+tile_map_data = PackedByteArray("AAD4//7/AAADAAYAAAD4//3/AAADAAUAAAD4//z/AAADAAQAAAD4//v/AAADAAMAAAD5//z/AAAEAAQAAAD5//v/AAAEAAMAAAALAP3/AAAFAAYAAAALAPz/AAAFAAUAAAALAPv/AAAFAAQAAAAMAPz/AAAGAAUAAAAMAPv/AAAGAAQAAAAFAAIAAAAHAAYAAAAFAAEAAAAHAAUAAAAGAAIAAAAIAAYAAAAGAAEAAAAIAAUAAAD5//7/AAAEAAYAAAD5//3/AAAEAAUAAADy//7/AAAFAAYAAADy//3/AAAFAAUAAADy//z/AAAFAAQAAAAMAP3/AAAGAAYAAADz//7/AAAGAAYAAADz//3/AAAGAAUAAADz//z/AAAGAAQAAAAPAAQAAAAHAAYAAAAPAAMAAAAHAAUAAAAQAAQAAAAIAAYAAAAQAAMAAAAIAAUAAAA=")
+tile_set = SubResource("TileSet_n4vm5")
+
+[node name="LevelView" type="Camera2D" parent="." unique_id=752227584]
+zoom = Vector2(0.34, 0.34)
+
+[node name="LevelBackground" type="Sprite2D" parent="." unique_id=649744635]
+z_index = -1
+position = Vector2(-2568, 2500)
+scale = Vector2(7.529993, 7.529993)
+texture = ExtResource("2_qf6rc")
+
+[node name="DarthWorm" parent="." unique_id=1069538837 instance=ExtResource("3_n4vm5")]
+position = Vector2(-1094, -633)
+scale = Vector2(2, 2)
+
+[node name="EnemyManager" parent="." unique_id=1701372891 instance=ExtResource("4_53xsp")]
+position = Vector2(-14, 42)
+curve = SubResource("Curve2D_53xsp")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=425287912]
+libraries/ = SubResource("AnimationLibrary_6r07y")
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=1397507541]
+energy = 0.0
+blend_mode = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1575172489]
+
+[node name="InLevelUI" parent="CanvasLayer" unique_id=1566003896 instance=ExtResource("11_8jhox")]
+
+[connection signal="enemy_died" from="EnemyManager" to="." method="_on_enemy_manager_enemy_died"]
+[connection signal="enemy_reached_end" from="EnemyManager" to="." method="_on_enemy_manager_enemy_reached_end"]
