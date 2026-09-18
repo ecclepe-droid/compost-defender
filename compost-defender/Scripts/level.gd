@@ -14,15 +14,19 @@ func get_waves() -> Array[Wave]:
 	var waves: Array[Wave]
 	
 	var wave: Wave = Wave.new()
-	wave.enemyScenes.push_back(_enemy_packed_from_name("banana"))
-	wave.enemyScenes.push_back(_enemy_packed_from_name("banana"))
-	wave.enemyScenes.push_back(_enemy_packed_from_name("orange"))
+	wave.enemyScenes.push_back(_enemy_packed_from_name("apple"))
 	waves.push_back(wave)
+	
 	return waves
 
 
 func _ready() -> void:
 	enemy_manager = $EnemyManager
+	enemy_manager.enemy_died.connect(_on_enemy_spawner_enemy_died)
+	enemy_manager.wave_ended.connect(_on_enemy_manager_wave_ended)
+	enemy_manager.out_of_waves.connect(_on_enemy_manager_out_of_waves)
+	enemy_manager.enemy_reached_end.connect(_on_enemy_manager_enemy_reached_end)
+	level_ui.user_wants_worm_at_mouse.connect(_on_in_level_ui_user_wants_worm_at_mouse)
 	Globals.set_compost_amount(starting_compost)
 	Globals.compost_integrity = starting_compost
 	user_interface = $CanvasLayer/InLevelUI
