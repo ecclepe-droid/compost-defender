@@ -1,5 +1,7 @@
 extends Control
 
+class_name leveUI
+
 signal user_wants_worm_at_mouse(worm: Worm, where: Vector2i)
 
 var anyworm_selected: bool
