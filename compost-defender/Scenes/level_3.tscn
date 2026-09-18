@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://bw6vbt67l1css"]
 
-[ext_resource type="Script" uid="uid://drxyxj5u18ase" path="res://Scripts/level_3.gd" id="1_53xsp"]
+[ext_resource type="Script" uid="uid://bws2blp2lusyc" path="res://Scripts/level_3.gd" id="1_53xsp"]
 [ext_resource type="Texture2D" uid="uid://dc1x1u1gs25qg" path="res://Sprites/Backgrounds/pierre9x6-japan-4524260_1920.jpg" id="2_qf6rc"]
 [ext_resource type="PackedScene" uid="uid://bhav1kvwveyf7" path="res://Scenes/Towers/darth_worm.tscn" id="3_n4vm5"]
 [ext_resource type="PackedScene" uid="uid://dwkd0bege35xs" path="res://Scenes/enemy_manager.tscn" id="4_53xsp"]
@@ -162,8 +162,11 @@ _data = {
 &"RESET": SubResource("Animation_ls13d")
 }
 
-[node name="Level1" type="Node2D" unique_id=1674712715]
+[node name="Level1" type="Node2D" unique_id=1674712715 node_paths=PackedStringArray("enemy_manager", "level_ui")]
 script = ExtResource("1_53xsp")
+enemy_manager = NodePath("EnemyManager")
+level_ui = NodePath("CanvasLayer/InLevelUI")
+starting_compost = 50
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=42374345]
 scale = Vector2(6, 6)
