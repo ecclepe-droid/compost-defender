@@ -8,7 +8,7 @@ signal out_of_waves()
 signal enemy_reached_end(enemy_health: int)
 
 const SECONDS_BETWEEN_WAVES = 2.5
-const SECONDS_BETWEEN_ENEMIES = 0.5
+const SECONDS_BETWEEN_ENEMIES = 0.2
 const DEFAULT_CHILD_COUNT = 3
 
 var future_waves: Array[Wave]
