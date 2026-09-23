@@ -19,8 +19,8 @@ scale = Vector2(6, 6)
 shape = SubResource("CircleShape2D_lif2s")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1755206296]
-modulate = Color(0, 0, 0, 0.09803922)
-scale = Vector2(3.9326026, 3.9326026)
+modulate = Color(1, 1, 1, 0.09803922)
+scale = Vector2(2, 2)
 texture = ExtResource("2_w0k6c")
 
 [connection signal="timeout" from="AttackCooldown" to="." method="_on_attack_cooldown_timeout"]
