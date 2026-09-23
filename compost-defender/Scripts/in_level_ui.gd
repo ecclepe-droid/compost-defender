@@ -12,10 +12,11 @@ var worms: Array[Worm]
 
 
 func _ready() -> void:
-	worms.push_back(Worm.new("Fire Worm", 25, "res://Scenes/Towers/fire_worm.tscn", "res://Sprites/Towers/fire(13).png"))
+	worms.push_back(Worm.new("Fire Worm", 30, "res://Scenes/Towers/fire_worm.tscn", "res://Sprites/Towers/fire(13).png"))
 	worms.push_back(Worm.new("Darth Worm", 20, "res://Scenes/Towers/darth_worm.tscn", "res://Sprites/Towers/darth_worm.png"))
 	worms.push_back(Worm.new("Air Worm", 30, "res://Scenes/Towers/air_worm.tscn", "res://Sprites/Towers/air(13).png"))
 	worms.push_back(Worm.new("High Damage Worm", 100, "res://Scenes/Towers/high_damage_worm.tscn", "res://Sprites/Towers/phat(3).png"))
+	worms.push_back(Worm.new("Water Worm", 0, "res://Scenes/Towers/water_worm.tscn","res://Sprites/Towers/water(13).png" ))
 	
 	worm_list = $HBoxContainer/WormList
 	for worm in worms:
