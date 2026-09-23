@@ -11,15 +11,18 @@ signal attacked_enemy
 @export var stun_stacks_effect: int = 0
 var attack_cooldown: Timer
 var attack_area: Area2D
+var attack_sprite: Sprite2D
 
 func _ready() -> void: # applies the attack range from above to the melee attack and starts the attack cooldown timer
 	attack_area = $Hitbox
 	self.scale *= hurt_box_scale
 	attack_cooldown = $AttackCooldown
 	attack_cooldown.start(seconds_between_attacks)
+	attack_sprite = $Sprite2D
 
 
 func _process(_delta: float) -> void:# when the attack cooldown stops it starts the _on_attack_cooldown_timeout function
+	attack_sprite.scale = scale * hurt_box_scale * (attack_cooldown.wait_time - attack_cooldown.time_left)
 	if attack_cooldown.is_stopped():
 		_on_attack_cooldown_timeout()
 
