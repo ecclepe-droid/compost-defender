@@ -1,14 +1,15 @@
 [gd_scene format=4 uid="uid://dvc3a6iarcxf1"]
 
-[ext_resource type="Script" uid="uid://k14o30gj1iew" path="res://Scripts/level_1.gd" id="1_dvrgg"]
-[ext_resource type="Texture2D" uid="uid://bcjabygd0lidv" path="res://Sprites/Tiles/paths(25).png" id="2_wk15n"]
-[ext_resource type="Texture2D" uid="uid://0pp8rvsdbrjw" path="res://Sprites/icon.svg" id="3_5a8oa"]
-[ext_resource type="PackedScene" uid="uid://bhav1kvwveyf7" path="res://Scenes/Towers/darth_worm.tscn" id="4_3ntyy"]
-[ext_resource type="PackedScene" uid="uid://dwkd0bege35xs" path="res://Scenes/enemy_manager.tscn" id="5_7huqf"]
-[ext_resource type="PackedScene" uid="uid://cupv03t4evic4" path="res://Scenes/worm_select_ui.tscn" id="6_di0d6"]
+[ext_resource type="Script" uid="uid://vw21gdljtiut" path="res://Scripts/level_4.gd" id="1_i4hbv"]
+[ext_resource type="Texture2D" uid="uid://bcjabygd0lidv" path="res://Sprites/Tiles/paths(25).png" id="2_h0uxt"]
+[ext_resource type="Texture2D" uid="uid://de1d3r6tdgqvh" path="res://Sprites/Jarona(25).png" id="3_keyqw"]
+[ext_resource type="Texture2D" uid="uid://0pp8rvsdbrjw" path="res://Sprites/icon.svg" id="4_gsxik"]
+[ext_resource type="PackedScene" uid="uid://bhav1kvwveyf7" path="res://Scenes/Towers/darth_worm.tscn" id="5_3asqb"]
+[ext_resource type="PackedScene" uid="uid://dwkd0bege35xs" path="res://Scenes/enemy_manager.tscn" id="6_slbhm"]
+[ext_resource type="PackedScene" uid="uid://cupv03t4evic4" path="res://Scenes/worm_select_ui.tscn" id="7_i5g5g"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lsmp6"]
-texture = ExtResource("2_wk15n")
+texture = ExtResource("2_h0uxt")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -30,8 +31,18 @@ texture = ExtResource("2_wk15n")
 9:0/0 = 0
 9:1/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3osng"]
+texture = ExtResource("3_keyqw")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_xrdnt"]
 sources/0 = SubResource("TileSetAtlasSource_lsmp6")
+sources/1 = SubResource("TileSetAtlasSource_3osng")
 
 [sub_resource type="Curve2D" id="Curve2D_6444e"]
 _data = {
@@ -79,12 +90,9 @@ _data = {
 &"RESET": SubResource("Animation_ls13d")
 }
 
-[node name="Level4" type="Node2D" unique_id=1674712715 node_paths=PackedStringArray("enemy_manager", "level_ui")]
+[node name="Level4" type="Node2D" unique_id=1674712715]
 position = Vector2(0, 1)
-script = ExtResource("1_dvrgg")
-enemy_manager = NodePath("EnemyManager")
-level_ui = NodePath("CanvasLayer/InLevelUI")
-starting_compost = 25
+script = ExtResource("1_i4hbv")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1012264711]
 position = Vector2(-4, 0)
@@ -99,12 +107,12 @@ zoom = Vector2(0.34, 0.4)
 z_index = -1
 position = Vector2(-49518, 5667)
 scale = Vector2(999, 999)
-texture = ExtResource("3_5a8oa")
+texture = ExtResource("4_gsxik")
 
-[node name="DarthWorm" parent="." unique_id=1069538837 instance=ExtResource("4_3ntyy")]
+[node name="DarthWorm" parent="." unique_id=1069538837 instance=ExtResource("5_3asqb")]
 position = Vector2(-833, -76)
 
-[node name="EnemyManager" parent="." unique_id=1806982580 instance=ExtResource("5_7huqf")]
+[node name="EnemyManager" parent="." unique_id=1806982580 instance=ExtResource("6_slbhm")]
 position = Vector2(-7, 21)
 curve = SubResource("Curve2D_6444e")
 
@@ -117,4 +125,4 @@ blend_mode = 1
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1575172489]
 
-[node name="InLevelUI" parent="CanvasLayer" unique_id=1566003896 instance=ExtResource("6_di0d6")]
+[node name="InLevelUI" parent="CanvasLayer" unique_id=1566003896 instance=ExtResource("7_i5g5g")]

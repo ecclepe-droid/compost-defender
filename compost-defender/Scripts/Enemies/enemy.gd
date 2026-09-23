@@ -18,7 +18,6 @@ const DEFAULT_SPEED_MULTIPLIER = 3.0
 @export var compost_dropped: int = 10
 @export var burn_timer: Timer
 @export var slow_timer: Timer
-
 var actual_speed
 var fire_stacks
 var slowing
@@ -28,6 +27,7 @@ var fire_fx: Sprite2D
 
 
 func _ready() -> void:
+	max_health *= Globals.health_multiplier
 	scale *= max_health / 10
 	actual_speed = speed * DEFAULT_SPEED_MULTIPLIER
 	health = max_health

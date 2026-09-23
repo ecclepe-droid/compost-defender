@@ -4,11 +4,11 @@ extends Control
 @export var menu_screen = HBoxContainer
 @export var level_select_screen = MarginContainer
 @export var controls_screen = MarginContainer
-const LEVEL_ONE_PACKED = preload("res://Scenes/level_1.tscn")
-const LEVEL_TWO_PACKED = preload("res://Scenes/level_2.tscn")
-const LEVEL_THREE_PACKED = preload("res://Scenes/level_3.tscn")
-#const LEVEL_FOUR_PACKED = preload("res://Scenes/level_4.tscn")
-#const LEVEL_FIVE_PACKED = preload("res://Scenes/level_5.tscn")
+const LEVEL_ONE_PACKED = preload("res://Scenes/Levels/level_1.tscn")
+const LEVEL_TWO_PACKED = preload("res://Scenes/Levels/level_2.tscn")
+const LEVEL_THREE_PACKED = preload("res://Scenes/Levels/level_3.tscn")
+const LEVEL_FOUR_PACKED = preload("res://Scenes/Levels/level_4.tscn")
+#const LEVEL_FIVE_PACKED = preload()
 
 func _ready() -> void:
 	$AnimationPlayer.play("open_MenuScreen")

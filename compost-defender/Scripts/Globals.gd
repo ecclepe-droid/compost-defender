@@ -3,6 +3,7 @@ extends Node
 signal compost_amount_changed(compost_amount: int)
 
 var _compost_amount = 0
+var health_multiplier = 1
 var compost_integrity = 100
 var score = 0
 var enemy_count = 0
