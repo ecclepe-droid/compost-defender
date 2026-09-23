@@ -27,6 +27,7 @@ var fire_fx: Sprite2D
 
 
 func _ready() -> void:
+	scale *= max_health / 10
 	actual_speed = speed * DEFAULT_SPEED_MULTIPLIER
 	health = max_health
 	fire_stacks = 0
