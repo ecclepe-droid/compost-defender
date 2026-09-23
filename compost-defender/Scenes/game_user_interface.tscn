@@ -2066,44 +2066,42 @@ theme_override_constants/separation = 352
 [node name="Seporator" type="Control" parent="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/BackButtonContainer" unique_id=879527013]
 layout_mode = 2
 
-[node name="BackButton" type="Button" parent="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/BackButtonContainer" unique_id=2090581689]
+[node name="CloseLevelSelectMenu" type="Button" parent="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/BackButtonContainer" unique_id=1944525218]
+custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
 icon = ExtResource("9_7iw8k")
 
-[node name="BackLabel" type="Label" parent="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/BackButtonContainer/BackButton" unique_id=67080857]
+[node name="BackLabel" type="Label" parent="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/BackButtonContainer/CloseLevelSelectMenu" unique_id=67080857]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -0.08173077
 anchor_right = 1.0817307
 anchor_bottom = 1.0
-offset_left = 8.5
-offset_right = -8.499992
+offset_left = -226.41347
+offset_top = -87.0
+offset_right = -175.58653
+offset_bottom = -87.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "
 Back To Menu"
 metadata/_edit_use_anchors_ = true
 
-[node name="CloseLevelSelectMenu" type="Button" parent="LevelSelectScreen" unique_id=1944525218]
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 0
-text = "X"
-
-[connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/OpenLevelSelectMenuButton" to="." method="_on_open_level_select_menu_button_pressed"]
 [connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/OpenLevelSelectMenuButton" to="." method="_on_toggle_level_select_menu_button_pressed"]
-[connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/OpenControlsMenuButton" to="." method="_on_open_controls_menu_button_pressed"]
+[connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/OpenLevelSelectMenuButton" to="." method="_on_open_level_select_menu_button_pressed"]
 [connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/OpenControlsMenuButton" to="." method="_on_toggle_controls_menu_button_pressed"]
+[connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/OpenControlsMenuButton" to="." method="_on_open_controls_menu_button_pressed"]
 [connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/QuitButton" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/ToggleLevelSelectMenuButton" to="." method="_on_toggle_level_select_menu_button_pressed"]
 [connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/ToggleControlsMenuButton" to="." method="_on_toggle_controls_menu_button_pressed"]
-[connection signal="pressed" from="ControlsScreen/CloseControlsMenuButton" to="." method="_on_close_controls_menu_button_pressed"]
 [connection signal="pressed" from="ControlsScreen/CloseControlsMenuButton" to="." method="_on_toggle_controls_menu_button_pressed"]
+[connection signal="pressed" from="ControlsScreen/CloseControlsMenuButton" to="." method="_on_close_controls_menu_button_pressed"]
 [connection signal="pressed" from="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer/Level1Button" to="." method="_on_level_1_button_pressed"]
 [connection signal="pressed" from="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer/Level2Button" to="." method="_on_level_2_button_pressed"]
 [connection signal="pressed" from="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer/Level3Button" to="." method="_on_level_3_button_pressed"]
 [connection signal="pressed" from="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer/Level4Button" to="." method="_on_level_4_button_pressed"]
 [connection signal="pressed" from="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer/Level5Button" to="." method="_on_level_5_button_pressed"]
-[connection signal="pressed" from="LevelSelectScreen/CloseLevelSelectMenu" to="." method="_on_close_level_select_menu_pressed"]
-[connection signal="pressed" from="LevelSelectScreen/CloseLevelSelectMenu" to="." method="_on_toggle_level_select_menu_button_pressed"]
+[connection signal="pressed" from="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/BackButtonContainer/CloseLevelSelectMenu" to="." method="_on_toggle_level_select_menu_button_pressed"]
+[connection signal="pressed" from="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/BackButtonContainer/CloseLevelSelectMenu" to="." method="_on_close_level_select_menu_pressed"]
