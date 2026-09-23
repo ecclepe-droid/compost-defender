@@ -178,7 +178,7 @@ tile_map_data = PackedByteArray("AAD4//7/AAADAAYAAAD4//3/AAADAAUAAAD4//z/AAADAAQ
 tile_set = SubResource("TileSet_n4vm5")
 
 [node name="LevelView" type="Camera2D" parent="." unique_id=752227584]
-zoom = Vector2(0.34, 0.34)
+zoom = Vector2(0.4, 0.34)
 
 [node name="LevelBackground" type="Sprite2D" parent="." unique_id=649744635]
 z_index = -1
