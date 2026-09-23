@@ -22,6 +22,8 @@ GlobalFunctions="*uid://cdrp5umafj1cg"
 
 [display]
 
+window/size/viewport_width=1356
+window/size/viewport_height=646
 window/stretch/mode="canvas_items"
 
 [dotnet]

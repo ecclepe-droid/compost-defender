@@ -92,7 +92,7 @@ tile_set = SubResource("TileSet_xrdnt")
 
 [node name="LevelView" type="Camera2D" parent="." unique_id=752227584]
 offset = Vector2(0, -23.66)
-zoom = Vector2(0.34, 0.4)
+zoom = Vector2(0.4, 0.4)
 
 [node name="LevelBackground" type="Sprite2D" parent="." unique_id=649744635]
 z_index = -1
