@@ -40,7 +40,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if (stun>0):
 		stun -= 1
-	move(delta)
+	else:
+		move(delta)
 	
 
 

@@ -1,13 +1,11 @@
-[gd_scene format=3 uid="uid://coemtxkf8473y"]
+[gd_scene format=3 uid="uid://bkeedeew0qdhi"]
 
-[ext_resource type="Script" path="res://Scripts/Towers/melee_weapon_attack.gd" id="1_xf43a"]
 [ext_resource type="Texture2D" uid="uid://bmikl0f2ta7gu" path="res://Sprites/download (14).png" id="2_1qnwc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lif2s"]
 radius = 16.666668
 
 [node name="MeleeAreaAttack" type="Node2D" unique_id=919355094]
-script = ExtResource("1_xf43a")
 
 [node name="AttackCooldown" type="Timer" parent="." unique_id=769674001]
 one_shot = true

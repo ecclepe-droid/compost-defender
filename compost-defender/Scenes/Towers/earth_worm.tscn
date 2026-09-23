@@ -21,4 +21,4 @@ texture = ExtResource("1_clsoe")
 [node name="MeleeAreaAttack" parent="." unique_id=919355094 instance=ExtResource("2_2ls0v")]
 seconds_between_attacks = 1.0
 hurt_box_scale = 1.5
-stun_stacks_effect = 100
+stun_stacks_effect = 20
