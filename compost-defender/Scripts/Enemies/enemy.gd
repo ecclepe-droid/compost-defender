@@ -23,6 +23,7 @@ var actual_speed
 var fire_stacks
 var slowing
 var health
+var stun
 var fire_fx: Sprite2D
 
 
@@ -31,16 +32,15 @@ func _ready() -> void:
 	health = max_health
 	fire_stacks = 0
 	progress = 0
+	stun = 0
 	slowing = 1
 	burn_timer.timeout.connect(_consume_burn_stack)
 
 func _process(delta: float) -> void:
-	var pre_movement_progress = progress
-	progress += actual_speed * delta / slowing
-	if slowing >= 2:
-		remove_slow_stack()
-	if pre_movement_progress > progress:
-		looped_end.emit(self)
+	if (stun>0):
+		stun -= 1
+	move(delta)
+	
 
 
 func take_damage(damage_amount: int) -> void:
@@ -57,6 +57,9 @@ func be_knocked_back(knockback_stacks: int) -> void:
 
 func get_slowed(slow_stacks_effect):
 	slowing += slow_stacks_effect
+
+func get_stunned(stun_stacks_effect):
+	stun += stun_stacks_effect
 
 func apply_fire_stacks(apply_burn_stacks: int) -> void:
 	fire_stacks = max(0, apply_burn_stacks)
@@ -84,3 +87,11 @@ func _consume_burn_stack() -> void:
 func _die() -> void:
 	died.emit(compost_dropped)
 	queue_free()
+	
+func move(delta):
+	var pre_movement_progress = progress
+	progress += actual_speed * delta / slowing
+	if slowing >= 2:
+		remove_slow_stack()
+	if pre_movement_progress > progress:
+		looped_end.emit(self)

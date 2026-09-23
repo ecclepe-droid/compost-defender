@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bchmqi1i2qfvf"]
 
 [ext_resource type="Script" uid="uid://cit5vrfssmwy3" path="res://Scripts/Towers/melee_area_attack.gd" id="1_xf43a"]
-[ext_resource type="Texture2D" uid="uid://bmikl0f2ta7gu" path="res://Sprites/download (14).png" id="2_1qnwc"]
+[ext_resource type="Texture2D" uid="uid://tpopium5c8kt" path="res://Sprites/rang(25).png" id="2_w0k6c"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lif2s"]
 radius = 16.666668
@@ -21,6 +21,6 @@ shape = SubResource("CircleShape2D_lif2s")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1755206296]
 modulate = Color(0, 0, 0, 0.09803922)
 scale = Vector2(3.9326026, 3.9326026)
-texture = ExtResource("2_1qnwc")
+texture = ExtResource("2_w0k6c")
 
 [connection signal="timeout" from="AttackCooldown" to="." method="_on_attack_cooldown_timeout"]

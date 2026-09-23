@@ -8,6 +8,7 @@ signal attacked_enemy
 @export var fire_stacks_effect: int = 0 # how many stacks of fire the melee attack inflicts  |||  10 = 10 stacks of fire, 1 = 1 stack of fire
 @export var knockback_stacks_effect: int = 0
 @export var slow_stacks_effect: int = 0
+@export var stun_stacks_effect: int = 0
 var attack_cooldown: Timer
 var attack_area: Area2D
 
@@ -41,6 +42,9 @@ func _attack_enemy(enemy: Node2D) -> void: # damages the enemy, and applies fire
 
 	if enemy.has_method("get_slowed"):
 		enemy.get_slowed(slow_stacks_effect)
+
+	if enemy.has_method("get_stunned"):
+		enemy.get_stunned(stun_stacks_effect)
 
 func _on_attack_cooldown_timeout() -> void: # looks for enemies in it's range with the _entity_is_enemy function and attacks it using the _attack enemy function. Then it starts the attack cooldown again
 	var areas_in_range: Array[Area2D] = attack_area.get_overlapping_areas()
