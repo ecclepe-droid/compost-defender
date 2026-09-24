@@ -5,19 +5,19 @@ func get_waves() -> Array[Wave]:
 	var waves: Array[Wave]
 	
 	var wave: Wave = Wave.new()
-	Globals.health_multiplier += .4
+	Globals.health_multiplier += .04
 	wave.enemyScenes.push_back(_enemy_packed_from_name("leaf"))
 	wave.enemyScenes.push_back(_enemy_packed_from_name("pear"))
 	waves.push_back(wave)
 	
-	Globals.health_multiplier += .6
+	Globals.health_multiplier += .06
 	wave = Wave.new()
 	wave.enemyScenes.push_back(_enemy_packed_from_name("pear"))
 	wave.enemyScenes.push_back(_enemy_packed_from_name("pear"))
 	wave.enemyScenes.push_back(_enemy_packed_from_name("orange"))
 	waves.push_back(wave)
 	
-	Globals.health_multiplyer += 1
+	Globals.health_multiplier += 0.1
 	wave = Wave.new()
 	wave.enemyScenes.push_back(_enemy_packed_from_name("pear"))
 	wave.enemyScenes.push_back(_enemy_packed_from_name("pear"))
@@ -26,7 +26,7 @@ func get_waves() -> Array[Wave]:
 	wave.enemyScenes.push_back(_enemy_packed_from_name("pomagranite"))
 	waves.push_back(wave)
 	
-	Globals.health_multiplyer += 1.5
+	Globals.health_multiplier += 0.15
 	wave = Wave.new()
 	wave.enemyScenes.push_back(_enemy_packed_from_name("pear"))
 	wave.enemyScenes.push_back(_enemy_packed_from_name("pear"))

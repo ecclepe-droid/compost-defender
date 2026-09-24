@@ -17,7 +17,7 @@ func _ready() -> void:
 	worms.push_back(Worm.new("Air Worm", 25, "res://Scenes/Towers/air_worm.tscn", "res://Sprites/Towers/air(13).png"))
 	worms.push_back(Worm.new("High Damage Worm", 50, "res://Scenes/Towers/high_damage_worm.tscn", "res://Sprites/Towers/phat(3).png"))
 	worms.push_back(Worm.new("Water Worm", 20, "res://Scenes/Towers/water_worm.tscn","res://Sprites/Towers/water(13).png" ))
-	worms.push_back(Worm.new("Earth Worm", 0, "res://Scenes/Towers/earth_worm.tscn","res://Sprites/Towers/download (12).png" ))
+	worms.push_back(Worm.new("Earth Worm", 15, "res://Scenes/Towers/earth_worm.tscn","res://Sprites/Towers/download (12).png" ))
 	
 	worm_list = $HBoxContainer/WormList
 	for worm in worms:
