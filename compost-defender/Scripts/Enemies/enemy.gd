@@ -67,8 +67,8 @@ func apply_fire_stacks(apply_burn_stacks: int) -> void:
 	fire_stacks = max(0, apply_burn_stacks)
 	if fire_stacks >= 1:
 		burn_timer.start(SECONDS_BETWEEN_FIRE_STACKS)
-		var fire_fx_node = FIRE_FX.instantiate()
-		add_child(fire_fx_node)
+		fire_fx = FIRE_FX.instantiate()
+		add_child(fire_fx)
 
 func remove_slow_stack():
 	if slow_timer.time_left==0:
@@ -78,12 +78,13 @@ func remove_slow_stack():
 func _consume_burn_stack() -> void:
 	take_damage(fire_stacks * FIRE_DAMAGE_MULTIPLIER)
 	fire_stacks -= 1
-	print(health)
+	print(fire_stacks)
 	
 	if fire_stacks >= 1:
 		burn_timer.start(SECONDS_BETWEEN_FIRE_STACKS)
-	elif not fire_fx == null:
+	elif fire_fx != null:
 		fire_fx.queue_free()
+		fire_stacks = null
 
 
 func _die() -> void:
