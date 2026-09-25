@@ -29,6 +29,7 @@ func _ready() -> void:
 	enemy_manager.out_of_waves.connect(_on_enemy_manager_out_of_waves)
 	enemy_manager.enemy_reached_end.connect(_on_enemy_manager_enemy_reached_end)
 	level_ui.user_wants_worm_at_mouse.connect(_on_in_level_ui_user_wants_worm_at_mouse)
+	Globals.health_multiplier = 0
 	Globals.set_compost_amount(starting_compost)
 	Globals.compost_integrity = starting_compost
 	user_interface = $CanvasLayer/InLevelUI
