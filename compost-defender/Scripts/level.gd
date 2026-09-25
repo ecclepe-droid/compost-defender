@@ -65,10 +65,11 @@ func _on_in_level_ui_user_wants_worm_at_mouse(worm: Worm) -> void:
 
 func _on_enemy_manager_out_of_waves() -> void:
 	print("You Won")
-	if get_tree().current_scene != null:
-		get_tree().current_scene.queue_free()
-		get_tree().change_scene_to_file(LEVEL_SELECT_SCREEN)
-		emit_signal("victory")
+	if get_tree() != null:
+		if get_tree().current_scene != null:
+			get_tree().current_scene.queue_free()
+			get_tree().change_scene_to_file(LEVEL_SELECT_SCREEN)
+			emit_signal("victory")
 
 
 func _on_enemy_manager_enemy_reached_end(enemy_health: int) -> void:
