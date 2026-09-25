@@ -2,6 +2,7 @@ extends Node2D
 
 signal attacked_enemy
 
+const SPRITE_DEFAULT_SCALE = Vector2i.ONE * 2.0 #Scales the attack's sprite to match its hitbox
 @export var damage: int = 1 # the ammount of damage melee attacks do every hit  |||  10 = 10 damage per hit, 1 = 1 damage per hit
 @export var seconds_between_attacks: float = 0 # how fast the melee attack reloads  |||  1 = 1 attack per second, 0.1 = 10 attacks per second
 @export var hurt_box_scale: float = 0 # how big the range of the melee attack is  |||  1 = 100 pixels, 0.01 = 1 pixel
@@ -15,14 +16,14 @@ var attack_sprite: Sprite2D
 
 func _ready() -> void: # applies the attack range from above to the melee attack and starts the attack cooldown timer
 	attack_area = $Hitbox
-	self.scale *= hurt_box_scale
+	self.scale = Vector2i.ONE * hurt_box_scale
 	attack_cooldown = $AttackCooldown
 	attack_cooldown.start(seconds_between_attacks)
 	attack_sprite = $Sprite2D
 
 
 func _process(_delta: float) -> void:# when the attack cooldown stops it starts the _on_attack_cooldown_timeout function
-	attack_sprite.scale = scale * hurt_box_scale * (attack_cooldown.wait_time - attack_cooldown.time_left)
+	attack_sprite.scale = SPRITE_DEFAULT_SCALE / attack_cooldown.wait_time * (attack_cooldown.wait_time - attack_cooldown.time_left)
 	if attack_cooldown.is_stopped():
 		_on_attack_cooldown_timeout()
 
