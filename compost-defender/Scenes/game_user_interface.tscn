@@ -1733,11 +1733,13 @@ libraries/ = SubResource("AnimationLibrary_vvvpa")
 autoplay = &"RESET"
 
 [node name="MenuScreen" type="HBoxContainer" parent="." unique_id=269593080]
-layout_mode = 0
-anchor_top = 0.07716049
-anchor_right = 1.0
-anchor_bottom = 0.84876543
-offset_bottom = 306.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.08001475
+anchor_top = 0.09752322
+anchor_right = 0.91998523
+anchor_bottom = 1.3452013
+grow_horizontal = 2
 theme_override_constants/separation = 13
 metadata/_edit_use_anchors_ = true
 
@@ -1745,8 +1747,6 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 2
 
 [node name="GameplayImmage 1" type="TextureRect" parent="MenuScreen" unique_id=953227424]
-visible = false
-self_modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(400, 500)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -1757,8 +1757,6 @@ texture = ExtResource("2_vljpe")
 layout_mode = 2
 
 [node name="Game logo" type="TextureRect" parent="MenuScreen/MainMenuContainer" unique_id=716212163]
-visible = false
-self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 texture = ExtResource("2_vvvpa")
@@ -1771,22 +1769,16 @@ size_flags_vertical = 4
 theme_override_constants/separation = 20
 
 [node name="OpenLevelSelectMenuButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=348135700]
-visible = false
-self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 text = "Play Game"
 icon = ExtResource("5_osrqe")
 
 [node name="OpenControlsMenuButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=478049765]
-visible = false
-self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 text = "Controls"
 icon = ExtResource("6_51chi")
 
 [node name="QuitButton" type="Button" parent="MenuScreen/MainMenuContainer/MainMenu" unique_id=369544090]
-visible = false
-self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 text = "Exit"
 icon = ExtResource("7_jnxqb")
@@ -1830,7 +1822,6 @@ size_flags_vertical = 4
 theme_override_constants/separation = 20
 
 [node name="GameplayImmage 2" type="TextureRect" parent="MenuScreen" unique_id=652140848]
-self_modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(400, 500)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -1846,7 +1837,10 @@ anchor_left = 0.1736111
 anchor_top = 0.15432099
 anchor_right = 0.8680556
 anchor_bottom = 0.77160496
-offset_right = -0.00024414063
+offset_left = -35.416656
+offset_top = 0.30864716
+offset_right = -35.41687
+offset_bottom = 0.3086548
 grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true

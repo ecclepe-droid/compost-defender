@@ -32,6 +32,7 @@ func _enemy_died(enemy_compost_value: int) -> void:
 func _update_wave_ended_status() -> void:
 	var number_of_enemies = get_children().size() - DEFAULT_CHILD_COUNT
 	if number_of_enemies == 0:
+		Globals.health_multiplier += 0.5
 		wave_ended.emit()
 		
 		var has_next_wave = future_waves.size() >= 1
