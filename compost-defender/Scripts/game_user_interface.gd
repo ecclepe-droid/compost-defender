@@ -84,4 +84,4 @@ func _on_close_loss_screen_pressed() -> void:
 	$AnimationPlayer.play("close_loss_screen")
 	
 
-func _on_victory
+#func _on_victory
