@@ -23,7 +23,6 @@ func _ready() -> void: # applies the attack range from above to the melee attack
 
 
 func _process(_delta: float) -> void:# when the attack cooldown stops it starts the _on_attack_cooldown_timeout function
-	print(attack_cooldown.time_left)
 	attack_sprite.scale = SPRITE_DEFAULT_SCALE / attack_cooldown.wait_time * (attack_cooldown.wait_time - attack_cooldown.time_left)
 	if attack_cooldown.is_stopped():
 		_on_attack_cooldown_timeout()
