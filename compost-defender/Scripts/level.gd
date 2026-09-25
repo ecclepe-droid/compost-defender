@@ -9,6 +9,8 @@ var user_interface: Control
 @export var level_ui: leveUI
 @export var starting_compost: int
 
+signal loss
+signal victory
 
 func get_waves() -> Array[Wave]:
 	var waves: Array[Wave]
@@ -65,6 +67,7 @@ func _on_enemy_manager_out_of_waves() -> void:
 	if get_tree().current_scene != null:
 		get_tree().current_scene.queue_free()
 		get_tree().change_scene_to_file(LEVEL_SELECT_SCREEN)
+		emit_signal("victory")
 
 
 func _on_enemy_manager_enemy_reached_end(enemy_health: int) -> void:
@@ -74,6 +77,7 @@ func _on_enemy_manager_enemy_reached_end(enemy_health: int) -> void:
 		print("You died")
 		get_tree().current_scene.queue_free()
 		get_tree().change_scene_to_file(LEVEL_SELECT_SCREEN)
+		emit_signal("loss")
 
 
 func _on_enemy_manager_wave_ended() -> void:
