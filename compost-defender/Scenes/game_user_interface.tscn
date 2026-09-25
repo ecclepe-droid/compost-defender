@@ -15,6 +15,9 @@
 [ext_resource type="Texture2D" uid="uid://dx1a23b6jqqw1" path="res://Sprites/3(25).png" id="10_jnxqb"]
 [ext_resource type="Texture2D" uid="uid://ch5fneue0k415" path="res://Sprites/4(25).png" id="11_7iw8k"]
 [ext_resource type="Texture2D" uid="uid://b8n4op7fhqgoa" path="res://Sprites/5 but not wrong(25).png" id="13_osrqe"]
+[ext_resource type="Texture2D" uid="uid://cta8jf0tw7no3" path="res://Sprites/Backgrounds/Victory(25).png" id="16_rggv2"]
+[ext_resource type="Texture2D" uid="uid://rxnvtj02vnwk" path="res://Sprites/Holy worm(25).png" id="17_xoftv"]
+[ext_resource type="Texture2D" uid="uid://tpopium5c8kt" path="res://Sprites/rang(25).png" id="18_f70hl"]
 
 [sub_resource type="Animation" id="Animation_60q08"]
 resource_name = "Fade_in"
@@ -260,6 +263,54 @@ tracks/19/path = NodePath("ControlsScreen/ControlsMenuBackround/ControlsMenuMarg
 tracks/19/interp = 1
 tracks/19/loop_wrap = true
 tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("VictoryScreen:modulate")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("VictoryScreen/MarginContainer/ExitGameButton:visible")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("VictoryScreen/MarginContainer/CloseVictoryScreenButton:visible")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("VictoryScreen:visible")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -851,7 +902,7 @@ tracks/21/keys = {
 }
 
 [sub_resource type="Animation" id="Animation_51chi"]
-resource_name = "delayed_open_MenuScreen(5s)"
+resource_name = "close_victory_screen"
 length = 1.5
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -860,7 +911,7 @@ tracks/0/path = NodePath("MenuScreen/MainMenuContainer/MainMenu/OpenLevelSelectM
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.5, 1, 1.1),
+"times": PackedFloat32Array(0.5, 0.96666664, 1.1666666),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -872,7 +923,7 @@ tracks/1/path = NodePath("MenuScreen/MainMenuContainer/MainMenu/OpenControlsMenu
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.5, 1.1333333, 1.2333333),
+"times": PackedFloat32Array(0.5, 1.1333333, 1.3333334),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -884,7 +935,7 @@ tracks/2/path = NodePath("MenuScreen/MainMenuContainer/MainMenu/QuitButton:self_
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.5, 1.4, 1.5),
+"times": PackedFloat32Array(0.5, 1.3, 1.5),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -996,6 +1047,54 @@ tracks/11/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("VictoryScreen:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("VictoryScreen/MarginContainer/CloseVictoryScreenButton:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 0.05),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("VictoryScreen/MarginContainer/ExitGameButton:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("VictoryScreen:visible")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
 }
 
 [sub_resource type="Animation" id="Animation_osrqe"]
@@ -1813,6 +1912,57 @@ tracks/11/keys = {
 "values": [true]
 }
 
+[sub_resource type="Animation" id="Animation_heffa"]
+resource_name = "open_victory_screen"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VictoryScreen:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("VictoryScreen:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("VictoryScreen/MarginContainer/CloseVictoryScreenButton:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("VictoryScreen/MarginContainer/ExitGameButton:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vvvpa"]
 _data = {
 &"Fade_in": SubResource("Animation_60q08"),
@@ -1820,10 +1970,11 @@ _data = {
 &"RESET": SubResource("Animation_ls13d"),
 &"close_ControlsScreen": SubResource("Animation_d4jpd"),
 &"close_LevelSelectScreen": SubResource("Animation_vljpe"),
-&"delayed_open_MenuScreen(5s)": SubResource("Animation_51chi"),
+&"close_victory_screen": SubResource("Animation_51chi"),
 &"open_ControlsScreen": SubResource("Animation_osrqe"),
 &"open_LevelSelectScreen": SubResource("Animation_vvvpa"),
-&"open_MenuScreen": SubResource("Animation_e5uxp")
+&"open_MenuScreen": SubResource("Animation_e5uxp"),
+&"open_victory_screen": SubResource("Animation_heffa")
 }
 
 [node name="GameUserInterface" type="Control" unique_id=650166834 node_paths=PackedStringArray("menu_screen", "level_select_screen", "controls_screen")]
@@ -1847,6 +1998,46 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_51chi")
 metadata/_edit_use_anchors_ = true
+
+[node name="VictoryScreen" type="TextureRect" parent="." unique_id=12439239]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("16_rggv2")
+metadata/_edit_use_anchors_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="VictoryScreen" unique_id=2060694730]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 200
+theme_override_constants/margin_top = 150
+theme_override_constants/margin_right = 200
+theme_override_constants/margin_bottom = 150
+
+[node name="CloseVictoryScreenButton" type="Button" parent="VictoryScreen/MarginContainer" unique_id=1562040827]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 32
+text = "Back To 
+Main Menu"
+icon = ExtResource("17_xoftv")
+
+[node name="ExitGameButton" type="Button" parent="VictoryScreen/MarginContainer" unique_id=2132241711]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 32
+text = "Exit Game"
+icon = ExtResource("18_f70hl")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1371331413]
 libraries/ = SubResource("AnimationLibrary_vvvpa")
@@ -1931,7 +2122,6 @@ size_flags_vertical = 0
 texture = ExtResource("2_vljpe")
 
 [node name="ControlsScreen" type="MarginContainer" parent="." unique_id=1125564509]
-visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.1736111
@@ -2009,8 +2199,11 @@ texture = ExtResource("2_vvvpa")
 
 [node name="ControlsLabelHContainer" type="HBoxContainer" parent="ControlsScreen/ControlsMenuBackround/ControlsMenuMarginContainer/HBoxContainer/ControlsVContainerForImmages" unique_id=398569650]
 layout_mode = 2
-theme_override_constants/separation = 35
+theme_override_constants/separation = 24
 metadata/_edit_use_anchors_ = true
+
+[node name="Control" type="Control" parent="ControlsScreen/ControlsMenuBackround/ControlsMenuMarginContainer/HBoxContainer/ControlsVContainerForImmages/ControlsLabelHContainer" unique_id=860556640]
+layout_mode = 2
 
 [node name="UsingShopControlsLabel" type="Label" parent="ControlsScreen/ControlsMenuBackround/ControlsMenuMarginContainer/HBoxContainer/ControlsVContainerForImmages/ControlsLabelHContainer" unique_id=805158413]
 modulate = Color(0.23000002, 1, 0.29416662, 1)
@@ -2180,11 +2373,6 @@ size_flags_vertical = 0
 icon = ExtResource("8_osrqe")
 expand_icon = true
 
-[node name="MenuButton" type="MenuButton" parent="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer/HBoxContainer" unique_id=1983023126]
-layout_mode = 2
-text = "Level 1"
-icon = ExtResource("8_vljpe")
-
 [node name="BackButtonContainer" type="HBoxContainer" parent="LevelSelectScreen/LevelSelectBackround/LevelSelectContainer" unique_id=1447530055]
 layout_mode = 2
 theme_override_constants/separation = 420
@@ -2209,28 +2397,8 @@ anchor_bottom = 0.38461542
 text = "Back to menu"
 metadata/_edit_use_anchors_ = true
 
-[node name="VictoryScreen" type="TextureRect" parent="." unique_id=12439239]
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-metadata/_edit_use_anchors_ = true
-
-[node name="Button" type="Button" parent="VictoryScreen" unique_id=1562040827]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
-text = "Back To Main Menu"
-
-[node name="Button2" type="Button" parent="VictoryScreen" unique_id=2132241711]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
-text = "Exit Game"
-
+[connection signal="pressed" from="VictoryScreen/MarginContainer/CloseVictoryScreenButton" to="." method="_on_close_victory_screen_button_pressed"]
+[connection signal="pressed" from="VictoryScreen/MarginContainer/ExitGameButton" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/OpenLevelSelectMenuButton" to="." method="_on_toggle_level_select_menu_button_pressed"]
 [connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/OpenLevelSelectMenuButton" to="." method="_on_open_level_select_menu_button_pressed"]
 [connection signal="pressed" from="MenuScreen/MainMenuContainer/MainMenu/OpenControlsMenuButton" to="." method="_on_toggle_controls_menu_button_pressed"]
