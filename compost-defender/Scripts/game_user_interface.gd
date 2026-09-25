@@ -74,3 +74,7 @@ func _on_close_controls_menu_button_pressed() -> void:
 
 func _on_open_controls_menu_button_pressed() -> void:
 	$AnimationPlayer.play("open_ControlsScreen")
+
+
+func _on_close_victory_screen_button_pressed() -> void:
+	pass # Replace with function body.
