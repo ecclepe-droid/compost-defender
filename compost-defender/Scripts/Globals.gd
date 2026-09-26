@@ -15,6 +15,8 @@ var bosses_defeated = 0
 var total_enimies_killed = 0
 var miner_worms = 0
 var kung_worms = 0
+var lost = false
+var won = false
 
 var acid_worms = 0
 var total_worms = 0

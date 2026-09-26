@@ -2,15 +2,13 @@ extends Node2D
 
 class_name Level
 
-const LEVEL_SELECT_SCREEN = "res://Scenes/game_user_interface.tscn"
+const GAME_UI = "res://Scenes/game_user_interface.tscn"
 
 var user_interface: Control
 @export var enemy_manager: EnemyManager
 @export var level_ui: leveUI
 @export var starting_compost: int
 
-signal loss
-signal victory
 
 func get_waves() -> Array[Wave]:
 	var waves: Array[Wave]
@@ -23,6 +21,7 @@ func get_waves() -> Array[Wave]:
 
 
 func _ready() -> void:
+	SignalBus.connect_ui(user_interface)
 	enemy_manager = $EnemyManager
 	enemy_manager.enemy_died.connect(_on_enemy_spawner_enemy_died)
 	enemy_manager.wave_ended.connect(_on_enemy_manager_wave_ended)
@@ -64,22 +63,22 @@ func _on_in_level_ui_user_wants_worm_at_mouse(worm: Worm) -> void:
 
 
 func _on_enemy_manager_out_of_waves() -> void:
-	print("You Won")
+#	print("You Won")
 	if get_tree() != null:
 		if get_tree().current_scene != null:
 			get_tree().current_scene.queue_free()
-			get_tree().change_scene_to_file(LEVEL_SELECT_SCREEN)
-			emit_signal("victory")
+			get_tree().change_scene_to_file(GAME_UI)
+			Globals.won = true
 
 
 func _on_enemy_manager_enemy_reached_end(enemy_health: int) -> void:
 	Globals.compost_integrity -= enemy_health
 	print("Compost integrity:" + str(Globals.compost_integrity))
 	if Globals.compost_integrity <= 0:
-		print("You died")
+#		print("The compost was breached")
 		get_tree().current_scene.queue_free()
-		get_tree().change_scene_to_file(LEVEL_SELECT_SCREEN)
-		emit_signal("loss")
+		get_tree().change_scene_to_file(GAME_UI)
+		Globals.lost = true
 
 
 func _on_enemy_manager_wave_ended() -> void:

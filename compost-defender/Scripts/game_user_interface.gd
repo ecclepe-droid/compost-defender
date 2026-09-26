@@ -4,6 +4,8 @@ extends Control
 @export var menu_screen = HBoxContainer
 @export var level_select_screen = MarginContainer
 @export var controls_screen = MarginContainer
+var lost = false
+var won = false
 const LEVEL_ONE_PACKED = preload("res://Scenes/Levels/level_1.tscn")
 const LEVEL_TWO_PACKED = preload("res://Scenes/Levels/level_2.tscn")
 const LEVEL_THREE_PACKED = preload("res://Scenes/Levels/level_3.tscn")
@@ -11,7 +13,18 @@ const LEVEL_FOUR_PACKED = preload("res://Scenes/Levels/level_4.tscn")
 #const LEVEL_FIVE_PACKED = preload()
 
 func _ready() -> void:
+	SignalBus.connect_ui(self)
 	$AnimationPlayer.play("open_MenuScreen")
+
+func _process(delta: float) -> void:
+	if (Globals.lost==true):
+		print("You Lost :(")
+		$AnimationPlayer.play("open_loss_screen")
+		Globals.lost = false
+	if (Globals.won==true):
+		print("You Won !")
+		$AnimationPlayer.play("open_victory_screen")
+		Globals.won = false
 
 #func toggle_visibility(object):
 #	var anim = $AnimationPlayer
@@ -84,4 +97,11 @@ func _on_close_loss_screen_pressed() -> void:
 	$AnimationPlayer.play("close_loss_screen")
 	
 
-#func _on_victory
+func on_victory() -> void:
+	print("You Won!")
+	$AnimationPlayer.play("open_victory_screen")
+	
+	
+func on_loss() -> void:
+	print("You lost :(")
+	$AnimationPlayer.play("open_loss_screen")

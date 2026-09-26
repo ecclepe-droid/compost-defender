@@ -19,6 +19,7 @@ config/icon="uid://f0lenvmgjjtv"
 
 Globals="*uid://cqs5lw7h4512j"
 GlobalFunctions="*uid://cdrp5umafj1cg"
+SignalBus="*uid://c3272ftuwfxp3"
 
 [display]
 
